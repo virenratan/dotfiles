@@ -34,9 +34,9 @@ brew install php55
 
 # Install other useful binaries
 brew install ack
-brew install exiv2
+#brew install exiv2
 brew install git
-brew install imagemagick
+#brew install imagemagick
 brew install lynx
 brew install node
 brew install pigz
