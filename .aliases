@@ -29,7 +29,7 @@ alias q="exit"
 alias dfbs="source ~/Projects/dotfiles/sync.sh -f"
 
 # kill all stopped jobs
-alias killj="kill `jobs -p`"
+alias killjobs="sudo kill \`jobs -p\`"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
