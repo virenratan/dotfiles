@@ -25,6 +25,9 @@ alias o="open"
 alias oo="open ."
 alias q="exit"
 
+# shortcut to bootstrap this dotfiles stuff
+alias bss="source ~/Projects/dotfiles/sync.sh -f"
+
 # kill all stopped jobs
 alias killj="kill `jobs -p`"
 
