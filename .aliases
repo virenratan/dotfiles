@@ -24,6 +24,9 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# kill all stopped jobs
+alias killj="kill `jobs -p`"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
