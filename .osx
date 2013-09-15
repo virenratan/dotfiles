@@ -24,8 +24,8 @@ sudo pmset -a standbydelay 86400
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Menu bar: disable transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+# Menu bar: enable transparency
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 # Menu bar: show remaining battery time (on pre-10.8); hide percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
@@ -33,6 +33,9 @@ defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 # Menu bar: hide the useless Time Machine and Volume icons
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
+
+# Appearance: Graphite
+/usr/bin/defaults write -g 'AppleAquaColorVariant' -int 6
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string '0.764700 0.976500 0.568600'
@@ -43,6 +46,12 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
+
+# Number of recent items: Applications: None
+/usr/bin/osascript -e 'tell application "System Events" to tell appearance preferences to set recent applications limit to 0'
+
+# Number of recent items: Documents: None
+/usr/bin/osascript -e 'tell application "System Events" to tell appearance preferences to set recent documents limit to 0'
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
@@ -174,12 +183,19 @@ systemsetup -settimezone "Australia/Melbourne" > /dev/null
 #defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 ###############################################################################
+# Sound                                                                       #
+###############################################################################
+
+# Select an alert sound: Sosumi
+/usr/bin/defaults write com.apple.systemsound 'com.apple.sound.beep.sound' -string '/System/Library/Sounds/Sosumi.aiff'
+
+###############################################################################
 # Screen                                                                      #
 ###############################################################################
 
-# Require password immediately after sleep or screen saver begins
+# Require password 5 seconds after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPasswordDelay -int 5
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
@@ -229,6 +245,9 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Disable Finder sounds
+/usr/bin/defaults write com.apple.finder 'FinderSounds' -bool false
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -301,6 +320,16 @@ chflags nohidden ~/Library
 file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 [ -e "$file" ] && mv -f "$file" "$file.bak"
 
+
+###############################################################################
+# Growl                                                                       #
+###############################################################################
+
+/usr/bin/defaults write com.Growl.GrowlHelperApp 'GrowlDisplayPluginName' -string 'Smokestack'
+/usr/bin/defaults write com.Growl.GrowlHelperApp 'GrowlMenuExtra' -bool false
+/usr/bin/defaults write com.Growl.GrowlHelperApp 'GrowlSelectedPosition' -int 2
+/usr/bin/defaults write com.Growl.GrowlHelperApp 'GrowlStartServer' -bool false
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -332,11 +361,11 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # (i.e. use the old Exposé behavior instead)
 defaults write com.apple.dock expose-group-by-app -bool false
 
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+# Enable Dashboard
+defaults write com.apple.dashboard mcx-disabled -bool false
 
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+# Show Dashboard as a Space
+defaults write com.apple.dock dashboard-in-overlay -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
