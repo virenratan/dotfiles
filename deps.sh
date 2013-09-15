@@ -32,12 +32,12 @@ chmod +x ~/code/z/z.sh
 
 
 # https://github.com/dronir/SpotifyControl
-# Spotify Controll Script
+# Spotify Control Script
 cd ~/code
 git clone git://github.com/dronir/SpotifyControl.git
 
 # https://github.com/jeroenbegyn/VLCControl
-# VLC Controll Script
+# VLC Control Script
 cd ~/code
 git clone git://github.com/jeroenbegyn/VLCControl.git
 
