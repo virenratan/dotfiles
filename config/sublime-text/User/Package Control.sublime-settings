@@ -1,0 +1,26 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Additional PHP Snippets",
+		"AngularJS",
+		"AngularJS (CoffeeScript)",
+		"AngularJS Attributes Completion",
+		"BracketHighlighter",
+		"Codeigniter Codeintel Helper",
+		"CodeIgniter Snippets",
+		"CodeIgniter Utilities",
+		"Console API Snippets (JavaScript)",
+		"Dotfiles Syntax Highlighting",
+		"Emmet",
+		"jQuery",
+		"jQuery Snippets pack",
+		"LiveStyle",
+		"Package Control",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"Theme - Soda"
+	]
+}

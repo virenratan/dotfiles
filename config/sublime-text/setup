@@ -1,0 +1,15 @@
+#!/bin/sh
+# Setup a machine for Sublime Text 2
+# Since Sublime is fucking insane and can't handle symlinks for the User
+# directory, we'll need to manually copy stuff over.
+set -x
+
+# symlink settings in
+sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+dotfiles_repo=~/Projects/dotfiles/config
+cp -R "$sublime_dir/User" "$sublime_dir/User.backup"
+cp -R "$dotfiles_repo/sublime2/User" "$sublime_dir/User"
+
+# Grab the Soda theme
+cd "$sublime_dir"
+git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
