@@ -63,6 +63,8 @@ function uninstallcask() {
 }
 
 installcask adium
+installcask android-file-transfer
+installcask codekit
 installcask diffmerge
 installcask dropbox
 installcask firefox
