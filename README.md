@@ -73,9 +73,9 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 ./.brew
 ```
 ### Thanks to people I've grabbed stuff from
-- [holman](https://github.com/holman/dotfiles/)
-- [paulirish](https://github.com/paulirish/dotfiles/)
-- [mathiasbynens](https://github.com/mathiasbynens/dotfiles/)
+- [holman/dotfiles](https://github.com/holman/dotfiles/)
+- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles/)
+- [paulirish/dotfiles](https://github.com/paulirish/dotfiles/)
 - [OS X hidden preferences](http://lri.me/osx.html#hidden-preferences)
-- [ptb OX S Lion setup](https://github.com/ptb/Mac-OS-X-Lion-Setup/blob/master/setup.sh)
-- [gitignore](https://github.com/github/gitignore)
+- [ptb: OS X Lion setup](https://github.com/ptb/Mac-OS-X-Lion-Setup/blob/master/setup.sh)
+- [github/gitignore](https://github.com/github/gitignore)
