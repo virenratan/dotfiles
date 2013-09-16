@@ -1,5 +1,5 @@
 # shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/Projects/.dotfiles
+export ZSH=$HOME/Projects/dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Sites
