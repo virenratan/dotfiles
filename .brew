@@ -58,19 +58,30 @@ function installcask() {
 	brew cask install "${@}" 2> /dev/null
 }
 
+function uninstallcask() {
+  brew cask uninstall "${@}" 2> /dev/null
+}
+
+installcask adium
+installcask diffmerge
 installcask dropbox
+installcask firefox
+installcask firefox-aurora
+installcask flux
+installcask github
 installcask google-chrome
 installcask google-chrome-canary
 installcask imagealpha
 installcask imageoptim
 installcask iterm2
 installcask macvim
-installcask miro-video-converter
+installcask mou
+installcask sequel-pro
+installcask sourcetree
 installcask sublime-text
 installcask the-unarchiver
 installcask tor-browser
 installcask transmission
-installcask ukelele
 installcask virtualbox
 installcask vlc
 
