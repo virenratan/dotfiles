@@ -29,10 +29,11 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 # Menu bar: show remaining battery time (on pre-10.8); hide percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-defaults write com.apple.menuextra.battery ShowTime -string "NO"
+defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 # Menu bar: hide the useless Time Machine and Volume icons
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu"
+# i'm hiding the clock because I use Day-0.app
 #"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Appearance: Graphite
@@ -221,7 +222,7 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 defaults write com.apple.finder QuitMenuItem -bool true
 
 # Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.finder DisableAllAnimations -bool false
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
@@ -366,7 +367,7 @@ defaults write com.apple.dock expose-group-by-app -bool false
 defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool false
+defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
