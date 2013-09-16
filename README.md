@@ -72,7 +72,8 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 ```bash
 ./.brew
 ```
-### Thanks to people I've grabbed stuff from 
+### Thanks to people I've grabbed stuff from
+- [holman](https://github.com/holman/dotfiles/)
 - [paulirish](https://github.com/paulirish/dotfiles/)
 - [mathiasbynens](https://github.com/mathiasbynens/dotfiles/)
 - [OS X hidden preferences](http://lri.me/osx.html#hidden-preferences)
