@@ -1,4 +1,4 @@
-# core path requirements for bash
+# ensure core path requirements for bash
 PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 export PATH
 
@@ -24,6 +24,7 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 alias q="exit"
+alias z="zsh"
 
 # dotfiles bootstrap
 alias dfbs="source ~/Projects/dotfiles/sync.sh -f"
