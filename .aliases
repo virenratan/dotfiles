@@ -155,6 +155,10 @@ done
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
 
+# Notification center
+alias notifyoff="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist"
+alias notifyon="launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist"
+
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"

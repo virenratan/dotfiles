@@ -115,7 +115,11 @@ systemsetup -setcomputersleep Off > /dev/null
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+#sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool false
+#killall NotificationCenter
+# Enable Notification Center
+#sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool true
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
