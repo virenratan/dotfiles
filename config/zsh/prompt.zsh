@@ -69,14 +69,14 @@ rb_prompt() {
 }
 
 directory_name() {
-  echo "%{$fg_bold[cyan]%}$(clean_dir_name)/%\%{$reset_color%}"
+  echo "%{$fg_bold[cyan]%}$(clean_dir_name)%\%{$reset_color%}"
 }
 
 function clean_dir_name {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-export PROMPT=$'\n$(rb_prompt)$(directory_name) $(git_dirty)$(need_push)\n\$ '
+export PROMPT=$'\n$(rb_prompt)$(directory_name) $(git_dirty)$(need_push)\n\› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
