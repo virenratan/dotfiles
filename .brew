@@ -65,12 +65,13 @@ function uninstallcask() {
 
 installcask adium
 installcask android-file-transfer
+installcask charles
 installcask codekit
 installcask diffmerge
 installcask dropbox
 installcask firefox
 installcask firefox-aurora
-installcask flux
+installcask f-lux
 installcask github
 installcask google-chrome
 installcask google-chrome-canary
@@ -80,11 +81,14 @@ installcask iterm2
 installcask macvim
 installcask mou
 installcask sequel-pro
+installcask skype
+installcask spotify
 installcask sourcetree
 installcask sublime-text
 installcask the-unarchiver
 installcask tor-browser
 installcask transmission
+installcask transmit
 installcask virtualbox
 installcask vlc
 
