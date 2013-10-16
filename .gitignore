@@ -18,3 +18,4 @@ Thumbs.db
 cache
 logs
 *.sublime-project
+*.sublime-workspace
