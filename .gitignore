@@ -16,6 +16,9 @@ Thumbs.db
 # Development cache
 .sass-cache
 cache
+
+# Development environment files
 logs
 *.sublime-project
 *.sublime-workspace
+composer.lock
