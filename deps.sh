@@ -14,9 +14,6 @@ curl -L https://get.rvm.io | bash -s stable --ruby
 # TODO: I think i'd rather curl down the nave.sh, symlink it into /bin and use that for initial node install.
 npm install -g nave
 
-# http://gruntjs.com/
-npm install -g grunt-cli
-
 
 # homebrew!
 # you need the code CLI tools YOU FOOL.
@@ -63,3 +60,5 @@ sudo easy_install Pygments
 
 # web development environment stuff
 sudo npm install -g LiveScript
+sudo npm install -g grunt-cli
+sudo gem install vagrant puppet puppet-lint --no-ri --no-rdoc
