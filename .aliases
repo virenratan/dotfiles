@@ -1,5 +1,5 @@
 # ensure core path requirements for bash
-PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export PATH
 
 # Easier navigation: .., ..., ...., ....., ~ and -
