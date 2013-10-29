@@ -1,5 +1,6 @@
 # ensure core path requirements for bash
-PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Applications/VirtualBox.app/Contents/MacOS/:$PATH"
+PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="/usr/local/share/npm/bin:/Applications/VirtualBox.app/Contents/MacOS/:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
 
 # Easier navigation: .., ..., ...., ....., ~ and -
