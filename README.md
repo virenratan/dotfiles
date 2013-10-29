@@ -1,5 +1,13 @@
 # humanPincushion's dotfiles
 
+## Running after an OS update?
+
+If you've upgraded OS X recently, make sure you've updated and run Xcode to accept the licence agreement. Also, install the command line tools, which you can trigger using:
+
+```
+$ xcode-select --install
+```
+
 ## Installation
 
 ### Using Git and the bootstrap script
@@ -39,9 +47,11 @@ $ cd; curl -#L https://github.com/humanPincushion/dotfiles/tarball/master | tar 
 
 To update later on, just run that command again.
 
+## Operation
+
 ### Specify the `$PATH`
 
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/humanPincushion/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing takes place.
 
 Here’s an example `~/.path` file that adds `~/utils` to the `$PATH`:
 
@@ -57,7 +67,7 @@ My `~/.extra` file is symlinked from Dropbox so it stays up to date across machi
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/humanPincushion/dotfiles/fork) instead, though.
 
-### Sensible OS X defaults
+## Sensible OS X defaults
 
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 
@@ -65,7 +75,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 $ ./.osx
 ```
 
-### Install Homebrew formulae
+## Install Homebrew formulae
 
 When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
 
@@ -73,15 +83,7 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 $ ./.brew
 ```
 
-### Is everything shitfucked?
-
-If you've upgraded OS X recently, make sure you've upgraded and run Xcode to accept the licence agreement. Also, install the command line tools, which you can trigger using:
-
-```
-$ xcode-select --install
-```
-
-### Thanks to people I've grabbed stuff from
+## Thanks to people I've grabbed stuff from
 - [holman/dotfiles](https://github.com/holman/dotfiles/)
 - [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles/)
 - [paulirish/dotfiles](https://github.com/paulirish/dotfiles/)
