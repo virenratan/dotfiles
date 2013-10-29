@@ -6,26 +6,26 @@
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The sync script will pull in the latest version and copy the files to your home folder.
 
-```bash
-git clone https://github.com/humanPincushion/dotfiles.git && cd dotfiles && source sync.sh
+```
+$ git clone https://github.com/humanPincushion/dotfiles.git && cd dotfiles && source sync.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
-```bash
-source sync.sh
+```
+$ source sync.sh
 ```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
-```bash
-set -- -f; source sync.sh
+```
+$ set -- -f; source sync.sh
 ```
 
 There is a shorter alias for this too:
 
-```bash
-dfbs
+```
+$dfbs
 ```
 
 
@@ -33,8 +33,8 @@ dfbs
 
 To install these dotfiles without Git:
 
-```bash
-cd; curl -#L https://github.com/humanPincushion/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,sync.sh,license}
+```
+$ cd; curl -#L https://github.com/humanPincushion/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,sync.sh,license}
 ```
 
 To update later on, just run that command again.
@@ -45,8 +45,8 @@ If `~/.path` exists, it will be sourced along with the other files, before any f
 
 Here’s an example `~/.path` file that adds `~/utils` to the `$PATH`:
 
-```bash
-export PATH="$HOME/utils:$PATH"
+```
+$export PATH="$HOME/utils:$PATH"
 ```
 
 ### Add custom commands without creating a new fork
@@ -61,17 +61,26 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 
-```bash
-./.osx
+```
+$ ./.osx
 ```
 
 ### Install Homebrew formulae
 
 When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
 
-```bash
-./.brew
 ```
+$ ./.brew
+```
+
+### Is everything shitfucked?
+
+If you've upgraded OS X recently, make sure you've upgraded and run Xcode to accept the licence agreement. Also, install the command line tools, which you can trigger using:
+
+```
+$ xcode-select --install
+```
+
 ### Thanks to people I've grabbed stuff from
 - [holman/dotfiles](https://github.com/holman/dotfiles/)
 - [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles/)

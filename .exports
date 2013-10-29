@@ -23,3 +23,7 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Node.js exports
+export PATH="/usr/local/share/npm/bin:$PATH"
+export NODE_PATH="/usr/local/lib/node"
