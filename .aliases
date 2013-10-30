@@ -159,6 +159,12 @@ done
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
 
+# Vagrant shortcuts
+alias vu="vagrant up"
+alias vp="vagrant provision"
+alias vs="vagrant ssh"
+alias vd="vagrant destroy"
+
 # Notification center
 alias notifyoff="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist"
 alias notifyon="launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist"
