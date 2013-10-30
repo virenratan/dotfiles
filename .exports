@@ -24,6 +24,8 @@ export GREP_OPTIONS="--color=auto"
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# ensure core path requirements for bash
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Applications/VirtualBox.app/Contents/MacOS/:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 # Node.js exports
-export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node"
