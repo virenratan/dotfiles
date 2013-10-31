@@ -154,6 +154,7 @@ done
 
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
+alias killnode="killall -9 node"
 
 # Vagrant shortcuts
 alias vu="vagrant up"
