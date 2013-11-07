@@ -61,4 +61,5 @@ sudo easy_install Pygments
 # web development environment stuff
 sudo npm install -g LiveScript
 sudo gem install vagrant puppet puppet-lint --no-ri --no-rdoc
+sudo npm install -g yo
 sudo npm install -g grunt-cli
