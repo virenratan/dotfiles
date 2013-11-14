@@ -59,7 +59,7 @@ sudo easy_install Pygments
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
 
 # web development environment stuff
-sudo npm install -g LiveScript
 sudo gem install vagrant puppet puppet-lint --no-ri --no-rdoc
+sudo npm install -g LiveScript
 sudo npm install -g yo
 sudo npm install -g grunt-cli
