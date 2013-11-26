@@ -37,3 +37,11 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+# ec2 command line tools
+export PATH=$PATH:$EC2_HOME/bin
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
+export EC2_HOME=~/.ec2
+export EC2_URL=https://eu-west-1.ec2.amazonaws.com
+export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
