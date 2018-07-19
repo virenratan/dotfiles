@@ -1,0 +1,29 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Viren's dotfiles",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virenratan/dotfiles.git"
+  },
+  "keywords": [],
+  "author": "Viren Ratan <viren@viren.com.au> (http://viren.com.au/)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-config-kentcdodds": "^12.2.1",
+    "eslint-config-xo": "^0.18.1",
+    "eslint-plugin-eslint-comments": "^1.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-optimize-regex": "^1.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-unicorn": "^2.1.1",
+    "prettier": "^1.3.1"
+  }
+}
