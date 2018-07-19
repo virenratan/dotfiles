@@ -157,17 +157,6 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
   alias "$method"="lwp-request -m '$method'"
 done
 
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
-alias killnode="killall -9 node"
-# alias gs="killnode; clear; grunt dev"
-
-# Vagrant shortcuts
-alias vu="vagrant up"
-alias vp="vagrant provision"
-alias vs="vagrant ssh"
-alias vd="vagrant destroy"
-
 # yarn aliases
 alias yar="yarn run"
 alias yas="yarn run start -s --"
@@ -179,11 +168,6 @@ alias ypm="echo \"Installing deps without lockfile and ignoring engines\" && yar
 # Notification center
 alias notifyoff="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist"
 alias notifyon="launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist"
-
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 7'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description

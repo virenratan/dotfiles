@@ -2,35 +2,33 @@
 # https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
 
 if ! xcode-select --print-path &> /dev/null; then
+  # prompt user to install the xcode command line tools.
+  xcode-select --install &> /dev/null
 
-    # prompt user to install the xcode command line tools.
-    xcode-select --install &> /dev/null
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # wait until the xcode command line tools are installed.
+  until xcode-select --print-path &> /dev/null; do
+      sleep 5
+  done
 
-    # wait until the xcode command line tools are installed.
-    until xcode-select --print-path &> /dev/null; do
-        sleep 5
-    done
+  print_result $? 'Install XCode Command Line Tools'
 
-    print_result $? 'Install XCode Command Line Tools'
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # point the `xcode-select` developer directory to the appropriate directory from within `Xcode.app`
+  # https://github.com/alrra/dotfiles/issues/13
 
-    # point the `xcode-select` developer directory to the appropriate directory from within `Xcode.app`
-    # https://github.com/alrra/dotfiles/issues/13
+  sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+  print_result $? 'Make "xcode-select" developer directory point to Xcode'
 
-    sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-    print_result $? 'Make "xcode-select" developer directory point to Xcode'
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # prompt user to agree to the terms of the Xcode license
+  # https://github.com/alrra/dotfiles/issues/10
 
-    # prompt user to agree to the terms of the Xcode license
-    # https://github.com/alrra/dotfiles/issues/10
-
-    sudo xcodebuild -license
-    print_result $? 'Agree with the XCode Command Line Tools licence'
-
+  sudo xcodebuild -license
+  print_result $? 'Agree with the XCode Command Line Tools licence'
 fi
 ### end of xcode.
 
