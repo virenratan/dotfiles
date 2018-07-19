@@ -2,30 +2,22 @@
 
 ## Installation
 
-### Using Git and the bootstrap script
-
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The sync script will pull in the latest version and copy the files to your home folder.
-
 ```
 $ git clone https://github.com/virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
+To update your dotfiles after making or pulling changes via git, `cd` into your local repository and then:
 
 ```
 $ ./symlink-setup.sh
 ```
 
-## Operation
+## Sensible OS X defaults
 
-### Specify the `$PATH`
-
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing takes place.
-
-Here’s an example `~/.path` file that adds `~/utils` to the `$PATH`:
+When setting up a new Mac, you may want to set some sensible MacOS defaults:
 
 ```
-$export PATH="$HOME/utils:$PATH"
+$ ./macos.sh
 ```
 
 ### Add custom commands without creating a new fork
@@ -35,22 +27,6 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 My `~/.extra` file is symlinked from Dropbox so it stays up to date across machines but never touches the repository:
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/virenratan/dotfiles/fork) instead, though.
-
-## Sensible OS X defaults
-
-When setting up a new Mac, you may want to set some sensible OS X defaults:
-
-```
-$ ./osx.sh
-```
-
-## Install Homebrew formulae
-
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
-
-```
-$ ./.brew
-```
 
 ## Thanks to people I've grabbed stuff from
 - [holman/dotfiles](https://github.com/holman/dotfiles)

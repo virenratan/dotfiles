@@ -1,37 +1,28 @@
 #!/usr/bin/env bash
 
-# Make sure we’re using the latest Homebrew
+# update.
 brew update
-
-# Upgrade any already-installed formulae
 brew upgrade
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-# Install Bash 4
-brew install bash
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
-# Install RingoJS and Narwhal
-# Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
-# Install more recent versions of some OS X tools
+# add repositories.
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+brew tap homebrew/versions
+brew tap phinze/homebrew-cask
 
-# Install other useful binaries
+# update system level stuff.
+brew install coreutils
+brew install findutils
+brew install bash
+brew install wget --enable-iri
+brew install homebrew/dupes/grep
+brew install brew-cask
+
+# install general stuff.
 brew install ack
-#brew install exiv2
 brew install git
 brew install imagemagick
 brew install librsvg
+brew install lua52
 brew install lynx
 brew install ngrep
 brew install node
@@ -40,12 +31,9 @@ brew install rename
 brew install rhino
 brew install tree
 brew install webkit2png
-brew install yarn --without-node
+brew install yarn
 brew install zopfli
 brew install zsh
 
-brew tap homebrew/versions
-brew install lua52
-
-# Remove outdated versions from the cellar
+# tidy up.
 brew cleanup
