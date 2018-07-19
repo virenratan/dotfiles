@@ -25,13 +25,6 @@ brew install narwhal
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
-brew tap josegonzalez/homebrew-php
-brew install php55
-brew install josegonzalez/php/composer
-
-# These two formulae didn’t work well last time I tried them:
-#brew install homebrew/dupes/vim
-#brew install homebrew/dupes/screen
 
 # Install other useful binaries
 brew install ack
@@ -47,50 +40,12 @@ brew install rename
 brew install rhino
 brew install tree
 brew install webkit2png
+brew install yarn --without-node
 brew install zopfli
 brew install zsh
 
 brew tap homebrew/versions
 brew install lua52
-
-# Install native apps
-brew tap phinze/homebrew-cask
-brew install brew-cask
-
-function installcask() {
-  brew cask install "${@}" 2> /dev/null
-}
-
-function uninstallcask() {
-  brew cask uninstall "${@}" 2> /dev/null
-}
-
-installcask android-file-transfer
-installcask atom
-installcask bartender
-installcask charles
-installcask dropbox
-installcask firefox
-installcask github
-installcask google-chrome
-installcask imagealpha
-installcask imageoptim
-installcask istat-menus
-installcask iterm2
-installcask itsycal
-installcask kaleidoscope
-installcask postman
-installcask sketch
-installcask slack
-installcask spotify
-installcask the-unarchiver
-installcask tower
-installcask tripmode
-# installcask transmission
-installcask virtualbox
-installcask visual-studio-code
-installcask vlc
-installcask zeplin
 
 # Remove outdated versions from the cellar
 brew cleanup

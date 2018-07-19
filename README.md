@@ -1,13 +1,5 @@
 # dotfiles
 
-## Running after an OS update?
-
-If you've upgraded OS X recently, make sure you've updated and run Xcode to accept the licence agreement. Also, install the command line tools, which you can trigger using:
-
-```
-$ xcode-select --install
-```
-
 ## Installation
 
 ### Using Git and the bootstrap script
@@ -15,46 +7,13 @@ $ xcode-select --install
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The sync script will pull in the latest version and copy the files to your home folder.
 
 ```
-$ git clone https://github.com/virenratan/dotfiles.git && cd dotfiles && source sync.sh
+$ git clone https://github.com/virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
 ```
-$ source sync.sh
-```
-
-Alternatively, to update while avoiding the confirmation prompt:
-
-```
-$ set -- -f; source sync.sh
-```
-
-There is a shorter alias for this too:
-
-```
-$dfbs
-```
-
-
-### Git-free install
-
-To install these dotfiles without Git:
-
-```
-$ cd; curl -#L https://github.com/virenratan/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,sync.sh,license}
-```
-
-To update later on, just run that command again.
-
-## Post-install
-
-```
-curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
-rvm install 2.3.1
-rvm use ruby-2.3.1 --default
-
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+$ ./symlink-setup.sh
 ```
 
 ## Operation
@@ -82,7 +41,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ```
-$ ./.osx
+$ ./osx.sh
 ```
 
 ## Install Homebrew formulae
