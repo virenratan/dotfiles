@@ -1,4 +1,4 @@
-# humanPincushion's dotfiles
+# dotfiles
 
 ## Running after an OS update?
 
@@ -15,7 +15,7 @@ $ xcode-select --install
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The sync script will pull in the latest version and copy the files to your home folder.
 
 ```
-$ git clone https://github.com/humanPincushion/dotfiles.git && cd dotfiles && source sync.sh
+$ git clone https://github.com/virenratan/dotfiles.git && cd dotfiles && source sync.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -42,7 +42,7 @@ $dfbs
 To install these dotfiles without Git:
 
 ```
-$ cd; curl -#L https://github.com/humanPincushion/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,sync.sh,license}
+$ cd; curl -#L https://github.com/virenratan/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,sync.sh,license}
 ```
 
 To update later on, just run that command again.
@@ -65,7 +65,7 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 
 My `~/.extra` file is symlinked from Dropbox so it stays up to date across machines but never touches the repository:
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/humanPincushion/dotfiles/fork) instead, though.
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/virenratan/dotfiles/fork) instead, though.
 
 ## Sensible OS X defaults
 
@@ -84,9 +84,10 @@ $ ./.brew
 ```
 
 ## Thanks to people I've grabbed stuff from
-- [holman/dotfiles](https://github.com/holman/dotfiles/)
-- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles/)
-- [paulirish/dotfiles](https://github.com/paulirish/dotfiles/)
+- [holman/dotfiles](https://github.com/holman/dotfiles)
+- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
 - [OS X hidden preferences](http://lri.me/osx.html#hidden-preferences)
 - [ptb: OS X Lion setup](https://github.com/ptb/Mac-OS-X-Lion-Setup/blob/master/setup.sh)
 - [github/gitignore](https://github.com/github/gitignore)
+- [kentcdodds/dotfiles](https://github.com/kentcdodds/dotfiles)
