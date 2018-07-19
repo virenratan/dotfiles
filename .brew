@@ -37,7 +37,8 @@ brew install josegonzalez/php/composer
 brew install ack
 #brew install exiv2
 brew install git
-#brew install imagemagick
+brew install imagemagick
+brew install librsvg
 brew install lynx
 brew install ngrep
 brew install node
@@ -57,41 +58,39 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function installcask() {
-	brew cask install "${@}" 2> /dev/null
+  brew cask install "${@}" 2> /dev/null
 }
 
 function uninstallcask() {
   brew cask uninstall "${@}" 2> /dev/null
 }
 
-installcask adium
 installcask android-file-transfer
+installcask atom
+installcask bartender
 installcask charles
-installcask codekit
-installcask diffmerge
 installcask dropbox
 installcask firefox
-installcask firefox-aurora
-installcask f-lux
 installcask github
 installcask google-chrome
-installcask google-chrome-canary
 installcask imagealpha
 installcask imageoptim
+installcask istat-menus
 installcask iterm2
-installcask macvim
-installcask mou
-installcask sequel-pro
-installcask skype
+installcask itsycal
+installcask kaleidoscope
+installcask postman
+installcask sketch
+installcask slack
 installcask spotify
-installcask sourcetree
-installcask sublime-text
 installcask the-unarchiver
-installcask tor-browser
-installcask transmission
-installcask transmit
+installcask tower
+installcask tripmode
+# installcask transmission
 installcask virtualbox
+installcask visual-studio-code
 installcask vlc
+installcask zeplin
 
 # Remove outdated versions from the cellar
 brew cleanup
