@@ -47,6 +47,16 @@ $ cd; curl -#L https://github.com/virenratan/dotfiles/tarball/master | tar -xzv 
 
 To update later on, just run that command again.
 
+## Post-install
+
+```
+curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
+rvm install 2.3.1
+rvm use ruby-2.3.1 --default
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+```
+
 ## Operation
 
 ### Specify the `$PATH`
@@ -87,7 +97,7 @@ $ ./.brew
 - [holman/dotfiles](https://github.com/holman/dotfiles)
 - [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+- [kentcdodds/dotfiles](https://github.com/kentcdodds/dotfiles)
 - [OS X hidden preferences](http://lri.me/osx.html#hidden-preferences)
 - [ptb: OS X Lion setup](https://github.com/ptb/Mac-OS-X-Lion-Setup/blob/master/setup.sh)
 - [github/gitignore](https://github.com/github/gitignore)
-- [kentcdodds/dotfiles](https://github.com/kentcdodds/dotfiles)
