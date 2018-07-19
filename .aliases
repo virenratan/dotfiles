@@ -7,6 +7,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
+alias a="atom ."
 alias apache="sudo /usr/sbin/apachectl restart"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
@@ -18,6 +19,7 @@ alias j="jobs"
 alias v="vim"
 alias m="mate ."
 alias s="subl ."
+alias sb="source ~/.bash_profile"
 alias o="open"
 alias oo="open ."
 alias q="exit"
@@ -31,9 +33,9 @@ alias killjobs="sudo kill \`jobs -p\`"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+  colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+  colorflag="-G"
 fi
 
 # List all files colorized in long format
@@ -149,7 +151,7 @@ alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "$method"="lwp-request -m '$method'"
+  alias "$method"="lwp-request -m '$method'"
 done
 
 # Make Grunt print stack traces by default
@@ -162,6 +164,14 @@ alias vu="vagrant up"
 alias vp="vagrant provision"
 alias vs="vagrant ssh"
 alias vd="vagrant destroy"
+
+# yarn aliases
+alias yar="yarn run"
+alias yas="yarn run start -s --"
+alias yab="yarn run build -s --"
+alias yat="yarn run test -s --"
+alias yoff="yarn add --offline"
+alias ypm="echo \"Installing deps without lockfile and ignoring engines\" && yarn install --no-lockfile --ignore-engines"
 
 # Notification center
 alias notifyoff="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist"
