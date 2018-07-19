@@ -1,24 +1,34 @@
-# Compiled Python files
-*.pyc
+# git credential file.
+.gitconfig.local
+*.patch
 
-# Folder view configuration files
+# folder view configuration files.
 .DS_Store
 Desktop.ini
 
-# Thumbnail cache files
+# thumbnail cache files.
 ._*
 Thumbs.db
 
-# Files that might appear on external disks
+# files that might appear on external disks.
 .Spotlight-V100
 .Trashes
 
-# Development cache
-.sass-cache
-cache
+# node.
+.nvmrc
+node_modules
+npm-debug.log
+yarn-error.log
 
-# Development environment files
-logs
-*.sublime-project
-*.sublime-workspace
-composer.lock
+# compiled python files.
+*.pyc
+
+# webstorm.
+.idea/
+
+# vs code.
+typings/
+.vscode
+
+# eslint.
+.eslintcache
