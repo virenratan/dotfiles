@@ -31,8 +31,8 @@ sudo nvram SystemAudioVolume=" "
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
-# Appearance: Graphite
-/usr/bin/defaults write -g 'AppleAquaColorVariant' -int 6
+# Use a dark menu bar / dock
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string '0.764700 0.976500 0.568600'
@@ -40,9 +40,19 @@ defaults write NSGlobalDomain AppleHighlightColor -string '0.764700 0.976500 0.5
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
+# Don't show Siri in the menu bar
+defaults write com.apple.siri "StatusMenuVisible" 0
+defaults write com.apple.systemuiserver "NSStatusItem Visible Siri" 0
+
 # Show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
+
+# Show Bluetooth in the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
+
+# Show volume in the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 0
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -249,6 +259,12 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Disable Finder sounds
 /usr/bin/defaults write com.apple.finder 'FinderSounds' -bool false
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# New Finder windows points to home
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
