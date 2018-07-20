@@ -1,8 +1,5 @@
 export PATH="$HOME/bin:$PATH"
 
-# add path for android sdk.
-# export PATH="$PATH:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_HOME/build-tools/25.0.3/"
-
 # nvm initialisation.
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
@@ -52,6 +49,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
 # export GRADLE_HOME=/usr/local/opt/gradle
 # export PATH=$PATH:~/.nexustools
+# export PATH="$PATH:$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$ANDROID_HOME/build-tools/25.0.3/"
 
 # fastlane stuff.
 # export PATH="$HOME/.fastlane/bin:$PATH"
