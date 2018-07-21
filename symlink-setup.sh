@@ -105,7 +105,7 @@ mkd() {
 
 print_error() {
     # Print output in red
-    printf "\e[0;31m  [✖] $1 $2\e[0m\n"
+    printf "\e[0;31m ❌ $1 $2\e[0m\n"
 }
 
 print_info() {
@@ -115,7 +115,7 @@ print_info() {
 
 print_question() {
     # Print output in yellow
-    printf "\e[0;33m  [?] $1\e[0m"
+    printf "\e[0;33m 🤔 $1\e[0m"
 }
 
 print_result() {
@@ -129,7 +129,7 @@ print_result() {
 
 print_success() {
     # Print output in green
-    printf "\e[0;32m  [✔] $1\e[0m\n"
+    printf "\e[0;32m ✅ $1\e[0m\n"
 }
 
 

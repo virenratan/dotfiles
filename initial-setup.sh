@@ -1,3 +1,6 @@
+# symlink it up!
+./symlink-setup.sh
+
 ### xcode command line tools.
 # https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
 
@@ -50,14 +53,9 @@ curl -L https://get.rvm.io | bash -s stable --ruby
 
 # https://github.com/creationix/nvm
 # nvm for node.
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
-### # change to bash 4 (installed by homebrew)
-BASHPATH=$(brew --prefix)/bin/bash
-#sudo echo $BASHPATH >> /etc/shells
-sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
-chsh -s $BASHPATH # will set for current user only.
-echo $BASH_VERSION # should be 4.x not the old 3.2.X
-
-# symlink it up!
-./symlink-setup.sh
+# change to bash 4
+sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
+chsh -s $(brew --prefix)/bin/bash
+shopt -s globstar
