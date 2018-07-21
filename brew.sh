@@ -34,6 +34,7 @@ brew install webkit2png
 brew install yarn
 brew install zopfli
 brew install zsh
+brew install zsh-completions
 
 # tidy up.
 brew cleanup
