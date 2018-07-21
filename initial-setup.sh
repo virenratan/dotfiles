@@ -51,10 +51,6 @@ sudo bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh
 # rvm for the rubiess.
 curl -L https://get.rvm.io | bash -s stable --ruby
 
-# https://github.com/creationix/nvm
-# nvm for node.
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-
 # change to bash 4
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash

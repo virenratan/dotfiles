@@ -12,14 +12,13 @@ installcask android-file-transfer
 installcask atom
 installcask bartender
 installcask dropbox
+installcask fantastical
 installcask firefox
 installcask google-chrome
-installcask imagealpha
-installcask imageoptim
-installcask istat-menus
 installcask iterm2
 installcask itsycal
 installcask kaleidoscope
+installcask micro-snitch
 installcask postman
 installcask sketch
 installcask slack
@@ -27,9 +26,7 @@ installcask spotify
 installcask the-unarchiver
 installcask tower
 installcask tripmode
-installcask virtualbox
 installcask visual-studio-code
-installcask vlc
 installcask zeplin
 
 # check for updates from the mac app store.

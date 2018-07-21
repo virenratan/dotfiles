@@ -5,8 +5,6 @@ brew update
 brew upgrade
 
 # add repositories.
-brew tap homebrew/dupes
-brew tap homebrew/versions
 brew tap phinze/homebrew-cask
 
 # update system level stuff.
@@ -22,16 +20,16 @@ brew install ack
 brew install git
 brew install imagemagick
 brew install librsvg
-brew install lua52
 brew install lynx
 brew install ngrep
 brew install node
+brew install nvm
 brew install pigz
 brew install rename
 brew install rhino
 brew install tree
 brew install webkit2png
-brew install yarn
+brew install yarn --without-node
 brew install zopfli
 brew install zsh
 brew install zsh-completions
