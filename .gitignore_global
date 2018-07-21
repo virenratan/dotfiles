@@ -1,0 +1,70 @@
+# git credential file.
+.gitconfig.local
+*.patch
+
+# general.
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# thumbnails.
+._*
+
+# files at root of a volume.
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# directories potentially created on remote AFP share.
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# node.
+.nvmrc
+node_modules
+npm-debug.log
+yarn-error.log
+
+# compiled python files.
+*.pyc
+
+# sublime text.
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+# Package control specific files
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+
+# vs code.
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# webstorm.
+.idea/
+
+# eslint.
+.eslintcache
