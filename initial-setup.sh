@@ -38,18 +38,15 @@ fi
 # for the c alias (syntax highlighted cat).
 sudo easy_install Pygments
 
+# https://rvm.io
+# rvm for the rubiess.
+curl -L https://get.rvm.io | bash -s stable --ruby
+
 ### homebrew install.
 ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
 ./brew.sh
 ./brew-cask.sh
 ### end of homebrew
-
-# https://github.com/jamiew/git-friendly
-sudo bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
-
-# https://rvm.io
-# rvm for the rubiess.
-curl -L https://get.rvm.io | bash -s stable --ruby
 
 # change to bash 4
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'

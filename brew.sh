@@ -4,9 +4,6 @@
 brew update
 brew upgrade
 
-# add repositories.
-brew tap phinze/homebrew-cask
-
 # update system level stuff.
 brew install coreutils
 brew install findutils
