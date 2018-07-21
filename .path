@@ -1,3 +1,16 @@
+# PATH like a bawss
+PATH=$PATH:/opt/local/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/bin
+PATH=$PATH:/opt/local/sbin
+PATH=$PATH:/usr/sbin
+PATH=$PATH:/sbin
+PATH=$PATH:/usr/local/sbin
+
+# ...
+export PATH
+
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/Applications/VirtualBox.app/Contents/MacOS/:$PATH"
