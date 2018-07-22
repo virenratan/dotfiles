@@ -7,6 +7,7 @@ installcask 1password
 installcask abstract
 installcask atom
 installcask bartender
+installcask craftmanager
 installcask dropbox
 installcask evernote
 installcask fantastical
@@ -26,6 +27,12 @@ installcask tripmode
 installcask visual-studio-code
 installcask vlc
 installcask zeplin
+
+# only for home computers.
+# installcask battle-net
+# installcask filebot
+# installcask nordvpn
+# installcask steam
 
 # check for updates from the mac app store.
 # echo "› sudo softwareupdate -i -a"
