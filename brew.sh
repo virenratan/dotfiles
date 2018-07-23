@@ -10,6 +10,7 @@ brew install findutils
 brew install bash
 brew install wget --enable-iri
 brew install homebrew/dupes/grep
+brew install homebrew/dupes/less
 brew install brew-cask
 
 # install general stuff.
