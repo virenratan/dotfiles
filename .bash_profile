@@ -49,7 +49,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # fastlane stuff.
 # export PATH="$HOME/.fastlane/bin:$PATH"
-# export PATH="/usr/local/bin:$PATH"
 # export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 
 # nvm stuff..
