@@ -15,3 +15,6 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/Applications/VirtualBox.app/Contents/MacOS/:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
