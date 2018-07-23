@@ -51,6 +51,7 @@ ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/inst
 # nvm node install.
 nvm install stable
 nvm use stable
+nvm alias default node
 
 # change to bash 4
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
