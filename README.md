@@ -4,6 +4,10 @@
 
 When running on a brand new machine:
 
+[Install dropbox](https://www.dropbox.com/install) and sync ./.ssh/config and ./.extra
+
+[Generate an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your Github account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
 ```bash
 git clone https://github.com/virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
 ```

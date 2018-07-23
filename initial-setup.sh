@@ -1,6 +1,3 @@
-# symlink it up!
-./symlink-setup.sh
-
 ### xcode command line tools.
 # https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
 
@@ -53,9 +50,12 @@ nvm install stable
 nvm use stable
 nvm alias default node
 
+# symlink it up!
+./symlink-setup.sh
+
 # change to bash 4
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash
-shopt -s globstar
+# shopt -s globstar
 
 # chsh -s /bin/zsh
