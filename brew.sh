@@ -9,7 +9,7 @@ brew install coreutils
 brew install findutils
 brew install bash
 brew install wget --enable-iri
-brew install homebrew/dupes/grep
+brew install grep
 brew install brew-cask
 
 # install general stuff.
