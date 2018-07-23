@@ -144,6 +144,31 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Trackpad: enable three finger drag
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
+
+# Trackpad: sets defaults for trackpad Two Finger Swipe gestures
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadTwoFingerFromRightEdgeSwipeGesture -int 1
+
+# Trackpad: sets defaults for trackpad three finger swipe gestures
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerHorizSwipeGesture -int 1
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerHorizGesture -boolean true
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerVertSwipeGesture -int 1
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerVertGesture -boolean true
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerGesture -int 1
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerDrag -boolean true
+
+# Trackpad: sets defaults for trackpad three tap gesture
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -int 1
+
+# Trackpad: sets defaults for trackpad four finger swipe gestures
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerVertSwipeGesture -int 1
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerVertGesture -boolean true
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerHorizSwipeGesture -int 1
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerHorizGesture -boolean true
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerDrag -boolean true
+#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerPinchSwipeGesture -int 1
+
 # Trackpad: map bottom right corner to right-click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
