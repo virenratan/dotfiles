@@ -48,6 +48,7 @@ ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/inst
 # nvm node install.
 nvm install stable
 nvm use stable
+nvm alias default node
 
 # symlink it up!
 ./symlink-setup.sh
