@@ -1,9 +1,5 @@
 export PATH="$HOME/bin:$PATH"
 
-# nvm initialisation.
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # add ssh passphrase to keychain on reboot.
 ssh-add -K ~/.ssh/id_rsa 2> /dev/null
 
@@ -56,8 +52,17 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # export PATH="/usr/local/bin:$PATH"
 # export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 
-# node stuff.
+# nvm stuff..
 export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+
+if [[ $(brew ls --versions nvm) ]]
+then
+    export NVM_DIR="$HOME/.nvm"
+    . "$(brew --prefix nvm)/nvm.sh"
+fi
+
+# ruby stuff.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # load rvm into a shell session *as a function*
 
 # ec2 cli stuff.

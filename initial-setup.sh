@@ -48,6 +48,10 @@ ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/inst
 ./brew-cask.sh
 ### end of homebrew
 
+# nvm node install.
+nvm install stable
+nvm use stable
+
 # change to bash 4
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash
