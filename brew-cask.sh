@@ -13,6 +13,7 @@ installcask evernote
 installcask fantastical
 installcask firefox
 installcask google-chrome
+installcask istat-menus
 installcask iterm2
 installcask itsycal
 installcask kaleidoscope
