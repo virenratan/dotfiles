@@ -35,6 +35,8 @@ fi
 # for the c alias (syntax highlighted cat).
 sudo easy_install Pygments
 
+sudo easy_install pip
+
 # https://rvm.io
 # rvm for the rubiess.
 curl -L https://get.rvm.io | bash -s stable --ruby
@@ -49,6 +51,8 @@ ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/inst
 nvm install stable
 nvm use stable
 nvm alias default node
+
+yarn global add eslint
 
 # symlink it up!
 ./symlink-setup.sh
