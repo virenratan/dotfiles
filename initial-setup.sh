@@ -1,6 +1,5 @@
 ### xcode command line tools.
 # https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
-
 if ! xcode-select --print-path &> /dev/null; then
   # prompt user to install the xcode command line tools.
   xcode-select --install &> /dev/null
@@ -34,10 +33,8 @@ fi
 
 # for the c alias (syntax highlighted cat).
 sudo easy_install Pygments
-
 sudo easy_install pip
 
-# https://rvm.io
 # rvm for the rubiess.
 curl -L https://get.rvm.io | bash -s stable --ruby
 
@@ -45,14 +42,13 @@ curl -L https://get.rvm.io | bash -s stable --ruby
 ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
 ./brew.sh
 ./brew-cask.sh
-### end of homebrew
 
 # nvm node install.
 nvm install stable
 nvm use stable
 nvm alias default node
 
-yarn global add eslint
+npm i -g eslint
 
 # symlink it up!
 ./symlink-setup.sh
@@ -60,6 +56,6 @@ yarn global add eslint
 # change to bash 4
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash
-# shopt -s globstar
+shopt -s globstar
 
 # chsh -s /bin/zsh
