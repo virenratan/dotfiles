@@ -36,5 +36,5 @@ installcask zeplin
 # installcask steam
 
 # check for updates from the mac app store.
-# echo "› sudo softwareupdate -i -a"
-# sudo softwareupdate -i -a
+echo "› sudo softwareupdate -i -a"
+sudo softwareupdate -i -a

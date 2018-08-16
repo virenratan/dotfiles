@@ -38,10 +38,13 @@ sudo easy_install pip
 # rvm for the rubiess.
 curl -L https://get.rvm.io | bash -s stable --ruby
 
-### homebrew install.
+# homebrew install.
 ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
 ./brew.sh
 ./brew-cask.sh
+
+# setup dock.
+./dock-setup.sh
 
 # nvm node install.
 nvm install stable
