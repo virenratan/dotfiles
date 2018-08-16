@@ -146,8 +146,8 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: enable "tap-and-a-half" to drag.
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1
-defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool true
+defaults write com.apple.AppleMultitouchTrackpad Dragging -bool true
 
 # Trackpad: enable 3-finger drag. (Moving with 3 fingers in any window "chrome" moves the window.)
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
@@ -158,23 +158,23 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool t
 #defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadTwoFingerFromRightEdgeSwipeGesture -int 1
 
 # Trackpad: sets defaults for trackpad three finger swipe gestures
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerHorizSwipeGesture -int 1
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerHorizGesture -boolean true
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerVertSwipeGesture -int 1
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerVertGesture -boolean true
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerGesture -int 1
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerDrag -boolean true
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerHorizSwipeGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerHorizGesture -boolean true
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerVertSwipeGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerVertGesture -boolean true
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerDrag -boolean true
 
 # Trackpad: sets defaults for trackpad three tap gesture
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -int 1
 
 # Trackpad: sets defaults for trackpad four finger swipe gestures
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerVertSwipeGesture -int 1
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerVertGesture -boolean true
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerHorizSwipeGesture -int 1
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerHorizGesture -boolean true
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerDrag -boolean true
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerPinchSwipeGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerVertSwipeGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerVertGesture -boolean true
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerHorizSwipeGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerHorizGesture -boolean true
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerDrag -boolean true
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadFourFingerPinchSwipeGesture -int 1
 
 # Trackpad: map bottom right corner to right-click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
@@ -194,7 +194,8 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.AppleMultitouchTrackpad HIDScrollZoomModifierMask -int 262144
 
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
