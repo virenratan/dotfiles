@@ -55,6 +55,10 @@ npm i -g eslint
 
 # symlink it up!
 ./symlink-setup.sh
+./dropbox.sh
+
+# macos defaults
+./macos.sh
 
 # change to bash 4
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
