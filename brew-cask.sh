@@ -9,7 +9,6 @@ installcask atom
 installcask bartender
 installcask craftmanager
 installcask dropbox
-installcask evernote
 installcask fantastical
 installcask firefox
 installcask google-chrome
@@ -31,6 +30,7 @@ installcask zeplin
 
 # only for home computers.
 # installcask battle-net
+# installcask evernote
 # installcask filebot
 # installcask nordvpn
 # installcask steam

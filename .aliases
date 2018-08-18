@@ -17,7 +17,6 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias v="vim"
-alias m="mate ."
 alias s="subl ."
 alias sb="source ~/.bash_profile"
 alias o="open"
@@ -49,9 +48,9 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias killjobs="sudo kill \`jobs -p\`"
 
 function clone() {
-    git clone --depth=1 $1
-    cd $(basename ${1%.*})
-    yarn install
+  git clone --depth=1 $1
+  cd $(basename ${1%.*})
+  yarn install
 }
 alias push="git push"
 
