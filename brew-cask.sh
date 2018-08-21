@@ -10,6 +10,7 @@ installcask bartender
 installcask craftmanager
 installcask dropbox
 installcask fantastical
+installcask figma
 installcask firefox
 installcask google-chrome
 installcask istat-menus
