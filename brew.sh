@@ -19,6 +19,7 @@ brew install git
 brew install imagemagick
 brew install librsvg
 brew install lynx
+brew install mas
 brew install ngrep
 brew install node
 brew install nvm
