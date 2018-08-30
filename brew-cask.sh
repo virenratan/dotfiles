@@ -31,6 +31,7 @@ installcask zeplin
 mas install 587512244  # kaleidoscope
 mas install 441258766  # magnet
 mas install 1084713122 # markoff
+mas install 615956269  # pdf reader
 mas install 557168941  # tweetbot
 
 # only for home computers.
