@@ -12,6 +12,7 @@ installcask dropbox
 installcask figma
 installcask firefox
 installcask google-chrome
+installcask hyper
 installcask istat-menus
 installcask iterm2
 installcask itsycal
