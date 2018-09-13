@@ -123,6 +123,12 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+    visor: {
+      hotkey: 'CommandOrControl+Shift+Z',
+      position: 'left',
+      width: 160,
+      height: '100%',
+    },
   },
 
   // a list of plugins to fetch and install from npm
@@ -142,6 +148,7 @@ module.exports = {
     'hyperterm-1password',
     'hyperterm-dibdabs',
     'hyperterm-tabs',
+    'hyperterm-visor',
   ],
 
   // in development, you can create a directory under
