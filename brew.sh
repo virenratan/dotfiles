@@ -12,6 +12,8 @@ brew install wget --enable-iri
 brew install grep
 brew install less
 brew install brew-cask
+brew install curl --with-nghttp2
+brew link curl --force
 
 # install general stuff.
 brew install ack
