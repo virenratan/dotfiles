@@ -121,13 +121,27 @@ module.exports = {
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
-
-    // for advanced config flags please refer to https://hyper.is/#cfg
-    visor: {
-      hotkey: 'CommandOrControl+Shift+Z',
+    overlay: {
+      alwaysOnTop: true,
+      animate: true,
+      hasShadow: false,
+      hideDock: false,
+      hideOnBlur: true,
+      hotkeys: {
+        open: ['CommandOrControl+Shift+Z'], // On MacOS hotkey is default to Option + Space!
+        close: ['Shift+Escape'], // On MacOS hotkey is default to Option + Escape!
+      },
       position: 'left',
-      width: 160,
-      height: '100%',
+      primaryDisplay: false,
+      resizable: true,
+      size: {
+        width: 0.6,
+        height: 1
+      },
+      startAlone: true,
+      startup: true,
+      tray: false,
+      unique: true
     },
   },
 
@@ -138,17 +152,14 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hpm-cli',
     'hyper-dark-macos',
-    'hyper-quit',
-    'hyper-quit',
+    'hyper-overlay',
     'hyper-tab-icons',
     'hyperline',
     'hyperlinks',
     'hyperterm-1password',
     'hyperterm-dibdabs',
     'hyperterm-tabs',
-    'hyperterm-visor',
   ],
 
   // in development, you can create a directory under
