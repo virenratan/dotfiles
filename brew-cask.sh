@@ -7,6 +7,7 @@ installcask 1password
 installcask abstract
 installcask atom
 installcask bartender
+installcask cakebrew
 installcask craftmanager
 installcask dropbox
 installcask figma

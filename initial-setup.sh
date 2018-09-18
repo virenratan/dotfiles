@@ -55,6 +55,7 @@ npm i -g eslint
 
 # symlink it up!
 ./symlink-setup.sh
+source ~/.bash_profile
 ./dropbox.sh
 
 # dns privacy.
