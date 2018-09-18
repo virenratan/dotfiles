@@ -28,6 +28,7 @@ brew install nvm
 brew install pigz
 brew install rename
 brew install rhino
+brew install stubby
 brew install tree
 brew install webkit2png
 brew install yarn --without-node

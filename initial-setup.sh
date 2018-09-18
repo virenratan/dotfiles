@@ -57,6 +57,10 @@ npm i -g eslint
 ./symlink-setup.sh
 ./dropbox.sh
 
+# dns privacy.
+sudo brew services start stubby
+dnssafe
+
 # macos defaults
 ./macos.sh
 

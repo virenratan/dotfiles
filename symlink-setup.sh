@@ -180,6 +180,9 @@ main() {
 
     done
 
+    local stubbyConfigSource="$(pwd)/stubby.yml"
+    local stubbyConfigTarget="/usr/local/etc/stubby/stubby.yml"
+    execute "ln -fs $stubbyConfigSource $stubbyConfigTarget" "$stubbyConfigTarget → $stubbyConfigSource"
 }
 
 main
