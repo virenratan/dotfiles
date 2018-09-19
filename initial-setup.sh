@@ -37,6 +37,7 @@ sudo easy_install pip
 
 # rvm for the rubiess.
 curl -L https://get.rvm.io | bash -s stable --ruby
+rvm use 2.5.1
 
 # homebrew install.
 ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
@@ -55,8 +56,8 @@ npm i -g eslint
 
 # symlink it up!
 ./symlink-setup.sh
-source ~/.bash_profile
 ./dropbox.sh
+source ~/.bash_profile
 
 # dns privacy.
 sudo brew services start stubby
