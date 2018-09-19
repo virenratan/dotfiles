@@ -29,6 +29,11 @@ installcask visual-studio-code
 installcask vlc
 installcask zeplin
 
+# install some fonts.
+installcask font-droid-sans-mono-for-powerline
+installcask font-fira-code
+installcask font-open-sans
+
 # install apps from mac app store.
 mas install 587512244  # kaleidoscope
 mas install 441258766  # magnet

@@ -4,30 +4,28 @@
 brew update
 brew upgrade
 
+# add taps.
+brew tap homebrew/cask-fonts
+
 # update system level stuff.
 brew install coreutils
 brew install findutils
 brew install bash
-brew install wget --enable-iri
-brew install grep
-brew install less
-brew install brew-cask
 brew install curl --with-nghttp2
 brew link curl --force
+brew install grep
+brew install less
+brew install wget
 
 # install general stuff.
-brew install ack
 brew install git
 brew install imagemagick
 brew install librsvg
-brew install lynx
 brew install mas
 brew install ngrep
 brew install node
 brew install nvm
-brew install pigz
 brew install rename
-brew install rhino
 brew install stubby
 brew install tree
 brew install webkit2png
