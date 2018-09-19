@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# update.
-brew update
 brew upgrade
 
 # add taps.
