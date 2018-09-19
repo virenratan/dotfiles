@@ -16,6 +16,7 @@ brew install less
 brew install wget
 
 # install general stuff.
+brew install dnscrypt-proxy
 brew install git
 brew install imagemagick
 brew install librsvg

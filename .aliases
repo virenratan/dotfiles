@@ -25,8 +25,8 @@ alias q="exit"
 alias z="zsh"
 
 # dns stuff.
-alias dnssafe="sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh"
-alias dnsunsafe="sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh -r"
+alias shieldsup="sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh"
+alias shieldsdown="sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh -r"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
