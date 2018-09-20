@@ -66,7 +66,7 @@ source ~/.bash_profile
 # dns privacy.
 # sudo brew services start stubby
 sudo brew services start dnscrypt-proxy
-dnssafe
+shieldsup
 
 # macos defaults
 ./macos.sh
