@@ -38,7 +38,6 @@ mas install 557168941  # tweetbot
 
 # only for home computers.
 # brew cask install battle-net
-# brew cask install evernote
 # brew cask install filebot
 # brew cask install nordvpn
 # brew cask install steam
