@@ -71,4 +71,4 @@ fi
 # export EC2_URL=https://eu-west-1.ec2.amazonaws.com
 # export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
 # export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
-export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/curl/bin"
