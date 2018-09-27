@@ -56,7 +56,9 @@ nvm install stable
 nvm use stable
 nvm alias default node
 
-npm i -g eslint
+yarn global add diff-so-fancy
+yarn global add eslint
+yarn global add snyk
 
 # symlink it up!
 ./symlink-setup.sh
