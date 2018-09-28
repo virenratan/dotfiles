@@ -35,6 +35,7 @@ mas install 441258766  # magnet
 mas install 1084713122 # markoff
 mas install 615956269  # pdf reader
 mas install 557168941  # tweetbot
+mas install 1385985095 # uBlock
 
 # only for home computers.
 # brew cask install battle-net
