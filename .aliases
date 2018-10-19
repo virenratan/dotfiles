@@ -7,7 +7,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias a="atom ."
+alias a="code ."
 alias apache="sudo /usr/sbin/apachectl restart"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"

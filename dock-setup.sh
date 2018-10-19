@@ -3,8 +3,7 @@ defaults write com.apple.dock persistent-apps -array
 
 # manually add app icons to dock in preferred order.
 dockutil --add  '/Applications/Google Chrome.app' --replacing 'Google Chrome'
-dockutil --add  '/Applications/Atom.app' --replacing 'Atom' --after 'Google Chrome'
-dockutil --add  '/Applications/Visual Studio Code.app' --replacing 'Visual Studio Code' --after 'Atom'
+dockutil --add  '/Applications/Visual Studio Code.app' --replacing 'Visual Studio Code' --after 'Google Chrome'
 dockutil --add  '/Applications/Tower.app' --replacing 'Tower' --after 'Visual Studio Code'
 dockutil --add  '/Applications/iTerm.app' --replacing 'iTerm' --after 'Tower'
 dockutil --add  '/Applications/Abstract.app' --replacing 'Abstract' --after 'iTerm'
