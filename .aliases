@@ -7,22 +7,20 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias a="atom ."
-alias apache="sudo /usr/sbin/apachectl restart"
+alias c="code ."
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
+alias hosts="sudo nano /etc/hosts"
 alias j="jobs"
 alias v="vim"
-alias s="subl ."
 alias sb="source ~/.bash_profile"
 alias o="open"
 alias oo="open ."
 alias q="exit"
-alias z="zsh"
 
 # dns stuff.
 alias shieldsup="sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh"
@@ -82,7 +80,7 @@ alias week='date +%V'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, installed global npm packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update -g; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update -g;nvm install lts/*; sudo gem update'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
