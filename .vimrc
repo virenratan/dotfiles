@@ -36,6 +36,8 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
+g:onedark_hide_endofbuffer 1
+colorscheme onedark
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
@@ -94,3 +96,12 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'joshdick/onedark.vim'
+Plug 'wakatime/vim-wakatime'
+
+" Initialize plugin system
+call plug#end()
