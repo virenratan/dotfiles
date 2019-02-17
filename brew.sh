@@ -19,6 +19,8 @@ brew install wget
 # install general stuff.
 brew install dnscrypt-proxy
 brew install git
+brew install git-quick-stats
+brew install git-secrets
 brew install gnupg
 brew install imagemagick
 brew install librsvg
