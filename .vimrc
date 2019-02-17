@@ -36,7 +36,10 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-g:onedark_hide_endofbuffer 1
+g:onedark_hide_endofbuffer = 1
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
 colorscheme onedark
 " Highlight current line
 set cursorline
@@ -97,11 +100,4 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
-" Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
-
-Plug 'joshdick/onedark.vim'
-Plug 'wakatime/vim-wakatime'
-
-" Initialize plugin system
-call plug#end()
+so ~/.vim/plugins.vim
