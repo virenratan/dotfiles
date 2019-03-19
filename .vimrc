@@ -36,6 +36,11 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
+g:onedark_hide_endofbuffer = 1
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
+colorscheme onedark
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
@@ -94,3 +99,5 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+so ~/.vim/plugins.vim
