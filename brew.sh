@@ -13,6 +13,7 @@ brew install bash
 brew install curl --with-nghttp2
 brew link curl --force
 brew install diff-so-fancy
+brew install fish
 brew install grep
 brew install less
 brew install wget
@@ -36,8 +37,6 @@ brew install tree
 brew install webkit2png
 brew install yarn --without-node
 brew install zopfli
-brew install zsh
-brew install zsh-completions
 
 # tidy up.
 brew cleanup

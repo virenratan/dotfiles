@@ -75,9 +75,12 @@ shieldsup
 # macos defaults
 ./macos.sh
 
-# change to bash 4
+# change to bash 4 for backup shell.
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash
 shopt -s globstar
 
-# chsh -s /bin/zsh
+# use fish for main shell.
+chsh -s $(brew --prefix)/bin/fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+fisher add hauleth/agnoster
