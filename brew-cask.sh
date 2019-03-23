@@ -28,6 +28,7 @@ brew cask install zoomus
 # install some fonts.
 brew cask install font-droid-sans-mono-for-powerline
 brew cask install font-fira-code
+brew cask install font-meslo-nerd-font
 brew cask install font-open-sans
 
 # install apps from mac app store.

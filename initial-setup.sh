@@ -60,6 +60,8 @@ yarn global add diff-so-fancy
 yarn global add eslint
 yarn global add snyk
 
+sudo pip install wakatime
+
 # symlink it up!
 ./symlink-setup.sh
 ./dropbox.sh

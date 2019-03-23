@@ -4,6 +4,7 @@ brew upgrade
 
 # add taps.
 brew tap homebrew/cask-fonts
+brew tap caskroom/fonts
 
 # update system level stuff.
 brew install coreutils
