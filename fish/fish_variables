@@ -11,9 +11,9 @@ SETUVAR AGNOSTER_SEGMENT_RSEPARATOR:\ue0b2\x1e\ue0b3
 SETUVAR AGNOSTER_SEGMENT_SEPARATOR:\ue0b0\x1e\x20\ue0b1\x20
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/Users/virratan/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/Users/virratan/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:/Users/virratan
+SETUVAR Z_DATA:~/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:~/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:~
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
