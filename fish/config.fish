@@ -103,6 +103,5 @@ nvm use default --silent
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [ -f ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish ]; and . ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish
 
-# rvm default
-
 set fish_greeting
+rvm default

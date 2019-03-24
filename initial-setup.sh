@@ -38,6 +38,7 @@ sudo easy_install pip
 # rvm for the rubiess.
 curl -L https://get.rvm.io | bash -s stable --ruby
 rvm use 2.5.1
+curl -L --create-dirs -o ~/.config/fish/functions/rvm.fish https://raw.github.com/lunks/fish-nuggets/master/functions/rvm.fish
 
 # homebrew install.
 ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
