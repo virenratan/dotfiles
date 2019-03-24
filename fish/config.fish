@@ -104,4 +104,4 @@ nvm use default --silent
 [ -f ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish ]; and . ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish
 
 set fish_greeting
-rvm default
+# rvm default
