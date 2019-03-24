@@ -74,6 +74,27 @@ set -gx LESS_TERMCAP_so \e'[38;5;246m'    # begin standout-mode - info box
 set -gx LESS_TERMCAP_ue \e'[0m'           # end underline
 set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
+function __check_nvm --on-variable PWD --description 'Do nvm stuff'
+  if test -f .nvmrc
+    set node_version (nvm version)
+    set nvmrc_node_version (nvm version (cat .nvmrc))
+
+    if [ $nvmrc_node_version = "N/A" ]
+      nvm install
+    else if [ $nvmrc_node_version != $node_version ]
+      nvm use
+    end
+  end
+end
+
+__check_nvm
+
+function nvm
+  bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
 
 # this currently messes with newlines in my prompt. lets debug it later.
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish

@@ -84,5 +84,3 @@ shopt -s globstar
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fisher add hauleth/agnoster
-agnoster theme powerline
