@@ -190,3 +190,5 @@ main() {
 }
 
 main
+
+ln -s ~/Projects/dotfiles/fish/ ~/.config/fish
