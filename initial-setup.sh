@@ -81,6 +81,8 @@ chsh -s $(brew --prefix)/bin/bash
 shopt -s globstar
 
 # use fish for main shell.
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fisher add hauleth/agnoster
+agnoster theme powerline

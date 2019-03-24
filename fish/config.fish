@@ -1,38 +1,26 @@
 set default_user "viren"
 set default_machine "Gemini"
 
-source ~/.config/fish/path.fish
 source ~/.config/fish/aliases.fish
-source ~/.config/fish/chpwd.fish
-source ~/.config/fish/functions.fish
-source ~/.config/fish/chromium.fish
-source ~/.config/fish/conf.d/scmpuff.fish
 
 # for things not checked into git..
 if test -e "$HOME/.extra.fish";
 	source ~/.extra.fish
 end
 
-# THEME PURE #
-set fish_function_path $HOME/.config/fish/functions/pure/functions/ $fish_function_path
-set fish_function_path $HOME/.config/fish/functions/pure/ $fish_function_path
-source $HOME/.config/fish/functions/pure/conf.d/pure.fish
-
-export GOPATH=$HOME/.go/
-
 # Completions
-function make_completion --argument-names alias command
-    echo "
-    function __alias_completion_$alias
-        set -l cmd (commandline -o)
-        set -e cmd[1]
-        complete -C\"$command \$cmd\"
-    end
-    " | .
-    complete -c $alias -a "(__alias_completion_$alias)"
-end
+# function make_completion --argument-names alias command
+#     echo "
+#     function __alias_completion_$alias
+#         set -l cmd (commandline -o)
+#         set -e cmd[1]
+#         complete -C\"$command \$cmd\"
+#     end
+#     " | .
+#     complete -c $alias -a "(__alias_completion_$alias)"
+# end
 
-make_completion g 'git'
+# make_completion g 'git'
 
 
 # Readline colors
@@ -110,3 +98,5 @@ set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 [ -f ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish ]; and . ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish
 
 # rvm default
+
+set fish_greeting
