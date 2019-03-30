@@ -19,6 +19,7 @@ brew cask install slack
 brew cask install spotify
 brew cask install the-unarchiver
 brew cask install tower
+brew cask install transmission
 brew cask install tripmode
 brew cask install visual-studio-code
 brew cask install vlc
