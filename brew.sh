@@ -7,12 +7,13 @@ brew tap homebrew/cask-fonts
 brew tap caskroom/fonts
 
 # update system level stuff.
-brew install coreutils
-brew install findutils
+brew install autojump
 brew install bash
+brew install coreutils
 brew install curl --with-nghttp2
 brew link curl --force
 brew install diff-so-fancy
+brew install findutils
 brew install fish
 brew install grep
 brew install less
@@ -33,6 +34,7 @@ brew install nvm
 brew install rename
 brew install smimesign
 brew install stubby
+brew install terminal-notifier
 brew install tree
 brew install webkit2png
 brew install yarn --without-node
