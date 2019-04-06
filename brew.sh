@@ -36,6 +36,7 @@ brew install smimesign
 brew install stubby
 brew install terminal-notifier
 brew install tree
+brew install watchman
 brew install webkit2png
 brew install yarn --without-node
 brew install zopfli

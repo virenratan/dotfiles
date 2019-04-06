@@ -12,6 +12,7 @@ brew cask install google-chrome
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install itsycal
+brew cask install ksdiff
 brew cask install micro-snitch
 brew cask install postman
 brew cask install sketch
