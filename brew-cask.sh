@@ -40,9 +40,11 @@ mas install 1084713122 # markoff
 mas install 557168941  # tweetbot
 
 # only for home computers.
+# brew cask install avast-security
 # brew cask install battle-net
 # brew cask install filebot
 # brew cask install nordvpn
+# brew cask install plex-media-server
 # brew cask install steam
 # mas install 504544917 # clear
 # mas install 975937182 # fantastical

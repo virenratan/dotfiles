@@ -5,6 +5,7 @@ brew upgrade
 # add taps.
 brew tap homebrew/cask-fonts
 brew tap caskroom/fonts
+brew tap domt4/autoupdate
 
 # update system level stuff.
 brew install autojump
@@ -34,7 +35,6 @@ brew install nvm
 brew install rename
 brew install smimesign
 brew install stubby
-brew install terminal-notifier
 brew install tree
 brew install watchman
 brew install webkit2png
