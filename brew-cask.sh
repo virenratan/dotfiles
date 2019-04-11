@@ -33,6 +33,9 @@ brew cask install font-fira-code
 brew cask install font-meslo-nerd-font
 brew cask install font-open-sans
 
+# quicklook,
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook suspicious-package quicklookase qlvideo qlImageSize
+
 # install apps from mac app store.
 mas install 587512244  # kaleidoscope
 mas install 441258766  # magnet
