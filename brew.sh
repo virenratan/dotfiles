@@ -17,12 +17,14 @@ brew install diff-so-fancy
 brew install findutils
 brew install fish
 brew install git
+brew install gitmoji
 brew install grep
 brew install htop
 brew install less
 brew install ngrep
 brew install nmap
 brew install node
+brew install thefuck
 brew install tree
 brew install wget
 
