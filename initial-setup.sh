@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ### xcode command line tools.
 # https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
 if ! xcode-select --print-path &> /dev/null; then

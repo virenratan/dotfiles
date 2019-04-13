@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # install apps.
 brew cask install 1password
 brew cask install abstract
