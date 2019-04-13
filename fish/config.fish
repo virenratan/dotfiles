@@ -1,4 +1,4 @@
-set default_user "viren"
+set default_user "$USER"
 set default_machine "Gemini"
 
 source ~/.config/fish/aliases.fish
