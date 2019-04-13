@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ### xcode command line tools.
 # https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
 if ! xcode-select --print-path &> /dev/null; then
@@ -35,11 +37,6 @@ fi
 sudo easy_install Pygments
 sudo easy_install pip
 
-# rvm for the rubiess.
-curl -L https://get.rvm.io | bash -s stable --ruby
-rvm use 2.5.1
-curl -L --create-dirs -o ~/.config/fish/functions/rvm.fish https://raw.github.com/lunks/fish-nuggets/master/functions/rvm.fish
-
 # homebrew install.
 ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
 ./brew.sh
@@ -57,11 +54,17 @@ nvm install stable
 nvm use stable
 nvm alias default node
 
+# rbenv ruby install.
+rbenv install 2.5.1
+rbenv global 2.5.1
+
 yarn global add diff-so-fancy
 yarn global add eslint
 yarn global add snyk
 
-sudo pip install wakatime
+# python3 stuff.
+sudo pip3 install wakatime
+pip3 install virtualfish
 
 # symlink it up!
 ./symlink-setup.sh
@@ -76,7 +79,7 @@ shieldsup
 # macos defaults
 ./macos.sh
 
-# change to bash 4 for backup shell.
+# switch to bash 4 for backup shell.
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash
 shopt -s globstar

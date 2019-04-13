@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # wipe all app icons from the dock.
 defaults write com.apple.dock persistent-apps -array
 

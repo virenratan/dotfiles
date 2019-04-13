@@ -1,4 +1,4 @@
-set default_user "viren"
+set default_user "$USER"
 set default_machine "Gemini"
 
 source ~/.config/fish/aliases.fish
@@ -102,6 +102,8 @@ nvm use default --silent
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [ -f ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish ]; and . ~/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish
+
+eval (python3 -m virtualfish)
 
 set fish_greeting
 # rvm default
