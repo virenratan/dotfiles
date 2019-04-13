@@ -62,6 +62,7 @@ yarn global add eslint
 yarn global add snyk
 
 sudo pip install wakatime
+pip3 install virtualfish
 
 # symlink it up!
 ./symlink-setup.sh
