@@ -24,6 +24,7 @@ brew install less
 brew install ngrep
 brew install nmap
 brew install node
+brew install python
 brew install rbenv
 brew install thefuck
 brew install tree
