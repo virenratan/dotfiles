@@ -63,7 +63,7 @@ yarn global add eslint
 yarn global add snyk
 
 # python3 stuff.
-sudo pip3 install wakatime
+pip3 install wakatime
 pip3 install virtualfish
 
 # symlink it up!

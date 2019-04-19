@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-brew upgrade
-
 # add taps.
 brew tap homebrew/cask-fonts
 brew tap caskroom/fonts
@@ -28,6 +26,7 @@ brew install python
 brew install rbenv
 brew install thefuck
 brew install tree
+brew install vim
 brew install wget
 
 # install general apps and stuff.

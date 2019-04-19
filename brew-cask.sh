@@ -11,6 +11,7 @@ brew cask install dropbox
 brew cask install figma
 brew cask install firefox
 brew cask install google-chrome
+brew cask install google-drive-file-stream
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install itsycal
@@ -51,6 +52,7 @@ mas install 557168941  # tweetbot
 # brew cask install nordvpn
 # brew cask install plex-media-server
 # brew cask install steam
+# brew cask install suspicious-package
 # mas install 504544917 # clear
 # mas install 975937182 # fantastical
 
