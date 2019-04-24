@@ -2,7 +2,6 @@
 
 # add taps.
 brew tap homebrew/cask-fonts
-brew tap caskroom/fonts
 brew tap domt4/autoupdate
 
 # update system level stuff.
@@ -24,6 +23,7 @@ brew install nmap
 brew install node
 brew install python
 brew install rbenv
+brew install speedtest-cli
 brew install thefuck
 brew install tree
 brew install vim

@@ -42,7 +42,7 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-g:onedark_hide_endofbuffer = 1
+" g:onedark_hide_endofbuffer = 1
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }

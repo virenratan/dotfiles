@@ -5,7 +5,6 @@ brew cask install 1password
 brew cask install abstract
 brew cask install atom
 brew cask install bartender
-brew cask install cakebrew
 brew cask install craftmanager
 brew cask install dropbox
 brew cask install figma
@@ -33,11 +32,13 @@ brew cask install zoomus
 # install some fonts.
 brew cask install font-droid-sans-mono-for-powerline
 brew cask install font-fira-code
+brew cask install font-langdon
 brew cask install font-meslo-nerd-font
+brew cask install font-museo
 brew cask install font-open-sans
 
 # quicklook,
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook suspicious-package quicklookase qlvideo qlImageSize
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook quicklookase qlvideo qlImageSize
 
 # install apps from mac app store.
 mas install 587512244  # kaleidoscope
