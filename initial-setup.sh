@@ -38,7 +38,10 @@ sudo easy_install Pygments
 sudo easy_install pip
 
 # homebrew install.
-ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+if ! which brew > /dev/null; then
+  ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+fi;
+brew update
 brew bundle
 
 # setup dock.

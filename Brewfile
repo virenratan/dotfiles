@@ -1,4 +1,4 @@
-cask_args appdir: '~/Applications'
+# cask_args appdir: '~/Applications'
 
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
@@ -7,6 +7,7 @@ tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'domt4/autoupdate'
 tap 'phinze/cask'
+# tap' mas-cli/tap'
 
 brew 'ack'
 brew 'autoconf'
@@ -71,11 +72,11 @@ cask 'atom'
 cask 'bartender'
 cask 'diffmerge'
 cask 'dropbox'
-# cask 'fastlane'
 cask 'figma'
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-drive-file-stream'
+cask 'iina'
 cask 'istat-menus'
 cask 'iterm2'
 cask 'itsycal'
@@ -90,9 +91,16 @@ cask 'the-unarchiver'
 cask 'tower'
 cask 'transmission'
 cask 'visual-studio-code'
-cask 'vlc'
 cask 'zeplin'
 cask 'zoomus'
+
+# software for home computers.
+# cask 'avast-security'
+# cask 'battle-net'
+# cask 'filebot'
+# cask 'nordvpn'
+# cask 'plex-media-server'
+# cask 'steam'
 
 # fonts.
 cask 'font-droid-sans-mono-for-powerline'
@@ -110,22 +118,13 @@ cask 'qlstephen'
 cask 'qlvideo'
 cask 'quicklook-json'
 cask 'quicklookase'
+cask 'suspicious-package'
 cask 'webpquicklook'
 
-# home computers.
-cask 'avast-security'
-cask 'battle-net'
-cask 'filebot'
-cask 'nordvpn'
-cask 'plex-media-server'
-cask 'steam'
-cask 'suspicious-package'
-
-mas 'Kaleidoscope', id: 587512244
-mas 'Magnet', id: 441258766
-mas 'Markoff', id: 1084713122
-mas 'Tweetbot', id: 557168941
-
-# home computers.
-mas 'Clear', id: 504544917
-mas 'Fantastical', id: 975937182
+# app store.
+# mas 'Clear', id: 504544917
+# mas 'Fantastical', id: 975937182
+# mas 'Kaleidoscope', id: 587512244
+# mas 'Magnet', id: 441258766
+# mas 'Markoff', id: 1084713122
+# mas 'Tweetbot', id: 557168941
