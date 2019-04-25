@@ -39,8 +39,7 @@ sudo easy_install pip
 
 # homebrew install.
 ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
-./brew.sh
-./brew-cask.sh
+brew bundle
 
 # setup dock.
 # dockutil - https://formulae.brew.sh/formula/dockutil

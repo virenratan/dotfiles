@@ -12,6 +12,7 @@
   cherrypick = cherry-pick
   cherry = cherry-pick
   cp = cherry-pick
+  fetch = git fetch --tags
 
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -29,8 +30,7 @@
   show = diff-so-fancy | less --tabs=4 -RFX
 
 [interactive]
-  # disabled until github.com/so-fancy/diff-so-fancy/pull/172 is resolved :(
-  # diffFilter = "diff-so-fancy"
+  diffFilter = "diff-so-fancy"
 
 # so much color
 [color]
@@ -108,8 +108,6 @@
     # show blocks of moved text of at least 20 alphanumeric characters differently than adds/deletes
     # https://blog.github.com/2018-04-05-git-217-released/
     colorMoved = zebra
-[remote "origin"]
-  fetch = +refs/heads/*:refs/remotes/origin/*
 [stash]
   showPatch = true
 [log]
