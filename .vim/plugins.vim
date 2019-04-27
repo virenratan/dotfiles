@@ -12,19 +12,32 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'christoomey/vim-run-interactive'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'fatih/vim-go'
+Plug 'janko-m/vim-test'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf'
 Plug 'mattn/emmet-vim'
-Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'pbrisbin/vim-mkdir'
 Plug 'prettier/prettier'
 Plug 'scrooloose/nerdtree'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'ternjs/tern_for_vim'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-Plug 'w0rp/ale'
+Plug 'vim-scripts/tComment'
 Plug 'wakatime/vim-wakatime'
+Plug 'w0rp/ale'
 
 " language support
 Plug 'elzr/vim-json'
@@ -32,6 +45,7 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'nikvdp/ejs-syntax'
+Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-jdaddy'
 Plug 'tweekmonster/braceless.vim'
@@ -55,7 +69,7 @@ let g:ycm_server_keep_logfiles = 1
 let g:javascript_plugin_jsdoc = 1
 
 """"""" othree/javascript-libraries-syntax.vim """""""
-let g:used_javascript_libs = 'underscore,jquery,react'
+let g:used_javascript_libs = 'underscore,react'
 
 """"""" scrooloose/nerdtree """""""
 let NERDTreeShowHidden = 1
