@@ -1,3 +1,9 @@
+[user]
+    name = Viren Ratan
+    email = viren@viren.com.au
+[github]
+    user = virenratan
+
 [alias]
   c = commit -am
   fpush = push --force
