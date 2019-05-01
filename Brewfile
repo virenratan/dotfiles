@@ -19,7 +19,7 @@ brew 'bash-completion'
 brew 'coreutils'
 brew 'curl'
 brew 'diff-so-fancy'
-brew 'dnscrypt-proxy', restart_service: true, link: false
+brew 'dnscrypt-proxy', restart_service: true
 brew 'dockutil'
 brew 'findutils'
 brew 'fish'
@@ -41,7 +41,6 @@ brew 'jupyter'
 brew 'libksba'
 brew 'librsvg'
 brew 'mas'
-brew 'maven'
 brew 'neovim'
 brew 'ngrep'
 brew 'nmap'
@@ -132,9 +131,9 @@ cask 'suspicious-package'
 cask 'webpquicklook'
 
 # app store.
-# mas 'Clear', id: 504544917
-# mas 'Fantastical', id: 975937182
-# mas 'Kaleidoscope', id: 587512244
-# mas 'Magnet', id: 441258766
-# mas 'Markoff', id: 1084713122
-# mas 'Tweetbot', id: 557168941
+mas 'Clear', id: 504544917
+mas 'Fantastical', id: 975937182
+mas 'Kaleidoscope', id: 587512244
+mas 'Magnet', id: 441258766
+mas 'Markoff', id: 1084713122
+mas 'Tweetbot', id: 557168941
