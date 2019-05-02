@@ -82,6 +82,13 @@ sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash
 shopt -s globstar
 
+# tmux setup.
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# neovim.
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # use fish for main shell.
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/fish

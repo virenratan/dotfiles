@@ -1,1 +1,0 @@
-../../../plugged/onedark.vim/autoload/lightline/colorscheme/onedark.vim
