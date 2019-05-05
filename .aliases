@@ -8,6 +8,7 @@ alias -- -="cd -"
 
 # Shortcuts
 alias c="code ."
+alias cat="bat"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"

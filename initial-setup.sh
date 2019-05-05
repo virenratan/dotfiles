@@ -33,10 +33,6 @@ if ! xcode-select --print-path &> /dev/null; then
 fi
 ### end of xcode.
 
-# for the c alias (syntax highlighted cat).
-sudo easy_install Pygments
-sudo easy_install pip
-
 # homebrew install.
 if ! which brew > /dev/null; then
   ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
@@ -52,17 +48,25 @@ nvm install stable
 nvm use stable
 nvm alias default node
 
-# rbenv ruby install.
-rbenv install 2.5.1
-rbenv global 2.5.1
-
 yarn global add diff-so-fancy
 yarn global add eslint
 yarn global add snyk
 
 # python3 stuff.
-pip3 install wakatime
-pip3 install virtualfish
+pip install --upgrade pip
+pip install --upgrade setuptools
+
+pip3 install --upgrade pip
+pip3 install --upgrade setuptools
+
+pip3 install --upgrade flexget
+pip3 install --upgrade transmissionrpc
+pip3 install --upgrade virtualfish
+pip3 install --upgrade wakatime
+
+# rbenv ruby install.
+rbenv install 2.5.1
+rbenv global 2.5.1
 
 # symlink it up!
 ./symlink-setup.sh
