@@ -1,8 +1,16 @@
 [user]
-    name = Viren Ratan
-    email = viren@viren.com.au
-[github]
-    user = virenratan
+  name = Viren Ratan
+  email = viren@viren.com.au
+
+[credential]
+	helper = osxkeychain
+# [commit]
+# 	gpgsign = true
+[gpg]
+	program = smimesign
+	format = x509
+[gpg "x509"]
+	program = smimesign
 
 [alias]
   c = commit -am
@@ -119,13 +127,8 @@
 [log]
   date = relative
 
-[user]
-  name = Viren Ratan
-  email = viren@viren.com.au
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
-[credential]
-	helper = osxkeychain
