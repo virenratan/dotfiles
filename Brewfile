@@ -110,7 +110,6 @@ cask 'zoomus'
 # cask 'avast-security'
 # cask 'battle-net'
 # cask 'filebot'
-# cask 'nordvpn'
 # cask 'plex-media-server'
 # cask 'steam'
 
@@ -137,4 +136,5 @@ mas 'Fantastical', id: 975937182
 mas 'Kaleidoscope', id: 587512244
 mas 'Magnet', id: 441258766
 mas 'Markoff', id: 1084713122
+mas 'NordVPN IKE', id: 1116599239
 mas 'Tweetbot', id: 557168941
