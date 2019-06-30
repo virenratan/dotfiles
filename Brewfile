@@ -20,6 +20,7 @@ brew 'bash-completion'
 brew 'bat'
 brew 'coreutils'
 brew 'curl'
+brew 'dark-mode'
 brew 'diff-so-fancy'
 brew 'dnscrypt-proxy', restart_service: true
 brew 'dockutil'
@@ -98,7 +99,9 @@ cask 'postman'
 cask 'rocket'
 cask 'sketch'
 cask 'slack'
+cask 'spectacle'
 cask 'spotify'
+cask 'spotify-notifications'
 cask 'tower'
 cask 'transmission'
 cask 'tripmode'
@@ -134,7 +137,6 @@ cask 'webpquicklook'
 mas 'Clear', id: 504544917
 mas 'Fantastical', id: 975937182
 mas 'Kaleidoscope', id: 587512244
-mas 'Magnet', id: 441258766
 mas 'Markoff', id: 1084713122
 mas 'NordVPN IKE', id: 1116599239
 mas 'Tweetbot', id: 557168941

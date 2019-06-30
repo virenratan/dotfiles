@@ -40,6 +40,8 @@ fi;
 brew update
 brew bundle
 
+dark-mode on
+
 # setup dock.
 ./dock-setup.sh
 
