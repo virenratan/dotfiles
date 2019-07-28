@@ -97,11 +97,9 @@ cask 'ksdiff'
 cask 'micro-snitch'
 cask 'postman'
 cask 'rocket'
-cask 'sketch'
 cask 'slack'
 cask 'spectacle'
 cask 'spotify'
-cask 'spotify-notifications'
 cask 'tower'
 cask 'transmission'
 cask 'tripmode'
@@ -135,9 +133,9 @@ cask 'webpquicklook'
 
 # app store.
 mas 'Clear', id: 504544917
+mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
 mas 'iA Writer', id: 775737590
 mas 'Kaleidoscope', id: 587512244
-mas 'Markoff', id: 1084713122
 mas 'NordVPN IKE', id: 1116599239
 mas 'Tweetbot', id: 557168941
