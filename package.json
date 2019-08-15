@@ -14,7 +14,7 @@
   "author": "Viren Ratan <viren@viren.com.au> (http://viren.com.au/)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "eslint-config-google": "^0.7.1",
     "eslint-config-kentcdodds": "^12.2.1",
     "eslint-config-xo": "^0.18.1",
