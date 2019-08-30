@@ -109,3 +109,8 @@ eval (python3 -m virtualfish)
 
 set fish_greeting
 # rvm default
+
+# GOLANG configurations
+set -x GOPATH $HOME/go
+set -x GOROOT /usr/local/opt/go/libexec
+set PATH $GOPATH/bin $GOROOT/bin $PATH
