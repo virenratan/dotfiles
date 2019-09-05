@@ -114,3 +114,8 @@ set fish_greeting
 set -x GOPATH $HOME/go
 set -x GOROOT /usr/local/opt/go/libexec
 set PATH $GOPATH/bin $GOROOT/bin $PATH
+
+# pyenv configurations
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin:$PATH
+status --is-interactive; and . (pyenv init -|psub)
