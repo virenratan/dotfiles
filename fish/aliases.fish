@@ -45,6 +45,7 @@ alias cleanup_dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
 # shortcuts.
 alias c="code ."
+alias cat="bat"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -61,6 +62,7 @@ alias sb="source ~/.bash_profile"
 alias o="open"
 alias oo="open ."
 alias q="exit"
+alias please="sudo"
 
 # dns stuff.
 alias shieldsup="sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh"
