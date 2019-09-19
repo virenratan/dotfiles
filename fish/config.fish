@@ -110,14 +110,19 @@ eval (python3 -m virtualfish)
 set fish_greeting
 # rvm default
 
-# GOLANG configurations
+# GOLANG configurations.
 set -x GOPATH $HOME/go
 set -x GOROOT /usr/local/opt/go/libexec
 set PATH $GOPATH/bin $GOROOT/bin $PATH
 
-# pyenv configurations
+# pyenv configurations.
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin:$PATH
 status --is-interactive; and . (pyenv init -|psub)
 
 set PATH /usr/local/opt/make/libexec/gnubin $PATH
+
+# aws-cli configurations.
+# set -x AWS_ACCESS_KEY "XXX"
+# set -x AWS_SECRET_KEY "XXX"
+set -x AWS_DEFAULT_REGION "ap-southeast-2"
