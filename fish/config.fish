@@ -119,3 +119,5 @@ set PATH $GOPATH/bin $GOROOT/bin $PATH
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin:$PATH
 status --is-interactive; and . (pyenv init -|psub)
+
+set PATH /usr/local/opt/make/libexec/gnubin $PATH
