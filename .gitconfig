@@ -7,7 +7,7 @@
 # [commit]
 # 	gpgsign = true
 [gpg]
-	program = smimesign
+	program = /usr/local/bin/gpg
 	format = x509
 [gpg "x509"]
 	program = smimesign
@@ -139,5 +139,3 @@
 [mergetool "sourcetree"]
   cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
-[commit]
-  template = ~/.stCommitMsg
