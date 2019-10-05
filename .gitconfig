@@ -69,11 +69,6 @@
   changed = green
   untracked = cyan
 
-# git mergetool
-[merge]
-  tool = opendiff
-  renameLimit = 0
-
 # rewrites of repo paths
 [url "git@github.com:"]
   insteadOf = "https://github.com/"
@@ -104,9 +99,6 @@
 [include]
   path = ~/.gitconfig.local
 
-#[init]
-#	templatedir = ~/.git_template
-
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
@@ -129,9 +121,3 @@
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
-[difftool "sourcetree"]
-  cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-  path =
-[mergetool "sourcetree"]
-  cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true

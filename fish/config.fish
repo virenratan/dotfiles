@@ -122,6 +122,8 @@ status --is-interactive; and . (pyenv init -|psub)
 
 set PATH /usr/local/opt/make/libexec/gnubin $PATH
 
+set EDITOR "nano"
+
 # aws-cli configurations.
 # set -x AWS_ACCESS_KEY "XXX"
 # set -x AWS_SECRET_KEY "XXX"
