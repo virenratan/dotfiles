@@ -72,3 +72,6 @@ fi
 # export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
 # export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 export PATH="$PATH:/usr/local/opt/curl/bin"
+
+# gpg2 stuff.
+export GPG_TTY=`tty`

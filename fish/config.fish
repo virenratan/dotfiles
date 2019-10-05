@@ -126,3 +126,6 @@ set PATH /usr/local/opt/make/libexec/gnubin $PATH
 # set -x AWS_ACCESS_KEY "XXX"
 # set -x AWS_SECRET_KEY "XXX"
 set -x AWS_DEFAULT_REGION "ap-southeast-2"
+
+# gpg2.
+set -x GPG_TTY (tty)
