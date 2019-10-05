@@ -4,13 +4,9 @@
 
 [credential]
 	helper = osxkeychain
-# [commit]
-# 	gpgsign = true
+
 [gpg]
-	program = /usr/local/bin/gpg
-	format = x509
-[gpg "x509"]
-	program = smimesign
+	program = /usr/local/MacGPG2/bin/gpg2
 
 [alias]
   c = commit -am
