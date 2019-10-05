@@ -6,13 +6,17 @@ When running on a brand new machine:
 
 [Generate an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your Github account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
-[Install dropbox](https://www.dropbox.com/install) and so you can sync `~/.ssh/config` and `~/.extra`
+[Install dropbox](https://www.dropbox.com/install) and so you can sync `~/.ssh/config`.
 
 Create a `~/Projects` directory and run the following:
 
 ```shell
 git clone git@github.com:virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
 ```
+
+## GPG setup
+
+- [Signing your Git Commits using GPG on MacOS Sierra/High Sierra](https://gist.github.com/virenratan/914bfdd76ac0561574ed918da2bce78e)
 
 ## Updating
 
