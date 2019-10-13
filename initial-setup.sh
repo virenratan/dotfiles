@@ -74,7 +74,6 @@ rbenv global 2.5.1
 
 # symlink it up!
 ./symlink-setup.sh
-./dropbox.sh
 source ~/.bash_profile
 
 # dns privacy.

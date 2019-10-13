@@ -191,4 +191,10 @@ main() {
 
 main
 
+# fish config.
 ln -s ~/Projects/dotfiles/fish/ ~/.config/fish
+
+# personal settings from icloud drive.
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.extra ~/.extra
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.gitconfig.local ~/.gitconfig.local
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.ssh/config ~/.ssh/config
