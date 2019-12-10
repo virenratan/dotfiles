@@ -127,7 +127,7 @@ set EDITOR "nano"
 # aws-cli configurations.
 # set -x AWS_ACCESS_KEY "XXX"
 # set -x AWS_SECRET_KEY "XXX"
-set -x AWS_DEFAULT_REGION "ap-southeast-2"
+# set -x AWS_DEFAULT_REGION "ap-southeast-2"
 
 # gpg2.
 set -x GPG_TTY (tty)
