@@ -120,7 +120,6 @@ cask 'zoomus'
 
 # software for home computers.
 # cask 'battle-net'
-# cask 'filebot'
 # cask 'plex-media-server'
 # cask 'steam'
 
@@ -145,6 +144,7 @@ cask 'webpquicklook'
 mas 'Clear', id: 504544917
 mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
+mas 'Filebot', id: 905384638
 mas 'iA Writer', id: 775737590
 mas 'Kaleidoscope', id: 587512244
 mas 'NordVPN IKE', id: 1116599239
