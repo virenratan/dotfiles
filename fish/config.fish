@@ -1,5 +1,5 @@
 set default_user "$USER"
-set default_machine "Gemini"
+set default_machine "Nebula"
 
 source ~/.config/fish/aliases.fish
 
