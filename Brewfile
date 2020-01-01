@@ -64,7 +64,6 @@ brew 'python@2'
 brew 'pyenv'
 brew 'rbenv-default-gems'
 brew 'rbenv'
-brew 'reattach-to-user-namespace'
 brew 'rename'
 brew 'rhino'
 brew 'rsync'
@@ -144,6 +143,7 @@ cask 'suspicious-package'
 cask 'webpquicklook'
 
 # app store.
+mas 'AutoMounter', id: 1160435653
 mas 'Clear', id: 504544917
 mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
