@@ -144,6 +144,7 @@ cask 'webpquicklook'
 
 # app store.
 mas 'AutoMounter', id: 1160435653
+mas 'CARROT Weather', id: 993487541
 mas 'Clear', id: 504544917
 mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
