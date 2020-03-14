@@ -50,9 +50,7 @@ nvm install stable
 nvm use stable
 nvm alias default node
 
-yarn global add diff-so-fancy
-yarn global add eslint
-yarn global add snyk
+yarn global add all-the-package-names diff-so-fancy eslint fkill-cli snyk vtop
 
 # python3 stuff.
 pip install --upgrade pip
