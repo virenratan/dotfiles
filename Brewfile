@@ -7,6 +7,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'caskroom/versions'
+tap 'buo/cask-upgrade'
 # tap' mas-cli/tap'
 
 brew 'ack'

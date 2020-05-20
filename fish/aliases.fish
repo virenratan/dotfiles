@@ -39,7 +39,7 @@ alias top  vtop
 
 # homebrew 🍺.
 alias cask 'brew cask'
-alias upgrade 'yarn global upgrade && brew upgrade && brew cask upgrade && brew cleanup && sudo softwareupdate -i -a'
+alias upgrade 'yarn global upgrade && brew upgrade && brew cu --all --cleanup && brew cleanup'
 
 # git.
 alias push 'git push'
