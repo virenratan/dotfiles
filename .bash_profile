@@ -75,3 +75,8 @@ export PATH="$PATH:/usr/local/opt/curl/bin"
 
 # gpg2 stuff.
 export GPG_TTY=`tty`
+
+# pyenv.
+if command -v pyenv 1>/dev/null 2>&1; then
+  pyenv init - | source
+fi
