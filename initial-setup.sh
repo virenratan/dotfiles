@@ -64,7 +64,7 @@ pip3 install --upgrade transmissionrpc
 pip3 install --upgrade virtualfish
 pip3 install --upgrade wakatime
 
-pyenv install 3.7.4
+# pyenv install 3.7.4
 
 # rbenv ruby install.
 rbenv install 2.5.1
