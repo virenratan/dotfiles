@@ -95,7 +95,7 @@ end
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
 
-eval (starship init fish)
+starship init fish | source
 
 test -e $HOME/.iterm2_shell_integration.fish ; and source $HOME/.iterm2_shell_integration.fish
 
