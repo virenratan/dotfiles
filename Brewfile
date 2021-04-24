@@ -121,7 +121,7 @@ cask 'transmit'
 cask 'tripmode'
 cask 'visual-studio-code'
 cask 'zeplin'
-cask 'zoomus'
+cask 'zoom'
 
 # software for home computers.
 # cask 'battle-net'
