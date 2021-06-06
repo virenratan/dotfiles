@@ -112,10 +112,10 @@ set -x GOROOT /usr/local/opt/go/libexec
 set -x PATH $GOPATH/bin $GOROOT/bin $PATH
 
 # pyenv.
-# set -Ux PYENV_ROOT $HOME/.pyenv
-# set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-# status --is-interactive; # and . (pyenv init - | psub)
-# pyenv init - | source
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+status is-login; and pyenv init --path | source
+pyenv init - | source
 
 set -x PATH /usr/local/opt/make/libexec/gnubin $PATH
 

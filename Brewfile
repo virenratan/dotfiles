@@ -60,8 +60,7 @@ brew 'pigz'
 brew 'pinentry-mac'
 brew 'pkg-config'
 brew 'python'
-brew 'python@2'
-# brew 'pyenv'
+brew 'pyenv'
 brew 'rbenv-default-gems'
 brew 'rbenv'
 brew 'rename'
@@ -107,6 +106,7 @@ cask 'keka'
 cask 'kitty'
 cask 'ksdiff'
 cask 'logitech-options'
+cask 'macs-fan-control'
 cask 'micro-snitch'
 cask 'microsoft-edge-dev'
 cask 'plex-media-player'
@@ -148,11 +148,12 @@ cask 'webpquicklook'
 # app store.
 mas 'AutoMounter', id: 1160435653
 mas 'CARROT Weather', id: 993487541
-mas 'Clear', id: 504544917
+# mas 'Clear', id: 504544917
 mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
 mas 'Filebot', id: 905384638
 mas 'iA Writer', id: 775737590
 mas 'Kaleidoscope', id: 587512244
 mas 'NordVPN IKE', id: 1116599239
+mas 'Pixelmator Pro', id: 1289583905
 mas 'Tweetbot', id: 557168941
