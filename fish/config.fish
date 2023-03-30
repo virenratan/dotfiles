@@ -88,9 +88,9 @@ end
 
 __check_nvm
 
-function nvm
-  bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-end
+# function nvm
+#   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+# end
 
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
@@ -107,15 +107,18 @@ test -e $HOME/.iterm2_shell_integration.fish ; and source $HOME/.iterm2_shell_in
 # rvm default
 
 # go.
-set -x GOPATH $HOME/go
-set -x GOROOT /usr/local/opt/go/libexec
-set -x PATH $GOPATH/bin $GOROOT/bin $PATH
+# set -x GOPATH $HOME/go
+# set -x GOROOT /usr/local/opt/go/libexec
+# set -x PATH $GOPATH/bin $GOROOT/bin $PATH
+
+# python.
+# set -x PATH /usr/local/opt/python/libexec/bin $PATH
 
 # pyenv.
-set -Ux PYENV_ROOT $HOME/.pyenv
-set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-status is-login; and pyenv init --path | source
-pyenv init - | source
+# set -Ux PYENV_ROOT $HOME/.pyenv
+# set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+# status is-login; and pyenv init --path | source
+# pyenv init - | source
 
 set -x PATH /usr/local/opt/make/libexec/gnubin $PATH
 
@@ -130,8 +133,12 @@ set -Ux EDITOR nano
 set -x GPG_TTY (tty)
 
 # fuck.
-thefuck --alias | source
+# thefuck --alias | source
 
-# homebrew
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
+# homebrew - intel
+# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
+
+# homebrew - apple silicon
+set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
+set -g fish_user_paths "/opt/homebrew/sbin" $fish_user_paths

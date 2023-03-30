@@ -35,7 +35,7 @@ fi
 
 # homebrew install.
 if ! which brew > /dev/null; then
-  ruby <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi;
 brew update
 brew bundle
@@ -46,9 +46,7 @@ dark-mode on
 ./dock-setup.sh
 
 # nvm node install.
-nvm install stable
-nvm use stable
-nvm alias default node
+nvm install --lts
 
 yarn global add all-the-package-names diff-so-fancy eslint fkill-cli snyk vtop
 
@@ -95,6 +93,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # use fish for main shell.
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish

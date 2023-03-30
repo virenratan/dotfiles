@@ -6,7 +6,7 @@ tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'caskroom/versions'
+tap 'homebrew/versions'
 tap 'buo/cask-upgrade'
 # tap' mas-cli/tap'
 
@@ -36,14 +36,13 @@ brew 'git-quick-stats'
 brew 'git-secrets'
 brew 'gitmoji'
 brew 'gnupg'
-brew 'go'
+# brew 'go'
 brew 'gpg2'
 brew 'grep'
 brew 'htop'
 brew 'hub'
 brew 'imagemagick'
 # brew 'java'
-brew 'jupyter'
 brew 'libksba'
 brew 'librsvg'
 brew 'homebrew/core/make'
@@ -99,34 +98,25 @@ cask 'gpg-suite'
 cask 'google-chrome'
 cask 'google-drive'
 cask 'iina'
-cask 'istat-menus'
+# cask 'istat-menus'
 cask 'iterm2'
-cask 'itsycal'
+# cask 'itsycal'
 cask 'keka'
 cask 'kitty'
 cask 'ksdiff'
 cask 'logitech-options'
-cask 'macs-fan-control'
 cask 'micro-snitch'
 cask 'microsoft-edge'
-cask 'plex-media-player'
 cask 'postman'
 cask 'rocket'
 cask 'slack'
 cask 'spectacle'
 cask 'spotify'
 cask 'tower'
-cask 'transmission'
-cask 'transmit'
 cask 'tripmode'
 cask 'visual-studio-code'
-cask 'zeplin'
+# cask 'zeplin'
 cask 'zoom'
-
-# software for home computers.
-# cask 'battle-net'
-# cask 'plex-media-server'
-# cask 'steam'
 
 # fonts.
 cask 'font-fira-code'
@@ -146,14 +136,24 @@ cask 'suspicious-package'
 cask 'webpquicklook'
 
 # app store.
-mas 'AutoMounter', id: 1160435653
 mas 'CARROT Weather', id: 993487541
 # mas 'Clear', id: 504544917
-mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
-mas 'Filebot', id: 905384638
 mas 'iA Writer', id: 775737590
 mas 'Kaleidoscope', id: 587512244
-mas 'NordVPN IKE', id: 1116599239
+mas 'NordVPN', id: 905953485
 mas 'Pixelmator Pro', id: 1289583905
-mas 'Tweetbot', id: 557168941
+# mas 'Tweetbot', id: 557168941
+
+# software for home computers.
+# brew 'jupyterlab'
+# cask 'battle-net'
+# cask 'macs-fan-control'
+# cask 'plex-media-player'
+# cask 'plex-media-server'
+# cask 'steam'
+# cask 'transmit'
+# cask 'transmission'
+# mas 'AutoMounter', id: 1160435653
+# mas 'Encrypto', id: 935235287
+# mas 'Filebot', id: 905384638
