@@ -1,12 +1,12 @@
 # cask_args appdir: '~/Applications'
 
 tap 'homebrew/bundle'
-tap 'homebrew/cask'
+# tap 'homebrew/cask'
+# tap 'homebrew/core'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
-tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'homebrew/versions'
+# tap 'homebrew/versions'
 tap 'buo/cask-upgrade'
 # tap' mas-cli/tap'
 
@@ -146,13 +146,11 @@ mas 'Pixelmator Pro', id: 1289583905
 # mas 'Tweetbot', id: 557168941
 
 # software for home computers.
-# brew 'jupyterlab'
 # cask 'battle-net'
 # cask 'macs-fan-control'
-# cask 'plex-media-player'
+# cask 'plex'
 # cask 'plex-media-server'
 # cask 'steam'
-# cask 'transmit'
 # cask 'transmission'
 # mas 'AutoMounter', id: 1160435653
 # mas 'Encrypto', id: 935235287
