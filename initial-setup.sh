@@ -65,8 +65,8 @@ pip3 install --upgrade wakatime
 # pyenv install 3.7.4
 
 # rbenv ruby install.
-rbenv install 2.5.1
-rbenv global 2.5.1
+rbenv install 3.2.2
+rbenv global 3.2.2
 
 # symlink it up!
 ./symlink-setup.sh
