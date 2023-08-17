@@ -115,8 +115,8 @@ test -e $HOME/.iterm2_shell_integration.fish ; and source $HOME/.iterm2_shell_in
 # set -x PATH /usr/local/opt/python/libexec/bin $PATH
 
 # pyenv.
-# set -Ux PYENV_ROOT $HOME/.pyenv
-# set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 # status is-login; and pyenv init --path | source
 # pyenv init - | source
 
