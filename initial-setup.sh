@@ -43,7 +43,7 @@ brew bundle
 dark-mode on
 
 # setup dock.
-./dock-setup.sh
+# ./dock-setup.sh
 
 # nvm node install.
 nvm install --lts
