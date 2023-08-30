@@ -42,18 +42,9 @@ brew bundle
 
 dark-mode on
 
-# setup dock.
-./dock-setup.sh
-
-# nvm node install.
-nvm install --lts
-
 yarn global add all-the-package-names diff-so-fancy eslint fkill-cli snyk vtop
 
 # python3 stuff.
-pip install --upgrade pip
-pip install --upgrade setuptools
-
 pip3 install --upgrade pip
 pip3 install --upgrade setuptools
 
@@ -72,21 +63,13 @@ rbenv global 3.2.2
 ./symlink-setup.sh
 source ~/.bash_profile
 
-# dns privacy.
-# sudo brew services start stubby
-sudo brew services start dnscrypt-proxy
-shieldsup
-
-# macos defaults
-./macos.sh
-
 # switch to bash 4 for backup shell.
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
 chsh -s $(brew --prefix)/bin/bash
 shopt -s globstar
 
 # tmux setup.
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # neovim.
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -94,5 +77,22 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 # use fish for main shell.
 echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells
+curl -sS https://starship.rs/install.sh | sh
 chsh -s $(brew --prefix)/bin/fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+
+# nvm install --lts
+
+
+# dns privacy.
+# sudo brew services start stubby
+sudo brew services start dnscrypt-proxy
+# shieldsup
+
+# nvm node install. -- not working
+
+# macos defaults
+./macos.sh
+
+# setup dock.
+# ./dock-setup.sh
