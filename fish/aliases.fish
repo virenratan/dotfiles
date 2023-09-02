@@ -73,3 +73,6 @@ alias empty_trash 'sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.as
 alias brwe brew
 alias gti git
 alias yearn yarn
+
+# switch shell to bash
+alias change_shell 'chsh -s $(brew --prefix)/bin/bash'
