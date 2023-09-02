@@ -135,10 +135,15 @@ set -x GPG_TTY (tty)
 # fuck.
 # thefuck --alias | source
 
-# homebrew - intel
-# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-# set -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
-
-# homebrew - apple silicon
-set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
-set -g fish_user_paths "/opt/homebrew/sbin" $fish_user_paths
+# homebrew
+if test (uname -m) = "arm64"
+  # apple silicon
+  # echo "You are on an Apple Silicon Mac."
+  set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
+  set -g fish_user_paths "/opt/homebrew/sbin" $fish_user_paths
+else
+  # intel mac
+  # echo "You are not on an Apple Silicon Mac."
+  set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+  set -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
+end
