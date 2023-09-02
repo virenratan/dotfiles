@@ -85,7 +85,7 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 
 
 # dns privacy.
-# sudo brew services start stubby
+brew services start stubby
 sudo brew services start dnscrypt-proxy
 # shieldsup
 
