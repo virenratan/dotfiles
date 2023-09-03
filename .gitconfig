@@ -6,68 +6,16 @@
 	helper = osxkeychain
 
 [gpg]
-	program = /usr/local/MacGPG2/bin/gpg2
+	# program = /usr/local/MacGPG2/bin/gpg2
+	format = ssh
 
-[alias]
-  c = commit -am
-  fpush = push --force
-  s = status
-  sclone = clone --depth=1
-  amend = commit --amend --all
-  undocommit = reset HEAD~
-  hreset = reset --hard
-  co = checkout
-  df = diff --color --color-words --abbrev
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  cherrypick = cherry-pick
-  cherry = cherry-pick
-  cp = cherry-pick
-  fetch = git fetch --tags
-
-  # Show the diff between the latest commit and the current state
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-
-  reup = rebase-update # depot_tools specific
-  git = !exec git
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [core]
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
 	editor = nano
-
-[pager]
-  # insanely beautiful diffs ==> npm install -g diff-so-fancy
-  diff = diff-so-fancy | less --tabs=4 -RFX
-  show = diff-so-fancy | less --tabs=4 -RFX
-
-[interactive]
-  diffFilter = "diff-so-fancy"
-
-# so much color
-[color]
-  ui = auto
-[color "diff"]
-  meta = yellow bold
-  commit = green bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
-    newMoved = cyan
-    oldMoved = blue
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = "red bold 52"
-  newNormal = "green bold"
-  newHighlight = "green bold 22"
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
 
 # rewrites of repo paths
 [url "git@github.com:"]
@@ -122,11 +70,3 @@
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[commit]
-	template = /Users/viren/.stCommitMsg
