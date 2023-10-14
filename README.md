@@ -4,12 +4,18 @@
 
 When running on a brand new machine:
 
-- Sign into iCloud so that personal config files can be symlinked from iCloud drive.
-- Install Google Chrome and sign in to sync bookmarks, extensions, etc.
-- Install 1Password and sign in to sync passwords.
-- [Generate an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your Github account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+- Sign into iCloud
+- Install Homebrew:
+```shell
+# https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+- Install Google Chrome and 1Password:
+```shell
+brew install google-chrome 1password
+```
+- Enable SSH key from 1Password
 - Create a `~/Projects` directory and run the following:
-
 ```shell
 git clone git@github.com:virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
 ```
