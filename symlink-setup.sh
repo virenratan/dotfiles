@@ -192,7 +192,7 @@ main() {
 main
 
 # fish config.
-ln -s ~/Projects/dotfiles/fish/ ~/.config/fish
+ln -s ~/Projects/dotfiles/fish/ ~/.config
 
 # personal settings from icloud drive.
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.extra ~/.extra

@@ -95,8 +95,6 @@ __check_nvm
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
 
-starship init fish | source
-
 test -e $HOME/.iterm2_shell_integration.fish ; and source $HOME/.iterm2_shell_integration.fish
 
 # tabtab source for yarn package
@@ -147,3 +145,5 @@ else
   set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
   set -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
 end
+
+starship init fish | source
