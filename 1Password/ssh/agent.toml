@@ -31,8 +31,6 @@
 
 [[ssh-keys]]
 vault = "Personal"
-item = "Nebula"
 
 [[ssh-keys]]
 vault = "Work"
-item = "Star-Lord"
