@@ -9,70 +9,70 @@ function g         ; git $argv ; end
 function grep      ; command grep --color=auto $argv ; end
 function egrep     ; command egrep --color=auto $argv ; end
 
+# these require 'brew install coreutils' to have been successful.
+if not command -q grm; or not command -q gmv; or not command -q gcp
+    echo "Warning: GNU coreutils not found. Please run: brew install coreutils"
+end
 alias mv 'command gmv --interactive --verbose'
 alias rm 'command grm --interactive --verbose'
 alias cp 'command gcp --interactive --verbose'
 
-alias chmox 'chmod +x'
+abbr -a chmox 'chmod +x'
 
-# shortcuts.
-alias vs c
-alias c  'code .'
-alias d  'cd ~/Downloads'
-alias dt 'cd ~/Desktop'
-alias p  'cd ~/Projects'
-alias j  'jobs'
-alias o  'open .'
-alias q  'exit'
-alias g  git
-alias h  history
-alias hosts "sudo $EDITOR /etc/hosts"
-alias please sudo
-alias plz please
-alias fs "stat -f \"%z bytes\"" # file size.
-alias where 'which'
+# shortcuts
+abbr -a vs 'c'
+abbr -a c 'code .'
+abbr -a d 'cd ~/Downloads'
+abbr -a dt 'cd ~/Desktop'
+abbr -a p 'cd ~/Projects'
+abbr -a j 'jobs'
+abbr -a o 'open .'
+abbr -a q 'exit'
+abbr -a g 'git'
+abbr -a h 'history'
+abbr -a please 'sudo'
+abbr -a plz 'please'
+abbr -a fs "stat -f \"%z bytes\""
+abbr -a where 'which'
 
-# replacements.
-alias cat  bat
-alias kill fkill
-alias top  vtop
+# replacements
+abbr -a cat 'bat'
+abbr -a kill 'fkill'
+abbr -a top 'vtop'
 
-# homebrew 🍺.
-alias cask 'brew cask'
-alias upgrade 'yarn global upgrade && brew upgrade'
+# homebrew
+abbr -a cask 'brew cask'
+abbr -a upgrade 'yarn global upgrade && brew upgrade'
 
-# git.
-alias push 'git push'
-alias undopush 'git push -f origin HEAD^:master'
-alias master 'git checkout master'
+# git
+abbr -a push 'git push'
+abbr -a undopush 'git push -f origin HEAD^:master'
+abbr -a master 'git checkout master'
 
-# dns over https.
-alias shieldsup 'sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh'
-alias shieldsdown 'sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh -r'
+# dns over https
+abbr -a shieldsup 'sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh'
+abbr -a shieldsdown 'sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh -r'
 
-# enable aliases to be sudo’ed.
-alias sudo 'sudo '
+# enable aliases to be sudo'ed
+abbr -a sudo 'sudo '
 
-# network.
-alias ping 'ping -c 5' # stop ping after 5 requests.
-alias localip 'ipconfig getifaddr en0'
-alias ip 'dig +short myip.opendns.com @resolver1.opendns.com'
-alias dig 'dig +nocmd any +multiline +noall +answer'
+# network
+abbr -a ping 'ping -c 5'
+abbr -a localip 'ipconfig getifaddr en0'
+abbr -a ip 'dig +short myip.opendns.com @resolver1.opendns.com'
+abbr -a dig 'dig +nocmd any +multiline +noall +answer'
 
-# recursively delete `.DS_Store` files.
-alias cleanup_ds "find . -name '*.DS_Store' -type f -ls -delete"
-# clean up LaunchServices to remove duplicates in the “Open With” menu.
-alias cleanup_ls '/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
+# cleanup
+abbr -a cleanup_ds "find . -name '*.DS_Store' -type f -ls -delete"
+abbr -a cleanup_ls '/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
 
-alias diskspace 'df -P -kHl'
+abbr -a diskspace 'df -P -kHl'
+abbr -a empty_trash 'sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl'
 
-# empty_trash written as a function.
-alias empty_trash 'sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl'
-
-# typos.
-alias brwe brew
-alias gti git
-alias yearn yarn
+# typos
+abbr -a brwe 'brew'
+abbr -a gti 'git'
+abbr -a yearn 'yarn'
 
 # switch shell to bash
-alias change_shell 'chsh -s $(brew --prefix)/bin/bash'
+abbr -a change_shell 'chsh -s (brew --prefix)/bin/bash'

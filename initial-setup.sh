@@ -94,4 +94,5 @@ sudo brew services start dnscrypt-proxy
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 fisher install jorgebucaran/nvm.fish
-nvm install lts
+nvm install lts/hydrogen
+nvm use lts/hydrogen
