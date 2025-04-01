@@ -2,7 +2,7 @@
 set -e fish_greeting
 set fish_greeting # hide welcome message.
 set default_user $USER
-set default_machine 'Nebula'
+set default_machine (hostname -s)
 set -gx EDITOR nano
 
 # load custom files.
