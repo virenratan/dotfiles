@@ -1,9 +1,9 @@
 # minimal core config.
-set -e fish_greeting
-set fish_greeting # hide welcome message.
+function fish_greeting
+end
 set default_user $USER
 set default_machine (hostname -s)
-set -gx EDITOR nano
+set -gx EDITOR code
 
 # load custom files.
 test -e $HOME/.extra.fish; and source $HOME/.extra.fish

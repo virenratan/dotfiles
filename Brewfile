@@ -24,6 +24,7 @@ brew 'tree'
 brew 'wget'
 
 # git and github.
+brew 'gh'
 brew 'git'
 brew 'git-delta'
 brew 'git-lfs'

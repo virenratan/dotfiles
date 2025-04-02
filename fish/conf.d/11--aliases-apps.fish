@@ -1,5 +1,5 @@
 # app replacements.
-abbr -a cat 'bat'
+abbr -a cat 'bat -P'
 abbr -a kill 'fkill'
 abbr -a top 'vtop'
 
