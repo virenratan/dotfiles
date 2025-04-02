@@ -58,6 +58,21 @@ brew bundle
 # symlink it up!
 ./symlink-setup.sh
 
+# Set up Git config to include shared config
+if [ -f ~/.gitconfig ]; then
+  # Check if include directive already exists
+  if ! grep -q "path = ~/.gitconfig.shared" ~/.gitconfig; then
+    # Create temporary file with include directive at the top
+    echo -e "# Include shared configuration (can be overridden by settings below)\n[include]\n  path = ~/.gitconfig.shared\n\n$(cat ~/.gitconfig)" > ~/.gitconfig.temp
+    mv ~/.gitconfig.temp ~/.gitconfig
+    echo "Added shared config include to existing .gitconfig"
+  fi
+else
+  # Create new .gitconfig with include directive
+  echo -e "# Include shared configuration (can be overridden by settings below)\n[include]\n  path = ~/.gitconfig.shared" > ~/.gitconfig
+  echo "Created new .gitconfig with shared config include"
+fi
+
 # tmux setup.
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
