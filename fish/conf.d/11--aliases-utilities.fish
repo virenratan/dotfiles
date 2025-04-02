@@ -40,5 +40,5 @@ abbr -a cleanup_ls '/System/Library/Frameworks/CoreServices.framework/Frameworks
 abbr -a diskspace 'df -P -kHl'
 abbr -a empty_trash 'sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl'
 
-# 🔥 switch shell to bash.
-abbr -a change_shell 'chsh -s (brew --prefix)/bin/bash'
+# 🔥 switch shell to native macOS zsh.
+abbr -a change_shell 'chsh -s /bin/zsh'

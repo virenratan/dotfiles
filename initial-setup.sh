@@ -55,18 +55,8 @@ brew bundle
 
 # pyenv install 3.7.4
 
-# rbenv ruby install.
-# rbenv install 3.2.2
-# rbenv global 3.2.2
-
 # symlink it up!
 ./symlink-setup.sh
-# source ~/.bash_profile
-
-# switch to bash 4 for backup shell.
-# sudo bash -c 'echo $(brew --prefix)/bin/bash >> /private/etc/shells'
-# chsh -s $(brew --prefix)/bin/bash
-# shopt -s globstar
 
 # tmux setup.
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -75,7 +65,7 @@ brew bundle
 # curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 #   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# use fish for main shell.
+# shell setup - fish is primary, zsh as backup
 echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
