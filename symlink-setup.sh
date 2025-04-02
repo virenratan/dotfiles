@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# this symlinks all the dotfiles (and .vim/) to ~/
-# it also symlinks ~/bin for easy updating
+# this symlinks all the dotfiles (and fish to ~/.config/fish)
 
 # this is safe to run multiple times and will prompt you about anything unclear
 
@@ -198,6 +197,4 @@ ln -s ~/Projects/dotfiles/fish/ ~/.config
 ln -s ~/Projects/dotfiles/1Password/ ~/.config
 
 # personal settings from icloud drive.
-ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.extra ~/.extra
-ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.gitconfig.local ~/.gitconfig.local
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.ssh/config ~/.ssh/config

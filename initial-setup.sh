@@ -25,10 +25,6 @@ else
   echo "Created new .gitconfig with shared config include"
 fi
 
-# neovim.
-# curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-#   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 # shell setup - fish is primary, zsh as backup
 echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/fish
