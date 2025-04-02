@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-# ~/.macos — https://mths.be/macos
-
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+# Close any open System Settings panes
+osascript -e 'tell application "System Settings" to quit'
 
 # Ask for the administrator password upfront
 sudo -v
@@ -31,10 +28,8 @@ sudo nvram SystemAudioVolume=" "
 # Disable transparency in the menu bar and elsewhere on Yosemite
 # defaults write com.apple.universalaccess reduceTransparency -bool true
 
-# Use dark mode
+# Use dark mode - updated syntax for macOS Ventura and later
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
-# defaults write -g NSRequiresAquaSystemAppearance -bool true
-defaults write com.apple.dt.Xcode NSRequiresAquaSystemAppearance -bool false
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string '0.752941 0.964706 0.678431'
@@ -44,17 +39,10 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Don't show Siri in the menu bar
 defaults write com.apple.siri "StatusMenuVisible" 0
-defaults write com.apple.systemuiserver "NSStatusItem Visible Siri" 0
 
 # Show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
-
-# Show Bluetooth in the menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
-
-# Show volume in the menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 0
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -100,10 +88,10 @@ defaults write com.apple.helpviewer DevMode -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Restart automatically if the computer freezes
-systemsetup -setrestartfreeze on
+systemsetup -setrestartfreeze on 2>/dev/null
 
 # Never go into computer sleep mode
-systemsetup -setcomputersleep Off > /dev/null
+systemsetup -setcomputersleep Off > /dev/null 2>&1
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -122,13 +110,6 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Disable Notification Center and remove the menu bar icon
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-#sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool false
-#killall NotificationCenter
-# Enable Notification Center
-#sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool true
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
@@ -152,12 +133,8 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool
 defaults write com.apple.AppleMultitouchTrackpad Dragging -bool true
 
 # Trackpad: enable 3-finger drag. (Moving with 3 fingers in any window "chrome" moves the window.)
-# defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
-
-# Trackpad: sets defaults for trackpad Two Finger Swipe gestures
-#defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadTwoFingerFromRightEdgeSwipeGesture -int 1
 
 # Trackpad: sets defaults for trackpad three finger swipe gestures
 defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerHorizSwipeGesture -int 1
@@ -223,9 +200,6 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Australia/Melbourne" > /dev/null
 
-# Stop iTunes from responding to the keyboard media keys
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
-
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -280,9 +254,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Finder: allow text selection in Quick Look
-defaults write com.apple.finder QLEnableTextSelection -bool true
-
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
@@ -327,9 +298,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
-
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
@@ -358,9 +326,9 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Add iOS & Watch Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
+# Add iOS & Watch Simulator to Launchpad (may need updating based on your Xcode version)
+sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app" 2>/dev/null
+sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app" 2>/dev/null
 
 # refresh the Dock to load the Dashboard changes
 killall Dock
@@ -381,7 +349,6 @@ killall Dock
 #  7: Dashboard
 # 10: Put display to sleep
 # 11: Launchpad
-# 12: Notification Center
 # Bottom left screen corner → Start screen saver
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
@@ -500,54 +467,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
 ###############################################################################
-# Spotlight                                                                   #
-###############################################################################
-
-# Hide Spotlight tray-icon (and subsequent helper)
-#sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-# Disable Spotlight indexing for any volume that gets mounted and has not yet
-# been indexed before.
-# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-# Change indexing order and disable some search results
-# Yosemite-specific search results (remove them if you are using macOS 10.9 or older):
-# 	MENU_DEFINITION
-# 	MENU_CONVERSION
-# 	MENU_EXPRESSION
-# 	MENU_SPOTLIGHT_SUGGESTIONS (send search queries to Apple)
-# 	MENU_WEBSEARCH             (send search queries to Apple)
-# 	MENU_OTHER
-defaults write com.apple.spotlight orderedItems -array \
-  '{"enabled" = 1;"name" = "APPLICATIONS";}' \
-  '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-  '{"enabled" = 1;"name" = "DIRECTORIES";}' \
-  '{"enabled" = 1;"name" = "PDF";}' \
-  '{"enabled" = 1;"name" = "FONTS";}' \
-  '{"enabled" = 0;"name" = "DOCUMENTS";}' \
-  '{"enabled" = 0;"name" = "MESSAGES";}' \
-  '{"enabled" = 0;"name" = "CONTACT";}' \
-  '{"enabled" = 0;"name" = "EVENT_TODO";}' \
-  '{"enabled" = 0;"name" = "IMAGES";}' \
-  '{"enabled" = 0;"name" = "BOOKMARKS";}' \
-  '{"enabled" = 0;"name" = "MUSIC";}' \
-  '{"enabled" = 0;"name" = "MOVIES";}' \
-  '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-  '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
-  '{"enabled" = 0;"name" = "SOURCE";}' \
-  '{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
-  '{"enabled" = 0;"name" = "MENU_OTHER";}' \
-  '{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
-  '{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
-  '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-  '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
-# Load new settings before rebuilding the index
-killall mds > /dev/null 2>&1
-# Make sure indexing is enabled for the main volume
-sudo mdutil -i on / > /dev/null
-# Rebuild the index from scratch
-sudo mdutil -E / > /dev/null
-
-###############################################################################
 # Terminal                                                                    #
 ###############################################################################
 
@@ -588,17 +507,14 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
-# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+# Address Book, Dashboard, Calendar, TextEdit, and Disk Utility                   #
 ###############################################################################
 
 # Enable the debug menu in Address Book
-defaults write com.apple.addressbook ABShowDebugMenu -bool true
+defaults write com.apple.AddressBook ABShowDebugMenu -bool true
 
-# Enable Dashboard dev mode (allows keeping widgets on the desktop)
-defaults write com.apple.dashboard devmode -bool true
-
-# Enable the debug menu in iCal (pre-10.8)
-defaults write com.apple.iCal IncludeDebugMenu -bool true
+# Enable the debug menu in Calendar
+defaults write com.apple.Calendar IncludeDebugMenu -bool true
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
@@ -708,38 +624,6 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 defaults write org.m0k.transmission RandomPort -bool true
 
 ###############################################################################
-# Twitter.app                                                                 #
-###############################################################################
-
-# Disable smart quotes as it’s annoying for code tweets
-defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
-
-# Show the app window when clicking the menu bar icon
-defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
-
-# Enable the hidden ‘Develop’ menu
-defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
-
-# Open links in the background
-defaults write com.twitter.twitter-mac openLinksInBackground -bool true
-
-# Allow closing the ‘new tweet’ window by pressing `Esc`
-defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
-
-# Show full names rather than Twitter handles
-defaults write com.twitter.twitter-mac ShowFullNames -bool true
-
-# Hide the app in the background if it’s not the front-most window
-defaults write com.twitter.twitter-mac HideInBackground -bool true
-
-###############################################################################
-# Tweetbot.app                                                                #
-###############################################################################
-
-# Bypass the annoyingly slow t.co URL shortener
-defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
-
-###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -750,19 +634,14 @@ for app in "Activity Monitor" \
   "Contacts" \
   "Dock" \
   "Finder" \
-  "Google Chrome Canary" \
   "Google Chrome" \
   "Mail" \
   "Messages" \
   "Opera" \
   "Photos" \
   "Safari" \
-  "SystemUIServer" \
   "Terminal" \
-  "Transmission" \
-  "Tweetbot" \
-  "Twitter" \
-  "iCal"; do
+  "Transmission"; do
   killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
