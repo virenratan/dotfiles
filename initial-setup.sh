@@ -43,7 +43,7 @@ sudo brew services start dnscrypt-proxy
 ./macos.sh
 
 # setup dock.
-# ./dock-setup.sh
+./dock-setup.sh
 
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
