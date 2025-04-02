@@ -1,94 +1,71 @@
 # cask_args appdir: '~/Applications'
 
 tap 'homebrew/bundle'
-# tap 'homebrew/cask'
-# tap 'homebrew/core'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/services'
-# tap 'homebrew/versions'
 tap '1password/tap'
 tap 'buo/cask-upgrade'
-# tap' mas-cli/tap'
 
+# setup.
+brew 'dockutil'
+brew 'mas'
+
+# essential command line tools.
 brew 'ack'
-brew 'autoconf'
-brew 'autojump'
-brew 'automake'
-brew 'awscli'
 brew 'bat'
 brew 'cmake'
 brew 'coreutils'
 brew 'curl'
-brew 'dark-mode'
-brew 'dnscrypt-proxy', restart_service: true
-brew 'dockutil'
-brew 'findutils'
-brew 'fish'
-brew 'gist'
-brew 'git'
-brew 'git-crypt'
-brew 'git-delta'
-# brew 'git-flow'
-brew 'git-lfs'
-brew 'git-quick-stats'
-brew 'git-secrets'
-brew 'gitmoji'
-brew 'gnupg'
-brew 'gpg2'
-brew 'grep'
 brew 'htop'
-brew 'hub'
-brew 'imagemagick'
-# brew 'java'
-brew 'libksba'
-brew 'librsvg'
-brew 'homebrew/core/make'
-brew 'mas'
-brew 'nano'
-brew 'neovim'
-brew 'ngrep'
-brew 'ninja'
-brew 'nmap'
-brew 'node'
-brew 'openssl'
-brew 'pigz'
-brew 'pinentry-mac'
-brew 'pkg-config'
-brew 'python'
-brew 'pyenv'
-brew 'rbenv-default-gems'
-brew 'rbenv'
-brew 'rename'
-brew 'rhino'
-brew 'rsync'
-brew 'ruby'
-brew 'smimesign'
-brew 'speedtest-cli'
-brew 'starship'
-brew 'stubby'
-brew 'swift'
-brew 'terminal-notifier'
-brew 'thefuck'
+brew 'make'
 brew 'tldr'
 brew 'tree'
-brew 'watchman'
-brew 'webkit2png'
 brew 'wget'
-brew 'wifi-password'
-brew 'yarn', args: ["ignore-dependencies"]
-brew 'zopfli'
 
-# artpro.
+# git and github.
+brew 'git'
+brew 'git-delta'
+brew 'git-lfs'
+brew 'gist'
+brew 'hub'
+
+# development tools.
+brew 'nano'
+brew 'node'
+brew 'pyenv'
+brew 'swift'
+brew 'watchman'
+brew 'yarn', args: ["ignore-dependencies"]
+
+# shells and terminal.
+brew 'autojump'
+brew 'fish'
+brew 'starship'
+brew 'terminal-notifier'
+brew 'thefuck'
+
+# security.
+brew 'gnupg'
+brew 'gpg2'
+brew 'openssl'
+brew 'stubby'
+
+# cloud and network.
+brew 'awscli'
+brew 'wifi-password'
+
+
 # tap 'weaveworks/tap'
 # brew 'kubernetes-cli'
 # brew 'weaveworks/tap/eksctls'
 
 cask '1password'
 cask '1password-cli'
-cask 'abstract'
+# cask 'abstract'
 cask 'copilot-for-xcode'
 # cask 'diffmerge'
+cask 'docker'
 cask 'figma'
 cask 'firefox'
 cask 'gpg-suite'
@@ -120,15 +97,13 @@ cask 'font-roboto-mono'
 cask 'font-source-code-pro'
 
 # quicklook.
-cask 'qlimagesize'
 cask 'qlmarkdown'
-cask 'qlvideo'
 cask 'quicklook-json'
-cask 'quicklookase'
 cask 'suspicious-package'
-cask 'webpquicklook'
 
 # app store.
+# note: you must be signed into the mac app store before running this.
+# run `mas signin your@email.com` if needed.
 mas 'CARROT Weather', id: 993487541
 # mas 'Clear', id: 504544917
 mas 'Fantastical', id: 975937182
