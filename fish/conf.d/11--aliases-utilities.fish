@@ -12,18 +12,19 @@ alias cp 'command gcp --interactive --verbose'
 
 # 🏃 shortcuts.
 abbr -a c 'code .'
+abbr -a cls 'clear'
 abbr -a j 'jobs'
 abbr -a o 'open .'
 abbr -a q 'exit'
 abbr -a h 'history'
 
 abbr -a chmox 'chmod +x'
+abbr -a fs "stat -f \"%z bytes\""
 abbr -a where 'which'
 
 # 🙏 be nice.
 abbr -a please 'sudo'
 abbr -a plz 'please'
-abbr -a fs "stat -f \"%z bytes\""
 
 # enable aliases to be sudo'ed
 abbr -a sudo 'sudo '
