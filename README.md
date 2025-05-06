@@ -10,7 +10,6 @@ When running on a fresh machine:
 - Sign into iCloud
 - Install Homebrew:
 ```shell
-# https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 - Install Google Chrome and 1Password:
@@ -18,9 +17,20 @@ When running on a fresh machine:
 brew install google-chrome 1password
 ```
 - Enable SSH key from 1Password
-- Create a `~/Projects` directory and run the following:
+- Create a `~/Projects` directory
+```shell
+mkdir Projects && cd Projects
+```
+- Run the following:
 ```shell
 git clone git@github.com:virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
+```
+
+### Copilot
+
+Install the GitHub CLI and then the Copilot extension:
+```shell
+gh extension install github/gh-copilot
 ```
 
 ### GPG setup

@@ -1,9 +1,5 @@
 # cask_args appdir: '~/Applications'
 
-tap 'homebrew/bundle'
-tap 'homebrew/cask-drivers'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/services'
 tap '1password/tap'
 tap 'buo/cask-upgrade'
 
@@ -64,6 +60,7 @@ brew 'wifi-password'
 cask '1password'
 cask '1password-cli'
 # cask 'abstract'
+cask 'automounterhelper'
 cask 'copilot-for-xcode'
 # cask 'diffmerge'
 cask 'docker'
@@ -72,19 +69,17 @@ cask 'firefox'
 cask 'gpg-suite'
 cask 'google-chrome'
 cask 'google-drive'
-cask 'hiddenbar'
 cask 'iina'
 cask 'iterm2'
 cask 'keka'
 # cask 'kitty'
-cask 'ksdiff'
 cask 'logitech-options'
 cask 'micro-snitch'
 cask 'microsoft-edge'
 cask 'postman'
+cask 'rectangle'
 cask 'rocket'
 cask 'slack'
-cask 'spectacle'
 cask 'tripmode'
 cask 'visual-studio-code'
 # cask 'zeplin'
@@ -103,11 +98,11 @@ cask 'quicklook-json'
 cask 'suspicious-package'
 
 # app store.
-# note: you must be signed into the mac app store before running this.
-# run `mas signin your@email.com` if needed.
+# mas 'AutoMounter', id: 1160435653
 mas 'CARROT Weather', id: 993487541
 # mas 'Clear', id: 504544917
 mas 'Fantastical', id: 975937182
+mas 'Hidden Bar', id: 1452453066
 # mas 'iA Writer', id: 775737590
 mas 'Kaleidoscope', id: 587512244
 mas 'NordVPN', id: 905953485

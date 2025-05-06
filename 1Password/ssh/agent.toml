@@ -30,7 +30,7 @@
 #  https://developer.1password.com/docs/ssh/agent/config
 
 [[ssh-keys]]
-vault = "Personal"
+vault = "Work"
 
 [[ssh-keys]]
-vault = "Work"
+vault = "Personal"
