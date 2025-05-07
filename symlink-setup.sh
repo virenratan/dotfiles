@@ -191,10 +191,11 @@ main() {
 main
 
 # fish config.
-ln -s ~/Projects/dotfiles/fish/ ~/.config
+mkdir -p ~/.config
+ln -sfn "$(pwd)/fish" ~/.config/fish
 
 # 1password ssh config.
-ln -s ~/Projects/dotfiles/1Password/ ~/.config
+ln -sfn "$(pwd)/1Password" ~/.config/1Password
 
 # personal settings from icloud drive.
-ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.ssh/config ~/.ssh/config
+ln -sf ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.ssh/config ~/.ssh/config
