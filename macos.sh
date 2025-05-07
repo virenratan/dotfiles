@@ -131,6 +131,12 @@ sudo pmset -a hibernatemode 0
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
+# Enable "natural" (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+
+# Set mouse tracking speed to about 80%
+defaults write NSGlobalDomain com.apple.mouse.scaling -float 2.5
+
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -341,6 +347,9 @@ defaults write com.apple.dock show-recents -bool false
 # Disable showing recent items in Dock app context menus
 defaults write com.apple.dock recent-apps -array
 defaults write com.apple.dock recent-documents -array
+
+# Disable "Show Desktop" when clicking on the desktop
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
 # Add iOS & Watch Simulator to Launchpad (may need updating based on your Xcode version)
 sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app" 2>/dev/null
