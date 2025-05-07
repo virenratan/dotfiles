@@ -9,19 +9,26 @@ When running on a fresh machine:
 
 - Sign into iCloud
 - Install Homebrew:
+
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 - Install Google Chrome and 1Password:
+
 ```shell
 brew install google-chrome 1password
 ```
-- Enable SSH key from 1Password
+
+- Enable the SSH Agent in 1Password and ensure the "Generate SSH config file with bookmarked hosts" is enabled. The rest of the ssh config should sync from iCloud or be symlinked by this repo.
 - Create a `~/Projects` directory
+
 ```shell
 mkdir Projects && cd Projects
 ```
+
 - Run the following:
+
 ```shell
 git clone git@github.com:virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
 ```
@@ -29,6 +36,7 @@ git clone git@github.com:virenratan/dotfiles.git && cd dotfiles && ./initial-set
 ### Copilot
 
 Install the GitHub CLI and then the Copilot extension:
+
 ```shell
 gh extension install github/gh-copilot
 ```
@@ -47,6 +55,7 @@ git pull origin develop
 ```
 
 ## 🙏 Thanks to people I've grabbed stuff from
+
 - [holman/dotfiles](https://github.com/holman/dotfiles)
 - [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
