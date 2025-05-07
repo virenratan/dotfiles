@@ -40,6 +40,15 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 # Don't show Siri in the menu bar
 defaults write com.apple.siri "StatusMenuVisible" 0
 
+# Enable Siri
+defaults write com.apple.assistant.support "Assistant Enabled" -bool true
+
+# Enable Type to Siri (text input instead of voice)
+defaults write com.apple.Siri TypeToSiriEnabled -bool true
+
+# Disable voice feedback for Siri
+defaults write com.apple.Siri VoiceFeedbackEnabled -bool false
+
 # Show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
@@ -325,6 +334,13 @@ defaults write com.apple.dock minimize-to-application -bool true
 
 # Show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
+
+# Disable showing recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Disable showing recent items in Dock app context menus
+defaults write com.apple.dock recent-apps -array
+defaults write com.apple.dock recent-documents -array
 
 # Add iOS & Watch Simulator to Launchpad (may need updating based on your Xcode version)
 sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app" 2>/dev/null
