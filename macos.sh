@@ -239,12 +239,6 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
-
-# Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool false
-
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
@@ -272,8 +266,14 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# New Finder windows points to home
-defaults write com.apple.finder NewWindowTarget -string "PfHm"
+# New Finder windows points to Downloads
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
+
+# Enable iCloud Desktop and Documents sync
+defaults write com.apple.finder FXICloudDriveDesktop -bool true
+defaults write com.apple.finder FXICloudDriveDocuments -bool true
+defaults write com.apple.finder FXICloudDriveEnabled -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
