@@ -28,6 +28,7 @@ brew 'gist'
 brew 'hub'
 
 # development tools.
+brew 'gitmoji'
 brew 'nano'
 brew 'node'
 brew 'pyenv'
