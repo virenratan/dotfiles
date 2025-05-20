@@ -122,3 +122,4 @@ mas 'Pixelmator Pro', id: 1289583905
 # mas 'Encrypto', id: 935235287
 # mas 'Filebot', id: 905384638
 # mas 'NextDNS', id: 1464122853
+# mas 'Panels - Comic Reader', id: 1236567663
