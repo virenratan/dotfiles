@@ -5,7 +5,7 @@ abbr -a top 'vtop'
 
 # homebrew.
 abbr -a cask 'brew cask'
-abbr -a upgrade 'yarn global upgrade && brew upgrade'
+abbr -a upgrade 'yarn global upgrade && brew upgrade && mas upgrade'
 
 # dns over https
 abbr -a shieldsup 'sudo /usr/local/opt/stubby/sbin/stubby-setdns-macos.sh'
