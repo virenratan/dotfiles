@@ -52,11 +52,6 @@ brew 'stubby'
 brew 'awscli'
 brew 'wifi-password'
 
-
-# tap 'weaveworks/tap'
-# brew 'kubernetes-cli'
-# brew 'weaveworks/tap/eksctls'
-
 cask '1password'
 cask '1password-cli'
 # cask 'abstract'
@@ -72,7 +67,6 @@ cask 'google-drive'
 cask 'iina'
 cask 'iterm2'
 cask 'keka'
-# cask 'kitty'
 cask 'logitech-options'
 cask 'micro-snitch'
 cask 'microsoft-edge'
@@ -98,27 +92,19 @@ cask 'quicklook-json'
 cask 'suspicious-package'
 
 # app store.
-# mas 'AutoMounter', id: 1160435653
 mas 'CARROT Weather', id: 993487541
-# mas 'Clear', id: 504544917
+mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
 mas 'Hidden Bar', id: 1452453066
 # mas 'iA Writer', id: 775737590
 mas 'Kaleidoscope', id: 587512244
 mas 'NordVPN', id: 905953485
 mas 'Pixelmator Pro', id: 1289583905
-# mas 'Tweetbot', id: 557168941
 
 # software for home computers.
-# cask 'battle-net'
 # cask 'discord'
 # cask 'macs-fan-control'
 # cask 'plex'
-# cask 'plex-media-server'
 # cask 'steam'
-# cask 'transmission'
 # mas 'AutoMounter', id: 1160435653
-# mas 'Encrypto', id: 935235287
-# mas 'Filebot', id: 905384638
-# mas 'NextDNS', id: 1464122853
 # mas 'Panels - Comic Reader', id: 1236567663
