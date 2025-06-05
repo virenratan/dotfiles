@@ -229,6 +229,13 @@ defaults write com.apple.screencapture type -string "PNG"
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
+# Enable Night Shift
+# Turn on Night Shift
+defaults write com.apple.CoreBrightness CBEnabled_v4 -bool true
+
+# Set Night Shift schedule (from sunset to sunrise)
+defaults write com.apple.CoreBrightness CBBlueReductionScheduleType_v4 -int 1
+
 # Enabling Font Smoothing in Terminal
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
