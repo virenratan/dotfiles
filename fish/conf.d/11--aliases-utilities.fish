@@ -22,10 +22,6 @@ abbr -a chmox 'chmod +x'
 abbr -a fs "stat -f \"%z bytes\""
 abbr -a where 'which'
 
-# 🙏 be nice.
-abbr -a please 'sudo'
-abbr -a plz 'please'
-
 # enable aliases to be sudo'ed
 abbr -a sudo 'sudo '
 
@@ -33,7 +29,6 @@ abbr -a sudo 'sudo '
 abbr -a ping 'ping -c 5'
 abbr -a localip 'ipconfig getifaddr en0'
 abbr -a ip 'dig +short myip.opendns.com @resolver1.opendns.com'
-abbr -a dig 'dig +nocmd any +multiline +noall +answer'
 
 # 🧹 housekeeping.
 abbr -a cleanup_ds "find . -name '*.DS_Store' -type f -ls -delete"
