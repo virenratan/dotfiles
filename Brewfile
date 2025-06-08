@@ -46,7 +46,6 @@ brew 'thefuck'
 brew 'gnupg'
 brew 'gpg2'
 brew 'openssl'
-brew 'stubby'
 
 # cloud and network.
 brew 'awscli'

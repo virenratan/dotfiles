@@ -230,7 +230,6 @@ defaults write com.apple.screencapture type -string "PNG"
 defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Enable Night Shift
-# Turn on Night Shift
 defaults write com.apple.CoreBrightness CBEnabled_v4 -bool true
 
 # Set Night Shift schedule (from sunset to sunrise)

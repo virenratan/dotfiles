@@ -178,14 +178,6 @@ main() {
         fi
 
     done
-
-    local stubbyConfigSource="$(pwd)/stubby.yml"
-    local stubbyConfigTarget="/usr/local/etc/stubby/stubby.yml"
-    execute "ln -fs $stubbyConfigSource $stubbyConfigTarget" "$stubbyConfigTarget → $stubbyConfigSource"
-
-    local dnscryptConfigSource="$(pwd)/dnscrypt-proxy.toml"
-    local dnscryptConfigTarget="/usr/local/etc/dnscrypt-proxy.toml"
-    execute "ln -fs $dnscryptConfigSource $dnscryptConfigTarget" "$dnscryptConfigTarget → $dnscryptConfigSource"
 }
 
 main

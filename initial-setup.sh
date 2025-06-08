@@ -30,11 +30,6 @@ echo $(brew --prefix)/bin/fish | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
-# dns privacy.
-brew services start stubby
-sudo brew services start dnscrypt-proxy
-# shieldsup
-
 # macos defaults.
 ./macos.sh
 
