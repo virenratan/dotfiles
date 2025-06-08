@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>system.dnscrypt-proxy</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>{{HOMEBREW_PREFIX}}/opt/dnscrypt-proxy/sbin/dnscrypt-proxy</string>
+        <string>-config</string>
+        <string>{{DOTFILES_PATH}}/dnscrypt-proxy/dnscrypt-proxy.toml</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/var/log/dnscrypt-proxy.err</string>
+    <key>StandardOutPath</key>
+    <string>/var/log/dnscrypt-proxy.out</string>
+    <key>WorkingDirectory</key>
+    <string>/var/lib/dnscrypt-proxy</string>
+</dict>
+</plist>

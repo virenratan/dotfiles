@@ -1,0 +1,134 @@
+##############################################
+#                                            #
+#        dnscrypt-proxy configuration        #
+#                                            #
+##############################################
+
+# Simple configuration file focused on Cloudflare DNS
+
+# Listen on localhost port 53 (standard DNS port)
+# This requires root privileges
+listen_addresses = ['127.0.0.1:53']
+
+# Use Cloudflare DNS servers only
+# These provide fast, privacy-respecting DNS resolution
+server_names = ['cloudflare', 'cloudflare-ipv6']
+
+## Maximum number of simultaneous client connections to accept
+max_clients = 250
+
+## Require servers to satisfy specific properties
+
+# Use servers reachable over IPv4
+ipv4_servers = true
+
+# Use servers reachable over IPv6 -- Do not enable if you don't have IPv6 connectivity
+ipv6_servers = true
+
+# Use servers implementing the DNSCrypt protocol
+dnscrypt_servers = true
+
+# Use servers implementing the DNS-over-HTTPS protocol
+doh_servers = true
+
+## Require servers defined by remote sources to satisfy specific properties
+
+# Server must support DNS security extensions (DNSSEC)
+require_dnssec = true
+
+# Server must not log user queries (declarative)
+require_nolog = true
+
+# Server must not enforce its own blocklist (for parental control, ads blocking...)
+require_nofilter = true
+
+## Always use TCP to connect to upstream servers.
+## This can be useful if you need to route everything through Tor.
+## Otherwise, leave this to `false`, as it doesn't improve security
+## (dnscrypt-proxy will always encrypt everything even using UDP), and can
+## only increase latency.
+force_tcp = false
+
+## How long a DNS query will wait for a response, in milliseconds.
+## If you have a network with *a lot* of latency, you may need to
+## increase this. Startup may be slower if you do so.
+## Don't increase it too much. 10000 is the highest reasonable value.
+timeout = 2500
+
+## Enable logs
+log_level = 2
+log_file = '~/Library/Logs/dnscrypt-proxy.log'
+
+## Use the system logger (syslog on Unix, Event Log on Windows)
+use_syslog = true
+
+## Delay, in minutes, after which certificates are reloaded
+cert_refresh_delay = 240
+
+## DNSCrypt: Create a new, unique key for every single DNS query
+## This may improve privacy but can also have a significant impact on CPU usage
+## Only enable if you don't have a lot of network load
+# dnscrypt_ephemeral_keys = false
+
+## DoH: Disable TLS session tickets - increases privacy but also latency
+# tls_disable_session_tickets = false
+
+## DoH: Use a specific cipher suite instead of the server preference
+## 49199 = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+## 49195 = TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+## 52392 = TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
+## 52393 = TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+# tls_cipher_suite = [52392, 49199]
+
+###############################################################################
+#        Servers with local, static and public certificate                    #
+###############################################################################
+
+## Local (private) servers
+[static]
+
+###############################################################################
+#        Servers with publicly available, non-censored certificates           #
+###############################################################################
+
+[sources]
+  ## Remote source from https://github.com/DNSCrypt/dnscrypt-resolvers
+
+  [sources.'public-resolvers']
+  urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md', 'https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md']
+  cache_file = '~/Library/Application Support/dnscrypt-proxy/public-resolvers.md'
+  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
+  refresh_delay = 72
+  prefix = ''
+
+  ## Anonymized DNS relays
+  [sources.'relays']
+  urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/relays.md', 'https://download.dnscrypt.info/resolvers-list/v3/relays.md']
+  cache_file = '~/Library/Application Support/dnscrypt-proxy/relays.md'
+  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
+  refresh_delay = 72
+  prefix = ''
+
+###############################################################################
+#                             Logging                                         #
+###############################################################################
+
+## log file for the application
+# log_file = '/var/log/dnscrypt-proxy/dnscrypt-proxy.log'
+
+## When using a log file, only keep logs from the most recent launch
+# log_files_max_size = 10
+# log_files_max_age = 7
+# log_files_max_backups = 1
+
+###############################################################################
+#                        Pattern-based blocking                               #
+###############################################################################
+
+## Patterns that are allowed to send queries to this server.
+## Patterns are primarily matched against domain names, but can also
+## match against client IP addresses or IP networks.
+# allowed_names = ['example.com', 'example.net']
+
+## Return a synthetic SOA response for blocked domains
+# blocked_names_reply_with_soa = true

@@ -43,6 +43,7 @@ brew 'terminal-notifier'
 brew 'thefuck'
 
 # security.
+brew 'dnscrypt-proxy'
 brew 'gnupg'
 brew 'gpg2'
 brew 'openssl'

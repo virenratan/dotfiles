@@ -1,7 +1,7 @@
 # dotfiles
 
 > Personal configurations for macOS, fish, iTerm2 and more.
-> Includes `.macos` — sensible defaults for macOS.
+> Includes `.macos` — sensible defaults for macOS, and automatic encrypted DNS setup with dnscrypt-proxy.
 
 ## 👋 Getting started
 
@@ -41,9 +41,11 @@ Install the GitHub CLI and then the Copilot extension:
 gh extension install github/gh-copilot
 ```
 
-### GPG setup
+### DNSCrypt Proxy (disabled for Apple Silicon)
 
-- [Signing your Git Commits using GPG on MacOS Sierra/High Sierra](https://gist.github.com/virenratan/914bfdd76ac0561574ed918da2bce78e)
+Automatic setup of encrypted DNS using dnscrypt-proxy with Cloudflare DNS servers for enhanced privacy and security.
+
+See [dnscrypt-proxy/README.md](dnscrypt-proxy/README.md) for detailed configuration and usage information.
 
 ## ⬆️ Updating
 

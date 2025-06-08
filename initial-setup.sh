@@ -10,6 +10,9 @@ brew bundle
 # symlink it up!
 ./symlink-setup.sh
 
+# setup dnscrypt-proxy.
+# ./dnscrypt-proxy/install.sh
+
 # set up git config to include shared config.
 if [ -f ~/.gitconfig ]; then
   # check if include directive already exists.
