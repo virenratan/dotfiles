@@ -58,6 +58,8 @@
 
 [fetch]
   prune = true
+[init]
+  defaultBranch = main
 [diff]
   tool = Kaleidoscope
 [merge]
