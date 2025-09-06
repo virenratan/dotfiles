@@ -7,6 +7,9 @@ abbr -a top 'vtop'
 abbr -a cask 'brew cask'
 abbr -a upgrade 'yarn global upgrade && brew upgrade && mas upgrade'
 
+# synology nas.
+alias nas-cleanup="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/scripts/nas-cleanup.sh"
+
 # plex on synology nas.
 function plex-restart
     ~/Library/Mobile\ Documents/com~apple~CloudDocs/scripts/plex-restart.sh
