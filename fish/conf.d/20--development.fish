@@ -9,5 +9,5 @@ set -gx NVM_DIR ~/.nvm
 set -gx nvm_default_version lts/hydrogen
 
 if status is-interactive; and test -f $NVM_DIR/nvm.sh
-    nvm use default --silent
+  nvm use default --silent
 end
