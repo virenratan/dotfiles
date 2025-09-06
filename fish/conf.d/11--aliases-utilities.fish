@@ -38,3 +38,5 @@ abbr -a empty_trash 'sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.
 
 # 🔥 switch shell to native macOS zsh.
 abbr -a change_shell 'chsh -s /bin/zsh'
+
+alias reload-fish="exec fish"
