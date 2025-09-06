@@ -189,5 +189,25 @@ ln -sfn "$(pwd)/fish" ~/.config/fish
 # 1password ssh config.
 ln -sfn "$(pwd)/1Password" ~/.config/1Password
 
+# scripts directory -> ~/scripts
+if [ -d "$(pwd)/scripts" ]; then
+    if [ -L "$HOME/scripts" ] || [ ! -e "$HOME/scripts" ]; then
+        ln -sfn "$(pwd)/scripts" "$HOME/scripts"
+        print_success "$HOME/scripts → $(pwd)/scripts"
+    else
+        print_error "$HOME/scripts exists and is not a symlink. Remove or rename it, then re-run."
+    fi
+fi
+
+if [ -f "$(pwd)/scripts/com.viren.nas-auto-cleanup.plist" ]; then
+    ln -sf "$(pwd)/scripts/com.viren.nas-auto-cleanup.plist" "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist"
+    launchctl unload "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist" 2>/dev/null || true
+    launchctl load "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist"
+    print_success "LaunchAgent loaded → com.viren.nas-auto-cleanup"
+else
+    print_error "LaunchAgent plist not found in scripts/"
+fi
+
 # personal settings from icloud drive.
+mkdir -p ~/.ssh
 ln -sf ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.ssh/config ~/.ssh/config

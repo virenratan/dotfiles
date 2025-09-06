@@ -41,6 +41,27 @@ Install the GitHub CLI and then the Copilot extension:
 gh extension install github/gh-copilot
 ```
 
+### NAS Helper Commands
+
+These fish functions and aliases provide quick helpers for Plex and NAS maintenance:
+
+- `plex-restart`
+  Restarts Plex Media Server on the Synology NAS, shows a macOS notification, and then runs `plex-status`.
+
+- `plex-status`
+  Checks whether Plex is running on the NAS and shows the last logged restart time.
+
+- `nas-cleanup`
+  Cleans up leftover `.smbdelete*` files and empty directories under `/volume2/Media/Movies` and `/volume2/Media/Series`.
+  Supports `--list` for a dry run.
+
+- `nas-auto-cleanup`
+  Runs automatically every hour via a LaunchAgent. Results can be checked in:
+  - `/tmp/nas-auto-cleanup.out` (stdout)
+  - `/tmp/nas-auto-cleanup.err` (stderr)
+
+The LaunchAgent is automatically symlinked and loaded by the bootstrap script in this repo.
+
 ### DNSCrypt Proxy (disabled for Apple Silicon)
 
 Automatic setup of encrypted DNS using dnscrypt-proxy with Cloudflare DNS servers for enhanced privacy and security.
