@@ -7,6 +7,9 @@ abbr -a top 'vtop'
 abbr -a cask 'brew cask'
 abbr -a upgrade 'yarn global upgrade && brew upgrade && mas upgrade'
 
+# nas
+alias plex-restart "$HOME/Library/Mobile Documents/com~apple~CloudDocs/scripts/plex-restart.sh"
+
 # typos
 abbr -a brwe 'brew'
 abbr -a gti 'git'

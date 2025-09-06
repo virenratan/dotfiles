@@ -7,4 +7,4 @@ function ......; cd ../../../../.. ; end
 abbr -a dt 'cd ~/Desktop'
 abbr -a d  'cd ~/Downloads'
 abbr -a p  'cd ~/Projects'
-abbr -a icloud  'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+abbr -a icloud "cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs"
