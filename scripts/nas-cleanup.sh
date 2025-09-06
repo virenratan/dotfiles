@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# cleanup junk files (like .smbdelete*) and empty dirs from synology nas media folders.
+
 start_time=$(date +%s)
 MODE="delete"
 
@@ -23,13 +25,13 @@ if [[ $? -eq 0 ]]; then
   elapsed=$(( end_time - start_time ))
 
   if [[ "$MODE" == "list" ]]; then
-    terminal-notifier -title "NAS Helper" -message "Listed junk & empty dirs ✅"
+    terminal-notifier -title "NAS Housekeeping" -message "Listed junk & empty dirs ✅"
     echo "✅ Listed junk & empty dirs (took ${elapsed}s)"
   else
-    terminal-notifier -title "NAS Helper" -message "Cleanup completed ✅"
+    terminal-notifier -title "NAS Housekeeping" -message "Cleanup completed ✅"
     echo "✅ Cleanup completed (took ${elapsed}s)"
   fi
 else
-  terminal-notifier -title "NAS Helper" -message "Cleanup failed ❌"
+  terminal-notifier -title "NAS Housekeeping" -message "Cleanup failed ❌"
   echo "❌ Cleanup failed"
 fi
