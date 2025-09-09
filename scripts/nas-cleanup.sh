@@ -2,6 +2,14 @@
 
 # cleanup junk files (like .smbdelete*) and empty dirs from synology nas media folders.
 
+# shellcheck source=nas.env
+SCRIPT_DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
+if [ ! -f "$SCRIPT_DIR/nas.env" ]; then
+  echo "❌ Missing $SCRIPT_DIR/nas.env" >&2
+  exit 1
+fi
+source "$SCRIPT_DIR/nas.env"
+
 start_time=$(date +%s)
 MODE="delete"
 
@@ -12,10 +20,10 @@ fi
 echo "🧹 NAS cleanup ($MODE mode)..."
 
 if [[ "$MODE" == "list" ]]; then
-  ssh viren@192.168.1.135 "find /volume2/Media/Movies /volume2/Media/Series \
+  ssh "$NAS_SSH_TARGET" "find /volume2/Media/Movies /volume2/Media/Series \
     -type f -name '.smbdelete*' -print -o -type d -empty -print"
 else
-  ssh viren@192.168.1.135 "sudo find /volume2/Media/Movies /volume2/Media/Series \
+  ssh "$NAS_SSH_TARGET" "sudo find /volume2/Media/Movies /volume2/Media/Series \
     \( -type f -name '.smbdelete*' -delete -print \) -o \
     \( -type d -empty -delete -print \)"
 fi
