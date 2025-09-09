@@ -1,10 +1,14 @@
 #!/bin/zsh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+log() {
+  echo "$(date '+%Y-%m-%d %H:%M:%S') $*"
+}
+
 # shellcheck source=nas.env
 SCRIPT_DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
 if [ ! -f "$SCRIPT_DIR/nas.env" ]; then
-  echo "❌ Missing $SCRIPT_DIR/nas.env" >&2
+  log "❌ Missing $SCRIPT_DIR/nas.env" >&2
   exit 1
 fi
 source "$SCRIPT_DIR/nas.env"
@@ -15,14 +19,14 @@ CONTAINERS=( mylar3 radarr sonarr )
 
 # 1. check if the nas is reachable.
 if ! ping -c 1 -W 1 $NAS_IP >/dev/null 2>&1; then
-  echo "⚠️ NAS not reachable, skipping"
+  log "⚠️ NAS not reachable, skipping"
   exit 0
 fi
 
 # 2. check volumes exist locally.
 for d in $CHECK_DIRS; do
   if [ ! -d "$d" ]; then
-    echo "⚠️ Volume $d not mounted, skipping"
+    log "⚠️ Volume $d not mounted, skipping"
     exit 0
   fi
 done
@@ -39,8 +43,8 @@ done
 
 # 4. restart if needed.
 if [ ${#NEED_RESTART[@]} -eq 0 ]; then
-  echo "✅ All containers see their mounts fine"
+  log "✅ All containers see their mounts fine"
 else
-  echo "♻️ Restarting: ${NEED_RESTART[@]}"
+  log "♻️ Restarting: ${NEED_RESTART[@]}"
   docker restart ${NEED_RESTART[@]}
 fi
