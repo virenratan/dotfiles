@@ -6,3 +6,5 @@ set -gx EDITOR nano
 test -e $HOME/.extra.fish; and source $HOME/.extra.fish
 
 # majority of configuration is under conf.d.
+
+thefuck --alias | source

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.viren.nas-docker-remount</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/viren/scripts/nas-docker-remount.sh</string>
+  </array>
+
+  <!-- Run every 5 minutes -->
+  <key>StartInterval</key>
+  <integer>300</integer>
+
+  <!-- Run at login and when network state changes -->
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <dict>
+    <key>NetworkState</key>
+    <true/>
+  </dict>
+
+  <!-- Logs -->
+  <key>StandardOutPath</key>
+  <string>/tmp/nas-docker-remount.out</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/nas-docker-remount.err</string>
+</dict>
+</plist>

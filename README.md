@@ -3,6 +3,16 @@
 > Personal configurations for macOS, fish, iTerm2 and more.
 > Includes `.macos` — sensible defaults for macOS, and automatic encrypted DNS setup with dnscrypt-proxy.
 
+## Table of Contents
+
+- [dotfiles](#dotfiles)
+  - [Table of Contents](#table-of-contents)
+  - [👋 Getting started](#-getting-started)
+    - [🤖 GitHub Copilot](#-github-copilot)
+    - [🛜 NAS utility commands](#-nas-utility-commands)
+    - [🔐 DNSCrypt Proxy (disabled for Apple Silicon)](#-dnscrypt-proxy-disabled-for-apple-silicon)
+  - [⬆️ Updating](#️-updating)
+
 ## 👋 Getting started
 
 When running on a fresh machine:
@@ -33,7 +43,7 @@ mkdir Projects && cd Projects
 git clone git@github.com:virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
 ```
 
-### Copilot
+### 🤖 GitHub Copilot
 
 Install the GitHub CLI and then the Copilot extension:
 
@@ -41,7 +51,7 @@ Install the GitHub CLI and then the Copilot extension:
 gh extension install github/gh-copilot
 ```
 
-### NAS Helper Commands
+### 🛜 NAS utility commands
 
 These fish functions and aliases provide quick helpers for Plex and NAS maintenance:
 
@@ -52,17 +62,32 @@ These fish functions and aliases provide quick helpers for Plex and NAS maintena
   Checks whether Plex is running on the NAS and shows the last logged restart time.
 
 - `nas-cleanup`
-  Cleans up leftover `.smbdelete*` files and empty directories under `/volume2/Media/Movies` and `/volume2/Media/Series`.
+  Cleans up leftover `.smbdelete*` files and empty directories under `/volume2/Media`.
   Supports `--list` for a dry run.
 
-- `nas-auto-cleanup`
-  Runs automatically every hour via a LaunchAgent. Results can be checked in:
+- `nas-auto-cleanup (LaunchAgent)`
+  Runs `nas-cleanup` automatically every hour via a LaunchAgent.
+  Logs are written to:
+
   - `/tmp/nas-auto-cleanup.out` (stdout)
   - `/tmp/nas-auto-cleanup.err` (stderr)
 
-The LaunchAgent is automatically symlinked and loaded by the bootstrap script in this repo.
+- `nas-docker-remount`
+  Checks if the NAS volumes are reachable and verifies that specific containers
+  can still see their `/data/...` bind mounts. If not, the affected containers are restarted.
+  Can be run manually via the alias.
 
-### DNSCrypt Proxy (disabled for Apple Silicon)
+- `nas-docker-remount (LaunchAgent)`
+  Runs the remount check automatically every 5 minutes and on network changes via a LaunchAgent.
+  Logs are written to:
+  - `/tmp/nas-docker-remount.out` (stdout)
+  - `/tmp/nas-docker-remount.err` (stderr)
+
+> **Note:** By default, LaunchAgent symlinking is commented out in the bootstrap script.
+> This prevents the jobs from running on work or shared machines. Uncomment the relevant
+> block in `symlink-bootstrap.sh` if you want the automation to be active.
+
+### 🔐 DNSCrypt Proxy (disabled for Apple Silicon)
 
 Automatic setup of encrypted DNS using dnscrypt-proxy with Cloudflare DNS servers for enhanced privacy and security.
 
@@ -76,11 +101,3 @@ If you just need to update the symlinks:
 git pull origin develop
 ./symlink-setup.sh
 ```
-
-## 🙏 Thanks to people I've grabbed stuff from
-
-- [holman/dotfiles](https://github.com/holman/dotfiles)
-- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
-- [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
-- [kentcdodds/dotfiles](https://github.com/kentcdodds/dotfiles)
-- [github/gitignore](https://github.com/github/gitignore)

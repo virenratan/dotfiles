@@ -13,17 +13,23 @@ if [ ! -f "$SCRIPT_DIR/nas.env" ]; then
 fi
 source "$SCRIPT_DIR/nas.env"
 
+# 1. skip if on battery power.
+if pmset -g batt | grep -q "Battery Power"; then
+  log "🔋 On battery power, skipping remount check"
+  exit 0
+fi
+
 NAS_IP="$NAS_HOST"
 CHECK_DIRS=( "/Volumes/Media/Comics" "/Volumes/Media/Movies" "/Volumes/Media/Series" )
 CONTAINERS=( mylar3 radarr sonarr )
 
-# 1. check if the nas is reachable.
+# 2. check if the nas is reachable.
 if ! ping -c 1 -W 1 $NAS_IP >/dev/null 2>&1; then
   log "⚠️ NAS not reachable, skipping"
   exit 0
 fi
 
-# 2. check volumes exist locally.
+# 3. check volumes exist locally.
 for d in $CHECK_DIRS; do
   if [ ! -d "$d" ]; then
     log "⚠️ Volume $d not mounted, skipping"
@@ -31,7 +37,7 @@ for d in $CHECK_DIRS; do
   fi
 done
 
-# 3. check the mounts inside of the containers.
+# 4. check the mounts inside of the containers.
 NEED_RESTART=()
 for c in $CONTAINERS; do
   if ! docker exec $c test -d /data/Comics >/dev/null 2>&1 \
@@ -41,7 +47,7 @@ for c in $CONTAINERS; do
   fi
 done
 
-# 4. restart if needed.
+# 5. restart if needed.
 if [ ${#NEED_RESTART[@]} -eq 0 ]; then
   log "✅ All containers see their mounts fine"
 else

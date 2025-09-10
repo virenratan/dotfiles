@@ -5,6 +5,7 @@ abbr -a top 'vtop'
 
 # synology nas.
 alias nas-cleanup="$HOME/scripts/nas-cleanup.sh"
+alias nas-docker-remount="$HOME/scripts/nas-docker-remount.sh"
 
 # plex on synology nas.
 function plex-restart

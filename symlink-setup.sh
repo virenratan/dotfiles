@@ -199,14 +199,29 @@ if [ -d "$(pwd)/scripts" ]; then
     fi
 fi
 
-if [ -f "$(pwd)/scripts/com.viren.nas-auto-cleanup.plist" ]; then
-    ln -sf "$(pwd)/scripts/com.viren.nas-auto-cleanup.plist" "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist"
-    launchctl unload "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist" 2>/dev/null || true
-    launchctl load "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist"
-    print_success "LaunchAgent loaded → com.viren.nas-auto-cleanup"
-else
-    print_error "LaunchAgent plist not found in scripts/"
-fi
+
+
+# # install automation via plist.
+# # uncomment to install after ssh key added to nas.
+# if [ -f "$(pwd)/scripts/com.viren.nas-auto-cleanup.plist" ]; then
+#     ln -sf "$(pwd)/scripts/com.viren.nas-auto-cleanup.plist" "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist"
+#     launchctl unload "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist" 2>/dev/null || true
+#     launchctl load "$HOME/Library/LaunchAgents/com.viren.nas-auto-cleanup.plist"
+#     print_success "LaunchAgent loaded → com.viren.nas-auto-cleanup"
+# else
+#     print_error "LaunchAgent plist not found in scripts/"
+# fi
+
+# # expects media-management docker system to be running.
+# if [ -f "$(pwd)/scripts/com.viren.nas-docker-remount.plist" ]; then
+#     ln -sf "$(pwd)/scripts/com.viren.nas-docker-remount.plist" "$HOME/Library/LaunchAgents/com.viren.nas-docker-remount.plist"
+#     launchctl unload "$HOME/Library/LaunchAgents/com.viren.nas-docker-remount.plist" 2>/dev/null || true
+#     launchctl load "$HOME/Library/LaunchAgents/com.viren.nas-docker-remount.plist"
+#     print_success "LaunchAgent loaded → com.viren.nas-docker-remount"
+# else
+#     print_error "LaunchAgent plist not found in scripts/"
+# fi
+
 
 # personal settings from icloud drive.
 mkdir -p ~/.ssh
