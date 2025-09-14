@@ -20,10 +20,10 @@ fi
 echo "🧹 NAS cleanup ($MODE mode)..."
 
 if [[ "$MODE" == "list" ]]; then
-  ssh "$NAS_SSH_TARGET" "find /volume2/Media/Movies /volume2/Media/Series \
+  "$NAS_SSH_BIN" -i "$NAS_SSH_KEY" $NAS_SSH_OPTS "$NAS_SSH_TARGET" "find /volume2/Media/Movies /volume2/Media/Series \
     -type f -name '.smbdelete*' -print -o -type d -empty -print"
 else
-  ssh "$NAS_SSH_TARGET" "sudo find /volume2/Media/Movies /volume2/Media/Series \
+  "$NAS_SSH_BIN" -i "$NAS_SSH_KEY" $NAS_SSH_OPTS "$NAS_SSH_TARGET" "sudo find /volume2/Media/Movies /volume2/Media/Series \
     \( -type f -name '.smbdelete*' -delete -print \) -o \
     \( -type d -empty -delete -print \)"
 fi
