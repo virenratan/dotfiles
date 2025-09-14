@@ -33,8 +33,8 @@ abbr -a ip 'dig +short myip.opendns.com @resolver1.opendns.com'
 # 🧹 housekeeping.
 abbr -a cleanup_ds "find . -name '*.DS_Store' -type f -ls -delete"
 abbr -a cleanup_ls '/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
-abbr -a diskspace 'df -P -kHl'
-abbr -a empty_trash 'sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl'
+abbr -a diskspace 'df -Hl'
+abbr -a empty_trash 'rm -rfv ~/.Trash/* 2>/dev/null'
 
 # 🔥 switch shell to native macOS zsh.
 abbr -a change_shell 'chsh -s /bin/zsh'
