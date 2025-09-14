@@ -14,6 +14,8 @@
 	<false/>
 	<key>BootstrapDaemon</key>
 	<false/>
+	<key>BracketedPasteMode</key>
+	<true/>
 	<key>CheckTestRelease</key>
 	<false/>
 	<key>ClickToSelectCommand</key>
@@ -24,6 +26,8 @@
 	<true/>
 	<key>Control</key>
 	<integer>1</integer>
+	<key>ConvertDosNewlines</key>
+	<true/>
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
@@ -625,6 +629,8 @@
 	<key>EnableProxyIcon</key>
 	<false/>
 	<key>EnableRendezvous</key>
+	<false/>
+	<key>EscapeShellCharsWithBackslash</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
 	<false/>
@@ -1329,6 +1335,12 @@
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
+	<false/>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
 	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>2</integer>
