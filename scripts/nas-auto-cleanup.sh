@@ -19,7 +19,7 @@ start_time=$(date +%s)
 
 if ping -c 1 -W 1 "$NAS_HOST" > /dev/null 2>&1; then
   log "🧹 NAS cleanup (delete mode)..."
-  if "$NAS_SSH_BIN" -i "$NAS_SSH_KEY" $NAS_SSH_OPTS "$NAS_SSH_TARGET" "sudo find /volume2/Media/Movies /volume2/Media/Series \
+  if "$NAS_SSH_BIN" -i "$NAS_SSH_KEY" ${(z)NAS_SSH_OPTS} "$NAS_SSH_TARGET" "sudo find /volume2/Media/Movies /volume2/Media/Series \
       \( -type f -name '.smbdelete*' -delete -print \) -o \
       \( -type d -empty -delete -print \)"; then
     log "✅ Cleanup completed (took $(( $(date +%s) - start_time ))s)"
