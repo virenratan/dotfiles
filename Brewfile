@@ -92,6 +92,7 @@ cask 'quicklook-json'
 cask 'suspicious-package'
 
 # app store.
+mas '1Password for Safari', id: 1569813296
 mas 'CARROT Weather', id: 993487541
 mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
