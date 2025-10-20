@@ -27,6 +27,7 @@ brew 'gist'
 brew 'hub'
 
 # development tools.
+brew 'codex'
 brew 'gitmoji'
 brew 'nano'
 brew 'node'
