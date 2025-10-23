@@ -22,6 +22,8 @@ abbr -a gca 'git commit --amend --no-edit'
 abbr -a gpf 'git push --force-with-lease'
 abbr -a push 'git push'
 abbr -a gitundo 'git push -f origin HEAD^:master'
+abbr -a gstash 'git stash -u'
+abbr -a gunstash 'git stash pop'
 
 function gpm
   set urls (git remote get-url --all mirror 2>/dev/null)
