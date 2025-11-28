@@ -34,6 +34,7 @@ brew 'node'
 brew 'pnpm'
 brew 'pyenv'
 brew 'swift'
+brew 'terraform'
 brew 'watchman'
 brew 'yarn', args: ["ignore-dependencies"]
 
