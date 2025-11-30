@@ -10,6 +10,7 @@
   - [👋 Getting started](#-getting-started)
     - [🤖 GitHub Copilot](#-github-copilot)
     - [🛜 NAS utility commands](#-nas-utility-commands)
+    - [Additional setup](#additional-setup)
     - [🔐 DNSCrypt Proxy (disabled for Apple Silicon)](#-dnscrypt-proxy-disabled-for-apple-silicon)
   - [⬆️ Updating](#️-updating)
 
@@ -86,6 +87,10 @@ These fish functions and aliases provide quick helpers for Plex and NAS maintena
 > **Note:** By default, LaunchAgent symlinking is commented out in the bootstrap script.
 > This prevents the jobs from running on work or shared machines. Uncomment the relevant
 > block in `symlink-bootstrap.sh` if you want the automation to be active.
+
+### Additional setup
+
+- [AI control integration](https://github.com/virenratan/ai-instructions)
 
 ### 🔐 DNSCrypt Proxy (disabled for Apple Silicon)
 
