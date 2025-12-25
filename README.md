@@ -10,6 +10,7 @@
   - [👋 Getting started](#-getting-started)
     - [🤖 GitHub Copilot](#-github-copilot)
     - [🛜 NAS utility commands](#-nas-utility-commands)
+      - [NAS passwordless sudo (DSM)](#nas-passwordless-sudo-dsm)
     - [Additional setup](#additional-setup)
     - [🔐 DNSCrypt Proxy (disabled for Apple Silicon)](#-dnscrypt-proxy-disabled-for-apple-silicon)
   - [⬆️ Updating](#️-updating)
@@ -87,6 +88,25 @@ These fish functions and aliases provide quick helpers for Plex and NAS maintena
 > **Note:** By default, LaunchAgent symlinking is commented out in the bootstrap script.
 > This prevents the jobs from running on work or shared machines. Uncomment the relevant
 > block in `symlink-bootstrap.sh` if you want the automation to be active.
+
+#### NAS passwordless sudo (DSM)
+
+The NAS helpers assume passwordless sudo for `synopkg` (Plex restart/status) and `find` (cleanup). DSM 7.x ships with `sudo` configured to include `/etc/sudoers.d`.
+
+Quick setup on the NAS (via SSH):
+
+1. Confirm includes: `sudo grep -n include /etc/sudoers` (look for `#includedir /etc/sudoers.d`).
+2. Ensure the include directory exists: `sudo mkdir -p /etc/sudoers.d && sudo chmod 755 /etc/sudoers.d`.
+3. Create a drop-in: `sudo visudo -f /etc/sudoers.d/automation` (file will be root:root, mode 0440).
+4. Add entries (adjust user if needed):
+
+```
+viren ALL=(root) NOPASSWD: /usr/syno/bin/synopkg restart PlexMediaServer, /usr/syno/bin/synopkg status PlexMediaServer, /usr/bin/find
+```
+
+5. Validate: `sudo visudo -c`.
+
+SSH opts live in [scripts/nas.env](scripts/nas.env#L1-L12); `BatchMode=yes` keeps scripts non-interactive and will fail fast if sudoers is reset after a DSM update.
 
 ### Additional setup
 
