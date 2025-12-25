@@ -8,7 +8,6 @@
 - [dotfiles](#dotfiles)
   - [Table of Contents](#table-of-contents)
   - [👋 Getting started](#-getting-started)
-    - [🤖 GitHub Copilot](#-github-copilot)
     - [🛜 NAS utility commands](#-nas-utility-commands)
       - [NAS passwordless sudo (DSM)](#nas-passwordless-sudo-dsm)
     - [Additional setup](#additional-setup)
@@ -43,14 +42,6 @@ mkdir Projects && cd Projects
 
 ```shell
 git clone git@github.com:virenratan/dotfiles.git && cd dotfiles && ./initial-setup.sh
-```
-
-### 🤖 GitHub Copilot
-
-Install the GitHub CLI and then the Copilot extension:
-
-```shell
-gh extension install github/gh-copilot
 ```
 
 ### 🛜 NAS utility commands

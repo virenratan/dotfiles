@@ -25,6 +25,7 @@ brew 'git-delta'
 brew 'git-lfs'
 brew 'gist'
 brew 'hub'
+brew 'copilot-cli'
 
 # development tools.
 brew 'codex'

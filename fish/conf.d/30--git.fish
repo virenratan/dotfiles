@@ -43,8 +43,3 @@ function gpm
     echo "Aborted."
   end
 end
-
-
-
-# copilot.
-abbr -a suggest 'gh copilot suggest'
