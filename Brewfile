@@ -25,10 +25,9 @@ brew 'git-delta'
 brew 'git-lfs'
 brew 'gist'
 brew 'hub'
-brew 'copilot-cli'
+brew 'copilot'
 
 # development tools.
-brew 'codex'
 brew 'gitmoji'
 brew 'nano'
 brew 'node'
@@ -37,7 +36,7 @@ brew 'pyenv'
 brew 'swift'
 brew 'terraform'
 brew 'watchman'
-brew 'yarn', args: ["ignore-dependencies"]
+# brew 'yarn', args: ["ignore-dependencies"]
 
 # shells and terminal.
 brew 'autojump'
@@ -59,10 +58,9 @@ brew 'wifi-password'
 cask '1password'
 cask '1password-cli'
 # cask 'abstract'
-cask 'automounterhelper'
 cask 'copilot-for-xcode'
 # cask 'diffmerge'
-cask 'docker'
+cask 'docker-desktop'
 cask 'figma'
 cask 'firefox'
 cask 'gpg-suite'
@@ -93,7 +91,7 @@ cask 'font-source-code-pro'
 
 # quicklook.
 cask 'qlmarkdown'
-cask 'quicklook-json'
+# cask 'quicklook-json'
 cask 'suspicious-package'
 
 # app store.
@@ -103,11 +101,12 @@ mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
 mas 'Hidden Bar', id: 1452453066
 # mas 'iA Writer', id: 775737590
-mas 'Kaleidoscope', id: 587512244
+# mas 'Kaleidoscope', id: 587512244
 mas 'NordVPN', id: 905953485
 mas 'Pixelmator Pro', id: 1289583905
 
 # software for home computers.
+# cask 'automounterhelper'
 # cask 'discord'
 # cask 'macs-fan-control'
 # cask 'plex'
