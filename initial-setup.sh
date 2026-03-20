@@ -39,8 +39,7 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 # setup dock.
 ./dock-setup.sh
 
-# nvm.
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-fisher add brigand/fast-nvm-fish
-nvm install lts/hydrogen
-nvm use lts/hydrogen
+# fnm.
+brew install fnm
+fnm install --lts
+fnm default lts-latest
