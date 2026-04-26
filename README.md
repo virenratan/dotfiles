@@ -114,6 +114,6 @@ See [dnscrypt-proxy/README.md](dnscrypt-proxy/README.md) for detailed configurat
 If you just need to update the symlinks:
 
 ```shell
-git pull origin develop
+git pull origin main
 ./symlink-setup.sh
 ```

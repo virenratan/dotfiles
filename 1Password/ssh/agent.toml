@@ -33,9 +33,9 @@
 # item = "Mindera"
 # vault = "Work"
 
-[[ssh-keys]]
-item = "SEC"
-vault = "Work"
-
 # [[ssh-keys]]
-# vault = "Personal"
+# item = "SEC"
+# vault = "Work"
+
+[[ssh-keys]]
+vault = "Personal"
