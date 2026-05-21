@@ -17,6 +17,7 @@ brew 'make'
 brew 'tldr'
 brew 'tree'
 brew 'wget'
+brew 'yq'
 
 # git and github.
 brew 'gh'
