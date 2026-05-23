@@ -80,7 +80,6 @@ cask 'rectangle'
 cask 'slack'
 # cask 'tripmode'
 cask 'visual-studio-code'
-# cask 'zeplin'
 cask 'zoom'
 
 # fonts.
@@ -91,9 +90,11 @@ cask 'font-roboto-mono'
 cask 'font-source-code-pro'
 
 # quicklook.
-cask 'qlmarkdown'
-# cask 'quicklook-json'
+cask 'qlmarkdown' # cask sunset 2026-09-01, install app manually after.
 cask 'suspicious-package'
+cask 'syntax-highlight'
+cask 'quicklook-video'
+cask 'apparency'
 
 # app store.
 mas '1Password for Safari', id: 1569813296
