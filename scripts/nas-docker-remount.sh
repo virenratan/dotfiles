@@ -20,8 +20,12 @@ if pmset -g batt | grep -q "Battery Power"; then
 fi
 
 NAS_IP="$NAS_HOST"
-CHECK_DIRS=( "/Volumes/Media/Comics" "/Volumes/Media/Movies" "/Volumes/Media/Series" )
-CONTAINERS=( mylar3 radarr sonarr )
+MEDIA_ROOT="/Volumes/Media"
+
+# each container maps to the single subdir it sees under both the host share
+# and /data inside the container.
+typeset -A MOUNTS
+MOUNTS=( mylar3 Comics  radarr Films  sonarr Series )
 
 # 2. check if the nas is reachable.
 if ! ping -c 1 -W 1 $NAS_IP >/dev/null 2>&1; then
@@ -29,21 +33,22 @@ if ! ping -c 1 -W 1 $NAS_IP >/dev/null 2>&1; then
   exit 0
 fi
 
-# 3. check volumes exist locally.
-for d in $CHECK_DIRS; do
-  if [ ! -d "$d" ]; then
-    log "⚠️ Volume $d not mounted, skipping"
+# 3. check the host share is mounted. if it is gone here, a container restart
+# can't fix it, so skip.
+for dir in ${(v)MOUNTS}; do
+  if [ ! -d "$MEDIA_ROOT/$dir" ]; then
+    log "⚠️ Volume $MEDIA_ROOT/$dir not mounted, skipping"
     exit 0
   fi
 done
 
-# 4. check the mounts inside of the containers.
+# 4. check each container actually reads its mount. a stale bind still resolves
+# as a directory but shows up empty, so test for content not existence.
 NEED_RESTART=()
-for c in $CONTAINERS; do
-  if ! docker exec $c test -d /data/Comics >/dev/null 2>&1 \
-     && ! docker exec $c test -d /data/Movies >/dev/null 2>&1 \
-     && ! docker exec $c test -d /data/Series >/dev/null 2>&1; then
-    NEED_RESTART+=($c)
+for c in ${(k)MOUNTS}; do
+  dir="${MOUNTS[$c]}"
+  if ! docker exec "$c" sh -c "[ -n \"\$(ls -A /data/$dir 2>/dev/null)\" ]" >/dev/null 2>&1; then
+    NEED_RESTART+=("$c")
   fi
 done
 
