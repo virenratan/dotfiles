@@ -25,7 +25,7 @@ MEDIA_ROOT="/Volumes/Media"
 # each container maps to the single subdir it sees under both the host share
 # and /data inside the container.
 typeset -A MOUNTS
-MOUNTS=( mylar3 Comics  radarr Films  sonarr Series )
+MOUNTS=( mylar3 Comics  radarr Films  lidarr Music  sonarr Series )
 
 # 2. check if the nas is reachable.
 if ! ping -c 1 -W 1 $NAS_IP >/dev/null 2>&1; then
