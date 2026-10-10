@@ -1,0 +1,4 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# default is 30ms, which slow dirs (icloud, nas mounts, big repos) blow past.
+scan_timeout = 200

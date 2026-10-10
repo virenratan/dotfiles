@@ -186,6 +186,9 @@ main
 mkdir -p ~/.config
 ln -sfn "$(pwd)/fish" ~/.config/fish
 
+# starship prompt config.
+ln -sfn "$(pwd)/starship.toml" ~/.config/starship.toml
+
 # 1password ssh config.
 ln -sfn "$(pwd)/1Password" ~/.config/1Password
 
