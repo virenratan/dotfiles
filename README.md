@@ -86,7 +86,7 @@ These fish functions and aliases provide quick helpers for Plex and NAS maintena
 
 > **Note:** By default, LaunchAgent symlinking is commented out in the bootstrap script.
 > This prevents the jobs from running on work or shared machines. Uncomment the relevant
-> block in `symlink-bootstrap.sh` if you want the automation to be active.
+> block in `symlink-setup.sh` if you want the automation to be active.
 
 #### NAS passwordless sudo (DSM)
 
