@@ -31,19 +31,9 @@ setopt prompt_subst
 RPROMPT='${vcs_info_msg_0_}'
 zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%f'
 
-# Load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # Environment variables
 export EDITOR=nano
 export GPG_TTY=$(tty)
-
-# Pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 
 # Path
 if [[ $(uname -m) == "arm64" ]]; then
@@ -54,8 +44,9 @@ else
   export PATH="/usr/local/sbin:/usr/local/opt/curl/bin:$PATH"
 fi
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+
+# fnm
+eval "$(fnm env --use-on-cd --resolve-engines --shell zsh)"
 
 # Aliases
 alias g="git"

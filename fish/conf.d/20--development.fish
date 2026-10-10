@@ -1,8 +1,4 @@
-# development tools (nvm, pyenv, etc.)
-
-# pyenv.
-set -gx PYENV_ROOT $HOME/.pyenv
-fish_add_path $PYENV_ROOT/bin
+# development tools.
 
 # fnm.
 fnm env --use-on-cd --resolve-engines --shell fish | source

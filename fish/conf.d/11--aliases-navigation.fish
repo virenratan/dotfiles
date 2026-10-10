@@ -8,3 +8,6 @@ abbr -a dt      "cd $HOME/Desktop"
 abbr -a d       "cd $HOME/Downloads"
 abbr -a p       "cd $HOME/Projects"
 abbr -a icloud  "cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs"
+
+# smarter cd: `z <partial-name>`, `zi` for interactive pick.
+zoxide init fish | source
