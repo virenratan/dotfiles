@@ -226,3 +226,15 @@ fi
 # personal settings from icloud drive.
 mkdir -p ~/.ssh
 ln -sf ~/Library/Mobile\ Documents/com~apple~CloudDocs/System/.ssh/config ~/.ssh/config
+
+# git identities and the public keys ssh uses to pick a 1password key.
+mkdir -p ~/.config/git
+for dir in identities keys; do
+    target="$HOME/.config/git/$dir"
+    if [ -L "$target" ] || [ ! -e "$target" ]; then
+        ln -sfn "$HOME/Library/Mobile Documents/com~apple~CloudDocs/System/git/$dir" "$target"
+        print_success "$target → iCloud System/git/$dir"
+    else
+        print_error "$target exists and is not a symlink. Remove or rename it, then re-run."
+    fi
+done

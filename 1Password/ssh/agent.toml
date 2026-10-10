@@ -29,13 +29,18 @@
 # More examples can be found here:
 #  https://developer.1password.com/docs/ssh/agent/config
 
-# [[ssh-keys]]
-# item = "Mindera"
-# vault = "Work"
-
-# [[ssh-keys]]
-# item = "SEC"
-# vault = "Work"
+[[ssh-keys]]
+item = "Mindera"
+vault = "Work"
 
 [[ssh-keys]]
+item = "SEC"
+vault = "Work"
+
+[[ssh-keys]]
+item = "David Jones"
+vault = "Work"
+
+[[ssh-keys]]
+item = "Star-Lord"
 vault = "Personal"
