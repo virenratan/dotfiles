@@ -1,4 +1,4 @@
-starship init fish | source
+starship init fish --print-full-init | source
 
 # only load iterm2 shell integration when actually running in iterm2.
 # https://iterm2.com/documentation-shell-integration.html

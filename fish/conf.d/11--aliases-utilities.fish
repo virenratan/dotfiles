@@ -22,9 +22,6 @@ abbr -a chmox 'chmod +x'
 abbr -a fs "stat -f \"%z bytes\""
 abbr -a where 'which'
 
-# enable aliases to be sudo'ed
-abbr -a sudo 'sudo '
-
 # 🛜 network.
 abbr -a ping 'ping -c 5'
 abbr -a localip 'ipconfig getifaddr en0'

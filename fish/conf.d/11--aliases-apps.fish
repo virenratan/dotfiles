@@ -1,7 +1,6 @@
 # app replacements.
 abbr -a cat 'bat -P'
-abbr -a kill 'fkill'
-abbr -a top 'vtop'
+abbr -a top 'btop'
 
 # synology nas.
 alias nas-cleanup="$HOME/scripts/nas-cleanup.sh"
