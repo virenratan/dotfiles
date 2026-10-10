@@ -33,7 +33,6 @@ zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%f'
 
 # Environment variables
 export EDITOR=nano
-export GPG_TTY=$(tty)
 
 # Path
 if [[ $(uname -m) == "arm64" ]]; then
