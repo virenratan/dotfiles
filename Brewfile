@@ -101,7 +101,7 @@ mas '1Password for Safari', id: 1569813296
 mas 'CARROT Weather', id: 993487541
 mas 'Encrypto', id: 935235287
 mas 'Fantastical', id: 975937182
-mas 'Hidden Bar', id: 1452453066
+# mas 'Hidden Bar', id: 1452453066
 # mas 'iA Writer', id: 775737590
 # mas 'Kaleidoscope', id: 587512244
 mas 'NordVPN', id: 905953485
