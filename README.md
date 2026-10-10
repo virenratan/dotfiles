@@ -12,6 +12,7 @@
       - [NAS passwordless sudo (DSM)](#nas-passwordless-sudo-dsm)
     - [Additional setup](#additional-setup)
     - [🔐 DNSCrypt Proxy (disabled for Apple Silicon)](#-dnscrypt-proxy-disabled-for-apple-silicon)
+  - [🍺 Brewfile](#-brewfile)
   - [⬆️ Updating](#️-updating)
 
 ## 👋 Getting started
@@ -115,6 +116,10 @@ SSH opts live in [scripts/nas.env](scripts/nas.env#L1-L12); `BatchMode=yes` keep
 Automatic setup of encrypted DNS using dnscrypt-proxy with Cloudflare DNS servers for enhanced privacy and security.
 
 See [dnscrypt-proxy/README.md](dnscrypt-proxy/README.md) for detailed configuration and usage information.
+
+## 🍺 Brewfile
+
+Keep every section of the `Brewfile` in alphabetical order, including commented-out entries. Sort tap-qualified formulae by their short name (`hashicorp/tap/terraform` sorts as `terraform`).
 
 ## ⬆️ Updating
 

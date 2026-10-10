@@ -2,19 +2,20 @@
 
 tap '1password/tap'
 tap 'buo/cask-upgrade'
+tap 'hashicorp/tap'
 
 # setup.
 brew 'dockutil'
 brew 'mas'
 
 # essential command line tools.
-brew 'ack'
 brew 'bat'
+brew 'btop'
 brew 'cmake'
 brew 'coreutils'
-brew 'htop'
 brew 'make'
-brew 'tldr'
+brew 'ripgrep'
+brew 'tlrc'
 brew 'tree'
 brew 'wget'
 brew 'yq'
@@ -24,32 +25,26 @@ brew 'gh'
 brew 'git'
 brew 'git-delta'
 brew 'git-lfs'
-brew 'gist'
-brew 'hub'
-brew 'copilot'
 
 # development tools.
+brew 'fnm'
 brew 'gitmoji'
 brew 'nano'
-brew 'node'
 brew 'pnpm'
-brew 'pyenv'
 brew 'swift'
-brew 'terraform'
+brew 'hashicorp/tap/terraform'
+brew 'uv'
 brew 'watchman'
 # brew 'yarn', args: ["ignore-dependencies"]
 
 # shells and terminal.
-brew 'autojump'
 brew 'fish'
 brew 'starship'
 brew 'terminal-notifier'
-brew 'thefuck'
+brew 'zoxide'
 
 # security.
 brew 'dnscrypt-proxy'
-brew 'gnupg'
-brew 'gpg2'
 brew 'openssl'
 
 # cloud and network.
@@ -59,20 +54,20 @@ brew 'wifi-password'
 cask '1password'
 cask '1password-cli'
 # cask 'abstract'
+cask 'copilot-cli'
 cask 'copilot-for-xcode'
 # cask 'diffmerge'
-cask 'docker-desktop'
 cask 'figma'
 cask 'firefox'
-cask 'gpg-suite'
 cask 'google-chrome'
 cask 'google-drive'
 cask 'iina'
 cask 'iterm2'
 cask 'keka'
-cask 'logitech-options'
+cask 'logi-options+'
 cask 'micro-snitch'
 cask 'microsoft-edge'
+cask 'orbstack'
 cask 'pocket-casts'
 cask 'postman'
 cask 'rectangle'
@@ -90,11 +85,11 @@ cask 'font-roboto-mono'
 cask 'font-source-code-pro'
 
 # quicklook.
-cask 'qlmarkdown' # cask sunset 2026-09-01, install app manually after.
+cask 'apparency'
+cask 'markdown-preview'
+cask 'quicklook-video'
 cask 'suspicious-package'
 cask 'syntax-highlight'
-cask 'quicklook-video'
-cask 'apparency'
 
 # app store.
 mas '1Password for Safari', id: 1569813296
