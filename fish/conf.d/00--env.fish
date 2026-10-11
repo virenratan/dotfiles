@@ -2,3 +2,6 @@
 
 # setup 1password ssh agent.
 set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
+# hide homebrew's "set HOMEBREW_X to change this" hints.
+set -gx HOMEBREW_NO_ENV_HINTS 1
