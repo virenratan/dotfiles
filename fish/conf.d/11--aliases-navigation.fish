@@ -10,4 +10,4 @@ abbr -a p       "cd $HOME/Projects"
 abbr -a icloud  "cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 # smarter cd: `z <partial-name>`, `zi` for interactive pick.
-zoxide init fish | source
+__source_cached_init zoxide init fish

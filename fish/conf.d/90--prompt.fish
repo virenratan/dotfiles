@@ -1,4 +1,6 @@
-starship init fish --print-full-init | source
+# a cold first prompt can blow past scan_timeout. the prompt still renders, so skip the warning.
+set -gx STARSHIP_LOG error
+__source_cached_init starship init fish --print-full-init
 
 # only load iterm2 shell integration when actually running in iterm2.
 # https://iterm2.com/documentation-shell-integration.html
