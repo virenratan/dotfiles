@@ -5,3 +5,8 @@ yarn-error.log
 
 .extra.fish
 fish/fish_variables
+
+# completions symlinked in by orbstack.
+fish/completions/docker.fish
+fish/completions/kubectl.fish
+fish/completions/orbctl.fish
