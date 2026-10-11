@@ -5,7 +5,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AnimateDimming</key>
@@ -622,7 +622,11 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DisableMetalWhenUnplugged</key>
+	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
+	<key>EnableAPIServer</key>
 	<true/>
 	<key>EnableDivisionView</key>
 	<true/>
@@ -686,7 +690,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -940,7 +944,7 @@
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
 			<real>7.6696390674804062</real>
 			<key>Bold Color</key>
@@ -1101,13 +1105,13 @@
 			<key>Name</key>
 			<string>Viren</string>
 			<key>Non Ascii Font</key>
-			<string>FiraCode-Regular 12</string>
+			<string>FiraCodeRoman-Regular 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Non-ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Normal Font</key>
-			<string>FiraCode-Regular 12</string>
+			<string>FiraCodeRoman-Regular 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1286,7 +1290,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.045128259660326249</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Underline Color</key>
@@ -1421,6 +1425,10 @@
 	<false/>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Session Status</string>
+	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
 	<key>URLHandlersByGuid</key>
@@ -1443,6 +1451,37 @@
 	<integer>1</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>Workgroups</key>
+	<data>
+	W3sic2Vzc2lvbnMiOlt7Im1vZGUiOiJyZWd1bGFyIiwidXJsU3RyaW5nIjoiIiwidG9v
+	bGJhckl0ZW1zIjpbeyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJraW5kIjoiZ2l0U3Rh
+	dHVzIn0seyJraW5kIjoiYXV0b1JlcXVlc3RSZXZpZXdXaGVuSWRsZSJ9XSwicGVyRmls
+	ZUNvbW1hbmQiOiIiLCJkaXNwbGF5TmFtZSI6IkNoYXQiLCJ1bmlxdWVJZGVudGlmaWVy
+	IjoiYnVpbHRpbi5jbGF1ZGVDb2RlLm1haW4iLCJraW5kIjp7ImtpbmQiOiJyb290In0s
+	ImNvbW1hbmQiOiIifSx7Im1vZGUiOiJkaWZmIiwicGFyZW50SUQiOiJidWlsdGluLmNs
+	YXVkZUNvZGUubWFpbiIsInVybFN0cmluZyI6IiIsInRvb2xiYXJJdGVtcyI6W3sia2lu
+	ZCI6Im1vZGVTd2l0Y2hlciJ9LHsia2luZCI6ImNoYW5nZWRGaWxlU2VsZWN0b3IifSx7
+	ImtpbmQiOiJnaXRCYXNlU2VsZWN0b3IifSx7ImJhY2tTaG9ydGN1dCI6eyJzZXJpYWxp
+	emVkIjoiMHhmNzAyLTB4MzQwMDAwLTB4N2IifSwia2luZCI6Im5hdmlnYXRpb24iLCJm
+	b3J3YXJkU2hvcnRjdXQiOnsic2VyaWFsaXplZCI6IjB4ZjcwMy0weDM0MDAwMC0weDdj
+	In0sInJlbG9hZFNob3J0Y3V0Ijp7InNlcmlhbGl6ZWQiOiIweDcyLTB4MTAwMDAwLTB4
+	ZiJ9fV0sInBlckZpbGVDb21tYW5kIjoiZ2l0IGRpZmZ0b29sIC15IC14IHZpbWRpZmYg
+	XFwoZ2l0QmFzZSkgLS0gXFwoZmlsZSkiLCJkaXNwbGF5TmFtZSI6IkRpZmYiLCJ1bmlx
+	dWVJZGVudGlmaWVyIjoiYnVpbHRpbi5jbGF1ZGVDb2RlLmRpZmYiLCJraW5kIjp7Imtp
+	bmQiOiJwZWVyIn0sImNvbW1hbmQiOiJnaXQgZGlmZnRvb2wgLXkgLXggdmltZGlmZiBc
+	XChnaXRCYXNlKSJ9LHsibW9kZSI6ImNvZGVSZXZpZXciLCJwYXJlbnRJRCI6ImJ1aWx0
+	aW4uY2xhdWRlQ29kZS5tYWluIiwidXJsU3RyaW5nIjoiIiwidG9vbGJhckl0ZW1zIjpb
+	eyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJraW5kIjoicmVsb2FkIiwic2hvcnRjdXQi
+	Onsic2VyaWFsaXplZCI6IjB4NzItMHgxMDAwMDAtMHhmIn19LHsia2luZCI6ImF1dG9T
+	ZW5kQ2xpcHBpbmdzV2hlbklkbGUifV0sInBlckZpbGVDb21tYW5kIjoiIiwiZGlzcGxh
+	eU5hbWUiOiJDb2RlIFJldmlldyIsInVuaXF1ZUlkZW50aWZpZXIiOiJidWlsdGluLmNs
+	YXVkZUNvZGUucmV2aWV3Iiwia2luZCI6eyJraW5kIjoicGVlciJ9LCJjb21tYW5kIjoi
+	Y2xhdWRlIFxcKGNvZGVSZXZpZXdQcm9tcHQpIC0tYXBwZW5kLXN5c3RlbS1wcm9tcHQt
+	ZmlsZSAnXFwoY29kZVJldmlld1N5c3RlbVByb21wdEZpbGUpJyAtLXNldHRpbmdzICdc
+	XChpdGVybTIuYXBwQnVuZGxlUGF0aClcL0NvbnRlbnRzXC9SZXNvdXJjZXNcL2NvZGUt
+	cmV2aWV3LXNldHRpbmdzLnR4dCcifV0sIm5hbWUiOiJDbGF1ZGUgQ29kZSIsInVuaXF1
+	ZUlkZW50aWZpZXIiOiJidWlsdGluLmNsYXVkZUNvZGUifV0=
+	</data>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
