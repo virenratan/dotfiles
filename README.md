@@ -33,11 +33,14 @@ brew install google-chrome 1password
 ```
 
 - Enable the SSH Agent in 1Password and ensure the "Generate SSH config file with bookmarked hosts" is enabled. The rest of the ssh config should sync from iCloud or be symlinked by this repo.
-- Git identities (email and signing key per repo) sync from iCloud `System/git`. Set the machine's default identity in `~/.gitconfig.local`:
+- Git identities (email and signing key per repo) sync from iCloud `System/git`. Set the machine's default identity in `~/.gitconfig.local`. Keep the default inline and scope any iCloud include to `~/Projects/`, since sandboxed git (e.g. Homebrew's downloads) can't read iCloud and fails on an unconditional include:
 
 ```ini
-[include]
-  path = ~/.config/git/identities/personal.gitconfig
+[user]
+  email = you@example.com
+  signingkey = ssh-ed25519 AAAA...
+[includeIf "gitdir:~/Projects/"]
+  path = ~/.config/git/identities/work.gitconfig
 ```
 
 - Create a `~/Projects` directory

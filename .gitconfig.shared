@@ -17,7 +17,6 @@
 
 # rewrites of repo paths
 [url "git@github.com:"]
-  insteadOf = "https://github.com/"
   pushInsteadOf = "github:"
   pushInsteadOf = "git://github.com/"
   pushInsteadOf = "https://github.com/"
@@ -46,7 +45,8 @@
   path = ~/.gitconfig.local
 
 # per-repo identities synced from icloud drive. must come after the local default so it can override it.
-[include]
+# scoped to ~/Projects/ so sandboxed git (e.g. homebrew's download sandbox, which blocks icloud reads) doesn't fail on it.
+[includeIf "gitdir:~/Projects/"]
   path = ~/.config/git/identities/rules.gitconfig
 
 [filter "lfs"]
