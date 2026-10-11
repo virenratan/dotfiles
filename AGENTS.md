@@ -13,6 +13,8 @@ reads the `Brewfile`.
   linked into `~`. Don't add a root dotfile unless you mean it to land in `$HOME`.
 - `fish/` → `~/.config/fish`, `starship.toml` → `~/.config/starship.toml`,
   `1Password/` → `~/.config/1Password`, `scripts/` → `~/scripts`.
+- `ghostty/` is a parked Ghostty config. It isn't installed or linked; it's kept for if the
+  quick terminal ever gets tabs.
 - SSH config and git identities/keys come from iCloud (`System/.ssh`, `System/git`), not this
   repo. Machine-local overrides live in `~/.gitconfig.local` and `~/.extra.fish` (untracked).
 

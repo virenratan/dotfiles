@@ -1,0 +1,28 @@
+# parked: not installed or linked. link to ~/.config/ghostty to use it.
+
+font-family = Fira Code
+font-size = 12
+theme = clovis
+background-opacity = 0.955
+background-blur = true
+cursor-style = bar
+cursor-style-blink = true
+window-padding-x = 15
+window-padding-y = 15
+copy-on-select = clipboard
+macos-option-as-alt = false
+# no unlimited option in the release yet. this is bytes and allocated lazily.
+scrollback-limit = 100000000
+# remote hosts like the nas don't know xterm-ghostty.
+shell-integration-features = ssh-terminfo,ssh-env
+
+# iterm-style hotkey window. the quick terminal can't do tabs, so ⌥space
+# shows and hides a normal window pinned to the left edge instead.
+keybind = global:alt+space=toggle_visibility
+window-position-x = 0
+window-position-y = 0
+# 200 columns like iterm. height is clamped to the screen, so this fills it.
+window-width = 200
+window-height = 999
+# restoring old windows would ignore the position above.
+window-save-state = never
