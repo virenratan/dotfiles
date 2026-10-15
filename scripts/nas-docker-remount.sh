@@ -1,5 +1,5 @@
 #!/bin/zsh
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.orbstack/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 log() {
   echo "$(date '+%Y-%m-%d %H:%M:%S') $*"
